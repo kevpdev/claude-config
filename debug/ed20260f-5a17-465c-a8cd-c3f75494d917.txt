@@ -1631,3 +1631,51 @@
 2025-12-15T21:13:59.880Z [DEBUG] Found 1 hook matchers in settings
 2025-12-15T21:13:59.880Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
 2025-12-15T21:14:05.056Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T21:17:38.082Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:17:38.082Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:17:38.082Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:17:38.082Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:17:38.100Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-15T21:17:38.100Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:17:38.100Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T21:17:38.101Z [DEBUG] FileHistory: Making snapshot for message 56be38af-798d-453f-98ef-bdae137392ba
+2025-12-15T21:17:38.102Z [DEBUG] FileHistory: Added snapshot for 56be38af-798d-453f-98ef-bdae137392ba, tracking 6 files
+2025-12-15T21:17:39.152Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:17:41.402Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:17:45.055Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-15T21:17:45.064Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-15T21:17:45.064Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:17:45.064Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T21:17:45.109Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-15T21:17:45.109Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:17:45.109Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T21:17:45.145Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:17:45.145Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:17:45.145Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:17:45.145Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:17:48.969Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:18:28.713Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-15T21:18:28.721Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-15T21:18:28.721Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:18:28.721Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-15T21:18:28.749Z [DEBUG] Writing to temp file: /home/kevdev/.claude/CLAUDE.md.tmp.172201.1765833508749
+2025-12-15T21:18:28.749Z [DEBUG] Preserving file permissions: 100664
+2025-12-15T21:18:28.754Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2025-12-15T21:18:28.754Z [DEBUG] Temp file written successfully, size: 10257 bytes
+2025-12-15T21:18:28.754Z [DEBUG] Applied original permissions to temp file
+2025-12-15T21:18:28.754Z [DEBUG] Renaming /home/kevdev/.claude/CLAUDE.md.tmp.172201.1765833508749 to /home/kevdev/.claude/CLAUDE.md
+2025-12-15T21:18:28.756Z [DEBUG] File /home/kevdev/.claude/CLAUDE.md written atomically
+2025-12-15T21:18:28.772Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/.claude/CLAUDE.md
+2025-12-15T21:18:28.808Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-15T21:18:28.808Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:18:28.808Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-15T21:18:28.941Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:18:28.941Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:18:28.941Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:18:28.941Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:18:31.785Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:18:46.510Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-15T21:18:46.510Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:18:46.510Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-15T21:18:51.715Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T21:20:23.126Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
