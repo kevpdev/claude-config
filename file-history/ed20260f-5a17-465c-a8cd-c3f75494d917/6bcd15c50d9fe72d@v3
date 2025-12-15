@@ -1,0 +1,356 @@
+# Plan: Ajouter Option Vite dans `/init-node-ts`
+
+## Objectif
+Ajouter une option "Utiliser Vite pour le build ?" dans `/init-node-ts` pour permettre aux utilisateurs de choisir entre `tsc` (build classique) et `vite` (build rapide + HMR).
+
+## Contexte Utilisateur
+L'utilisateur souhaite avoir le choix entre:
+- **tsc** (actuel): Build standard TypeScript, simple, fiable
+- **Vite**: Build ultra-rapide, HMR, optimisations modernes, mais plus de config
+
+## Fichier à Modifier
+`/home/kevdev/.claude/commands/init-node-ts.md` (185 lignes)
+
+## Modifications Détaillées
+
+### 1. Step 2 : Ajouter Question Vite (ligne 23-26)
+
+**Avant:**
+```markdown
+2. **Ask user preferences** (using AskUserQuestion):
+   - Package manager (pnpm/npm/yarn)
+   - Project name (default: current directory name)
+   - Add ESLint + Prettier? (yes/no)
+```
+
+**Après:**
+```markdown
+2. **Ask user preferences** (using AskUserQuestion):
+   - Package manager (pnpm/npm/yarn)
+   - Project name (default: current directory name)
+   - Build tool: Vite or tsc? (Vite = faster builds + HMR, tsc = simpler)
+   - Add ESLint + Prettier? (yes/no)
+```
+
+### 2. Step 5 : Installer Vite si Choisi (après ligne 38)
+
+**Ajouter variante:**
+```markdown
+5. **Install TypeScript and build tool**:
+   - Always install: `typescript`, `@types/node`
+   - If tsc chosen:
+     - Install: `tsx` (for dev runner)
+     - Dev dependencies
+   - If Vite chosen:
+     - Install: `vite`, `vite-node` (for dev runner)
+     - Dev dependencies
+```
+
+### 3. Step 6 : Adapter tsconfig.json pour Vite (ligne 40-60)
+
+**Ajouter note conditionnelle:**
+```markdown
+6. **Create tsconfig.json** (strict mode):
+
+   **If tsc chosen:**
+   ```json
+   {
+     "compilerOptions": {
+       "strict": true,
+       "target": "ES2022",
+       "module": "NodeNext",
+       "moduleResolution": "NodeNext",
+       "esModuleInterop": true,
+       "skipLibCheck": true,
+       "forceConsistentCasingInFileNames": true,
+       "rootDir": "./src",
+       "outDir": "./dist",
+       "declaration": true,
+       "declarationMap": true,
+       "sourceMap": true
+     },
+     "include": ["src/**/*"],
+     "exclude": ["node_modules", "dist", "**/*.test.ts"]
+   }
+   ```
+
+   **If Vite chosen:**
+   ```json
+   {
+     "compilerOptions": {
+       "strict": true,
+       "target": "ES2022",
+       "module": "ESNext",
+       "moduleResolution": "bundler",
+       "esModuleInterop": true,
+       "skipLibCheck": true,
+       "forceConsistentCasingInFileNames": true,
+       "rootDir": "./src",
+       "outDir": "./dist",
+       "declaration": true,
+       "sourceMap": true,
+       "isolatedModules": true,
+       "allowImportingTsExtensions": true,
+       "noEmit": true
+     },
+     "include": ["src/**/*"],
+     "exclude": ["node_modules", "dist", "**/*.test.ts"]
+   }
+   ```
+
+   **Key differences for Vite:**
+   - `module: "ESNext"` instead of `NodeNext`
+   - `moduleResolution: "bundler"` (Vite-compatible)
+   - `noEmit: true` (Vite handles emit)
+   - `allowImportingTsExtensions: true` (for .ts imports)
+```
+
+### 4. Nouveau Step 6.5 : Créer vite.config.ts (si Vite choisi)
+
+**Insérer après Step 6:**
+```markdown
+6.5. **Create vite.config.ts** (if Vite chosen):
+   ```typescript
+   import { defineConfig } from 'vite'
+
+   export default defineConfig({
+     build: {
+       lib: {
+         entry: './src/index.ts',
+         formats: ['es'],
+         fileName: 'index'
+       },
+       rollupOptions: {
+         external: ['node:*']
+       },
+       outDir: 'dist',
+       sourcemap: true,
+       minify: false
+     },
+     resolve: {
+       extensions: ['.ts', '.js']
+     }
+   })
+   ```
+
+   **Config notes:**
+   - `lib` mode for Node.js library/app
+   - `formats: ['es']` for ESM output
+   - `external: ['node:*']` to exclude Node built-ins
+   - `minify: false` for readable backend code (enable if needed)
+```
+
+### 5. Step 10 : Adapter Scripts selon Build Tool (ligne 77-93)
+
+**Avant:**
+```json
+{
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    ...
+  }
+}
+```
+
+**Après:**
+```markdown
+10. **Add scripts to package.json**:
+
+    **If tsc chosen:**
+    ```json
+    {
+      "scripts": {
+        "dev": "tsx watch src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:ui": "vitest --ui",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src tests --ext .ts",
+        "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+        "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\""
+      }
+    }
+    ```
+
+    **If Vite chosen:**
+    ```json
+    {
+      "scripts": {
+        "dev": "vite-node --watch src/index.ts",
+        "build": "vite build",
+        "start": "node dist/index.mjs",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "test:ui": "vitest --ui",
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src tests --ext .ts",
+        "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+        "format:check": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\""
+      }
+    }
+    ```
+
+    **Key differences for Vite:**
+    - `dev`: `vite-node --watch` instead of `tsx watch`
+    - `build`: `vite build` instead of `tsc`
+    - `start`: `node dist/index.mjs` (Vite outputs .mjs for ES modules)
+    - `typecheck`: Still uses `tsc --noEmit` (Vite doesn't type-check)
+```
+
+### 6. Step 12 : Vérification Adaptée (ligne 129-132)
+
+**Ajouter:**
+```markdown
+12. **Final verification**:
+    - Run `pnpm install` / `npm install` / `yarn install`
+    - Run typecheck to verify TypeScript setup
+    - If Vite chosen: Verify vite.config.ts is valid
+    - Show summary of what was created
+```
+
+### 7. Output : Mentionner Build Tool Choisi (ligne 134-163)
+
+**Modifier pour inclure:**
+```markdown
+## Output
+
+```
+🚀 Initializing Node.js + TypeScript project...
+
+✓ Git initialized
+✓ .gitignore created
+✓ pnpm initialized
+✓ TypeScript installed and configured (strict mode)
+✓ Build tool: Vite configured  # OU "Build tool: tsc (standard)"
+✓ ESLint + Prettier configured
+✓ Vitest installed
+✓ Project structure created:
+  src/
+  ├─ index.ts
+  tests/
+  ├─ index.test.ts
+
+✓ Scripts added:
+  - pnpm dev        # Run with watch mode (vite-node/tsx)
+  - pnpm build      # Compile TypeScript (vite/tsc)
+  - pnpm start      # Run compiled code
+  - pnpm test       # Run tests
+  - pnpm typecheck  # Type check only
+  - pnpm lint       # Lint code
+  - pnpm format     # Format code
+
+✓ Dependencies installed
+
+Project ready! Run 'pnpm dev' to start developing.
+```
+```
+
+## Dépendances Ajoutées
+
+### Mode tsc (actuel)
+```json
+{
+  "devDependencies": {
+    "typescript": "^5.x",
+    "@types/node": "^20.x",
+    "tsx": "^4.x"
+  }
+}
+```
+
+### Mode Vite (nouveau)
+```json
+{
+  "devDependencies": {
+    "typescript": "^5.x",
+    "@types/node": "^20.x",
+    "vite": "^5.x",
+    "vite-node": "^1.x"
+  }
+}
+```
+
+**Différence**: `vite` + `vite-node` remplacent `tsx`
+
+## Comparaison tsc vs Vite
+
+| Critère | tsc | Vite |
+|---------|-----|------|
+| **Build speed** | Lent (secondes) | Ultra-rapide (ms) |
+| **Dev HMR** | Non (restart avec tsx) | Oui (vite-node) |
+| **Config** | Simple (tsconfig.json) | +1 fichier (vite.config.ts) |
+| **Type checking** | Intégré | Séparé (tsc --noEmit) |
+| **Output** | .js (CommonJS/ESM) | .mjs (ESM only) |
+| **Use case** | Backend simple, librairies | Apps complexes, builds fréquents |
+
+**Recommandation:**
+- **tsc** si: Backend simple, peu de rebuilds, priorité simplicité
+- **Vite** si: Dev intensif, builds fréquents, besoin HMR
+
+## Avantages
+
+1. **Flexibilité**: User choisit selon son use case
+2. **Simplicité préservée**: tsc reste option par défaut (recommandé dans question)
+3. **Performance**: Vite = builds 10-100x plus rapides pour projets >50 fichiers
+4. **Zero breaking change**: Pas d'impact sur projets existants
+
+## Limitations
+
+- Vite pour backend Node = moins courant (Vite = primaire frontend)
+- Output .mjs peut nécessiter ajustements imports (`node:` prefix)
+- Vite = plus de config (vite.config.ts, tsconfig ajusté)
+
+## Question AskUserQuestion
+
+Dans Step 2, ajouter cette question:
+
+```typescript
+{
+  question: "Quel outil de build préférez-vous ?",
+  header: "Build Tool",
+  multiSelect: false,
+  options: [
+    {
+      label: "tsc - Standard TypeScript (Recommandé)",
+      description: "Build classique avec tsc. Simple, fiable, parfait pour backend Node. Pas de config supplémentaire."
+    },
+    {
+      label: "Vite - Build ultra-rapide",
+      description: "Build 10-100x plus rapide, HMR en dev. Nécessite vite.config.ts. Idéal pour dev intensif ou gros projets."
+    }
+  ]
+}
+```
+
+## Fichiers Créés/Modifiés
+
+### Avec tsc (actuel)
+```
+projet/
+├── package.json (scripts: tsx, tsc)
+├── tsconfig.json (module: NodeNext)
+└── src/index.ts
+```
+
+### Avec Vite (nouveau)
+```
+projet/
+├── package.json (scripts: vite-node, vite build)
+├── tsconfig.json (module: ESNext, noEmit: true)
+├── vite.config.ts
+└── src/index.ts
+```
+
+## Next Steps (Implémentation)
+
+1. Modifier `/home/kevdev/.claude/commands/init-node-ts.md`
+2. Ajouter question build tool dans Step 2
+3. Ajouter Step 5 variante (install vite ou tsx)
+4. Ajouter Step 6 variantes (2 tsconfig selon choix)
+5. Ajouter Step 6.5 (vite.config.ts si Vite)
+6. Modifier Step 10 (2 sets de scripts)
+7. Tester les deux modes (tsc et Vite)

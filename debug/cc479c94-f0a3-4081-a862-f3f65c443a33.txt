@@ -1,0 +1,942 @@
+2025-12-14T22:46:07.034Z [DEBUG] Watching for changes in setting files /home/kevdev/.claude/settings.json...
+2025-12-14T22:46:07.088Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2025-12-14T22:46:07.089Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2025-12-14T22:46:07.089Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2025-12-14T22:46:07.092Z [DEBUG] LSP server manager initialized successfully
+2025-12-14T22:46:07.092Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2025-12-14T22:46:07.107Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2025-12-14T22:46:07.121Z [DEBUG] Stats cache is up to date
+2025-12-14T22:46:07.138Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (16.2ms): ldd /bin/ls 2>/dev/null
+2025-12-14T22:46:07.146Z [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kevdev/.claude/skills, project=[]
+2025-12-14T22:46:07.157Z [DEBUG] Loaded 0 installed plugins from /home/kevdev/.claude/plugins/installed_plugins.json
+2025-12-14T22:46:07.158Z [DEBUG] Official marketplace auto-install already attempted, skipping
+2025-12-14T22:46:07.239Z [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+2025-12-14T22:46:07.239Z [DEBUG] Looking for shell config file: /home/kevdev/.zshrc
+2025-12-14T22:46:07.240Z [DEBUG] Snapshots directory: /home/kevdev/.claude/shell-snapshots
+2025-12-14T22:46:07.241Z [DEBUG] Creating snapshot at: /home/kevdev/.claude/shell-snapshots/snapshot-zsh-1765752367239-tvsc9b.sh
+2025-12-14T22:46:07.241Z [DEBUG] Shell binary exists: true
+2025-12-14T22:46:07.241Z [DEBUG] Execution timeout: 10000ms
+2025-12-14T22:46:07.248Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752367248
+2025-12-14T22:46:07.257Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (8.5ms)
+2025-12-14T22:46:07.257Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-14T22:46:07.257Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752367248 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:46:07.257Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:46:07.266Z [DEBUG] Auto-updating 1 installed marketplaces in background
+2025-12-14T22:46:07.267Z [DEBUG] Auto-updating marketplace "claude-plugins-official"
+2025-12-14T22:46:07.279Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2025-12-14T22:46:07.279Z [DEBUG] Total plugin skills loaded: 0
+2025-12-14T22:46:07.279Z [DEBUG] Total plugin commands loaded: 0
+2025-12-14T22:46:07.280Z [DEBUG] Registered 0 hooks from 0 plugins
+2025-12-14T22:46:07.298Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+2025-12-14T22:46:07.305Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills
+2025-12-14T22:46:07.324Z [DEBUG] Git remote URL: null
+2025-12-14T22:46:07.324Z [DEBUG] No git remote URL found
+2025-12-14T22:46:07.324Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2025-12-14T22:46:07.325Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+2025-12-14T22:46:07.343Z [DEBUG] Total plugin agents loaded: 0
+2025-12-14T22:46:07.446Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752367446
+2025-12-14T22:46:07.446Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:07.450Z [DEBUG] Temp file written successfully, size: 53298 bytes
+2025-12-14T22:46:07.450Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:07.450Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752367446 to /home/kevdev/.claude.json
+2025-12-14T22:46:07.450Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:07.660Z [DEBUG] Shell snapshot created successfully (139992 bytes)
+2025-12-14T22:46:07.777Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2025-12-14T22:46:07.777Z [DEBUG] Successfully refreshed marketplace: claude-plugins-official
+2025-12-14T22:46:07.777Z [DEBUG] Successfully auto-updated marketplace "claude-plugins-official"
+2025-12-14T22:46:07.984Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2025-12-14T22:46:07.991Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752367991
+2025-12-14T22:46:07.991Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:07.998Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (6.8ms)
+2025-12-14T22:46:07.998Z [DEBUG] Temp file written successfully, size: 53298 bytes
+2025-12-14T22:46:07.998Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:07.998Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752367991 to /home/kevdev/.claude.json
+2025-12-14T22:46:07.998Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:08.009Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2025-12-14T22:46:08.009Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:08.009Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2025-12-14T22:46:08.034Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-14T22:46:08.035Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /capture, /session-end, /run-tasks, /watch-ci, /create-pull-request, /story-create, /explore, /oneshot, /epct, /plan-to-stories, /memory-bank-init, /fix-pr-comments, /session-start
+2025-12-14T22:46:08.103Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752368103
+2025-12-14T22:46:08.103Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:08.108Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.4ms)
+2025-12-14T22:46:08.108Z [DEBUG] Temp file written successfully, size: 53225 bytes
+2025-12-14T22:46:08.108Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:08.108Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752368103 to /home/kevdev/.claude.json
+2025-12-14T22:46:08.108Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:08.126Z [DEBUG] performStartupChecks called
+2025-12-14T22:46:08.126Z [DEBUG] Starting background plugin installations
+2025-12-14T22:46:08.126Z [DEBUG] performBackgroundPluginInstallations called
+2025-12-14T22:46:08.149Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-14T22:46:08.153Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752368153
+2025-12-14T22:46:08.153Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:08.159Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2025-12-14T22:46:08.159Z [DEBUG] Temp file written successfully, size: 53298 bytes
+2025-12-14T22:46:08.159Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:08.159Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752368153 to /home/kevdev/.claude.json
+2025-12-14T22:46:08.159Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:08.162Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2025-12-14T22:46:08.190Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (26.8ms): ps -o ppid= -p 247538
+2025-12-14T22:46:08.215Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (25.0ms): ps -o ppid= -p 27440
+2025-12-14T22:46:08.216Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2025-12-14T22:46:08.241Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (24.8ms): ps -o ppid= -p 247538
+2025-12-14T22:46:08.268Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (26.8ms): ps -o ppid= -p 27440
+2025-12-14T22:46:08.290Z [DEBUG] Getting matching hook commands for SubagentStart with query: Explore
+2025-12-14T22:46:08.290Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:08.290Z [DEBUG] Matched 0 unique hooks for query "Explore" (0 before deduplication)
+2025-12-14T22:46:08.299Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2025-12-14T22:46:08.299Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:08.299Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2025-12-14T22:46:08.362Z [DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+2025-12-14T22:46:08.368Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752368368
+2025-12-14T22:46:08.368Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:08.372Z [DEBUG] Temp file written successfully, size: 53298 bytes
+2025-12-14T22:46:08.372Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:08.372Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752368368 to /home/kevdev/.claude.json
+2025-12-14T22:46:08.372Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:08.386Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752368386
+2025-12-14T22:46:08.386Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:08.391Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2025-12-14T22:46:08.391Z [DEBUG] Temp file written successfully, size: 53298 bytes
+2025-12-14T22:46:08.391Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:08.391Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752368386 to /home/kevdev/.claude.json
+2025-12-14T22:46:08.391Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:46:08.396Z [DEBUG] Summarizing all 120 messages (~63641 tokens)
+2025-12-14T22:46:08.426Z [DEBUG] MCP server "ide": Successfully connected to ws-ide server in 91ms
+2025-12-14T22:46:08.426Z [DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.62"}}
+2025-12-14T22:46:08.438Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:46:09.332Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:09.336Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:10.106Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:10.588Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (23.1ms): ps -o ppid= -p 247538
+2025-12-14T22:46:10.612Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (23.2ms): ps -o ppid= -p 27440
+2025-12-14T22:46:10.636Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (23.8ms): ps -o ppid= -p 247538
+2025-12-14T22:46:10.660Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (24.2ms): ps -o ppid= -p 27440
+2025-12-14T22:46:11.183Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-14T22:46:11.183Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:11.183Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-14T22:46:19.667Z [DEBUG] Metadata string for plan-to-stories:
+2025-12-14T22:46:19.667Z [DEBUG] <command-message>plan-to-stories is running…</command-message>
+<command-name>/plan-to-stories</command-name>
+2025-12-14T22:46:19.667Z [DEBUG] command-message tags in metadata: 1
+2025-12-14T22:46:19.694Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-14T22:46:19.695Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:46:19.696Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:46:19.696Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:46:19.696Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:46:19.728Z [DEBUG] processPromptSlashCommand creating 3 messages for plan-to-stories
+2025-12-14T22:46:19.728Z [DEBUG] Message 1: <command-message>plan-to-stories is running…</command-message>
+<command-name>/plan-to-stories</command-name>
+2025-12-14T22:46:19.729Z [DEBUG] Message 2 [META]: [{"type":"text","text":"Split a plan, brief, or specification into focused, implementable stories.\n\n## What this does\n\nAnalyzes a plan and creates multiple story files in `.claude/memory-bank/stor
+2025-12-14T22:46:19.729Z [DEBUG] Message 3: [ATTACHMENT]
+2025-12-14T22:46:19.737Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-14T22:46:19.737Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:19.737Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-14T22:46:19.738Z [DEBUG] FileHistory: Added snapshot for 018afb23-2ba3-4626-aa88-e6c72eac1974, tracking 0 files
+2025-12-14T22:46:19.744Z [DEBUG] UserCommandMessage rendering: "plan-to-stories is running…" (args: "none")
+2025-12-14T22:46:19.744Z [DEBUG] isSkillFormat: false, prefix: "/"
+2025-12-14T22:46:19.761Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-14T22:46:19.772Z [DEBUG] Total plugin output styles loaded: 0
+2025-12-14T22:46:19.776Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 15ms
+2025-12-14T22:46:22.679Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:25.973Z [DEBUG] executePreToolHooks called for tool: Glob
+2025-12-14T22:46:25.973Z [DEBUG] executePreToolHooks called for tool: Glob
+2025-12-14T22:46:25.974Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-14T22:46:25.984Z [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+2025-12-14T22:46:25.984Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:25.984Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2025-12-14T22:46:25.984Z [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+2025-12-14T22:46:25.984Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:25.985Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2025-12-14T22:46:25.985Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-14T22:46:25.985Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:25.985Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-14T22:46:26.087Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:46:26.101Z [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+2025-12-14T22:46:26.101Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:26.101Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2025-12-14T22:46:26.122Z [DEBUG] tree-sitter: WASM files not found
+2025-12-14T22:46:26.148Z [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+2025-12-14T22:46:26.148Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:26.148Z [DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+2025-12-14T22:46:26.937Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:27.064Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:27.181Z [DEBUG] No session environment scripts found
+2025-12-14T22:46:27.244Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-14T22:46:27.244Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:27.244Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-14T22:46:27.266Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:46:27.266Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:46:27.266Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:46:27.266Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:46:27.266Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:46:27.273Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:46:28.071Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:30.864Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:32.274Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-14T22:46:32.280Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-14T22:46:32.280Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:32.280Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:46:32.317Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-14T22:46:32.317Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:32.317Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:46:32.336Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:46:32.337Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:46:32.337Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:46:32.337Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:46:32.337Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:46:32.342Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:46:34.946Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:38.778Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:46:38.783Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:46:38.783Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:38.783Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:46:38.804Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752398804
+2025-12-14T22:46:38.804Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:38.809Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.2ms)
+2025-12-14T22:46:38.809Z [DEBUG] Temp file written successfully, size: 673 bytes
+2025-12-14T22:46:38.809Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:38.809Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752398804 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:46:38.809Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:46:38.821Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:46:38.821Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:38.821Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:46:38.841Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:46:38.842Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:46:38.842Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:46:38.842Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:46:38.842Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:46:38.846Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:46:40.598Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:51.207Z [DEBUG] Language not supported while highlighting code, falling back to markdown:
+2025-12-14T22:46:52.598Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:46:52.623Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:46:52.623Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:52.623Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:46:52.652Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752412652
+2025-12-14T22:46:52.652Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:46:52.657Z [DEBUG] Temp file written successfully, size: 675 bytes
+2025-12-14T22:46:52.657Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:46:52.657Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752412652 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:46:52.658Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:46:52.669Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:46:52.669Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:52.669Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:46:52.693Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:46:52.693Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:46:52.693Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:46:52.693Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:46:52.693Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:46:52.703Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 10ms
+2025-12-14T22:46:55.179Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:46:59.416Z [DEBUG] executePreToolHooks called for tool: AskUserQuestion
+2025-12-14T22:46:59.425Z [DEBUG] Getting matching hook commands for PreToolUse with query: AskUserQuestion
+2025-12-14T22:46:59.425Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:46:59.425Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-14T22:46:59.458Z [DEBUG] executePermissionRequestHooks called for tool: AskUserQuestion
+2025-12-14T22:46:59.469Z [DEBUG] Getting matching hook commands for PermissionRequest with query: AskUserQuestion
+2025-12-14T22:46:59.469Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:46:59.469Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-14T22:47:05.465Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2025-12-14T22:47:05.465Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:47:05.465Z [DEBUG] Matched 1 unique hooks for query "permission_prompt" (1 before deduplication)
+2025-12-14T22:47:07.405Z [DEBUG] Notification:permission_prompt [ffplay -nodisp -autoexit -volume 10 /home/kevdev/.claude/song/need-human.mp3] completed with status 0
+2025-12-14T22:47:07.405Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:47:39.013Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-14T22:47:39.013Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:47:39.013Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-14T22:47:52.436Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-14T22:47:52.483Z [DEBUG] Getting matching hook commands for PostToolUse with query: AskUserQuestion
+2025-12-14T22:47:52.484Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:47:52.484Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-14T22:47:52.521Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:47:52.521Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:47:52.521Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:47:52.521Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:47:52.521Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:47:52.533Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 12ms
+2025-12-14T22:47:54.449Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:47:56.558Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:47:56.580Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:47:56.580Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:47:56.580Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:47:56.602Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752476602
+2025-12-14T22:47:56.602Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:47:56.606Z [DEBUG] Temp file written successfully, size: 677 bytes
+2025-12-14T22:47:56.606Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:47:56.606Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752476602 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:47:56.606Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:47:56.621Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:47:56.621Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:47:56.621Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:47:56.648Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:47:56.648Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:47:56.649Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:47:56.649Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:47:56.649Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:47:56.655Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:47:59.791Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:48:00.725Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-14T22:48:00.748Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-14T22:48:00.748Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:48:00.748Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-14T22:48:00.817Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:48:00.906Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-14T22:48:00.906Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:48:00.906Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-14T22:48:00.930Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:48:00.930Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:48:00.930Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:48:00.930Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:48:00.930Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:48:00.935Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:48:01.596Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:48:03.442Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:48:04.817Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:48:04.838Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:48:04.838Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:48:04.838Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:48:04.867Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752484867
+2025-12-14T22:48:04.867Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:48:04.871Z [DEBUG] Temp file written successfully, size: 679 bytes
+2025-12-14T22:48:04.871Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:48:04.871Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752484867 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:48:04.871Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:48:04.887Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:48:04.887Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:48:04.887Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:48:04.908Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:48:04.908Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:48:04.908Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:48:04.908Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:48:04.908Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:48:04.912Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:48:06.717Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:49:58.615Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:58.631Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:58.631Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:58.631Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:58.669Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:58.675Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:49:58.692Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md
+2025-12-14T22:49:58.712Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752598712
+2025-12-14T22:49:58.715Z [DEBUG] Temp file written successfully, size: 1540 bytes
+2025-12-14T22:49:58.715Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752598712 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md
+2025-12-14T22:49:58.715Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md written atomically
+2025-12-14T22:49:58.734Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:58.734Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:58.734Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:58.810Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:58.831Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:58.831Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:58.831Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:58.876Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:58.883Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:49:58.883Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TYPES-001-core-types-config.md.tmp.247863.1765752598883
+2025-12-14T22:49:58.888Z [DEBUG] Temp file written successfully, size: 1601 bytes
+2025-12-14T22:49:58.888Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TYPES-001-core-types-config.md.tmp.247863.1765752598883 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TYPES-001-core-types-config.md
+2025-12-14T22:49:58.888Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TYPES-001-core-types-config.md written atomically
+2025-12-14T22:49:58.897Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TYPES-001-core-types-config.md
+2025-12-14T22:49:58.949Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:58.949Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:58.949Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.014Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:59.032Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:59.032Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:59.032Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.088Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:59.091Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 3ms
+2025-12-14T22:49:59.092Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-001-oauth2-authentication.md.tmp.247863.1765752599092
+2025-12-14T22:49:59.097Z [DEBUG] Temp file written successfully, size: 1001 bytes
+2025-12-14T22:49:59.097Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-001-oauth2-authentication.md.tmp.247863.1765752599092 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-001-oauth2-authentication.md
+2025-12-14T22:49:59.097Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-001-oauth2-authentication.md written atomically
+2025-12-14T22:49:59.108Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-001-oauth2-authentication.md
+2025-12-14T22:49:59.149Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:59.149Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:59.149Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.224Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:59.255Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:59.255Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:59.255Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.343Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:59.346Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 3ms
+2025-12-14T22:49:59.346Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-002-fetch-input-emails.md.tmp.247863.1765752599346
+2025-12-14T22:49:59.349Z [DEBUG] Temp file written successfully, size: 1148 bytes
+2025-12-14T22:49:59.349Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-002-fetch-input-emails.md.tmp.247863.1765752599346 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-002-fetch-input-emails.md
+2025-12-14T22:49:59.349Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-002-fetch-input-emails.md written atomically
+2025-12-14T22:49:59.358Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-002-fetch-input-emails.md
+2025-12-14T22:49:59.406Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:59.406Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:59.406Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.494Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:59.537Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:59.537Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:59.537Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.610Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:59.634Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+2025-12-14T22:49:59.635Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-003-extract-metadata.md
+2025-12-14T22:49:59.635Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-003-extract-metadata.md.tmp.247863.1765752599635
+2025-12-14T22:49:59.641Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (6.5ms)
+2025-12-14T22:49:59.641Z [DEBUG] Temp file written successfully, size: 1169 bytes
+2025-12-14T22:49:59.641Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-003-extract-metadata.md.tmp.247863.1765752599635 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-003-extract-metadata.md
+2025-12-14T22:49:59.641Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-003-extract-metadata.md written atomically
+2025-12-14T22:49:59.719Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:59.719Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:59.719Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.803Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:49:59.837Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:49:59.837Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:49:59.837Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:49:59.908Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:49:59.911Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 3ms
+2025-12-14T22:49:59.911Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-004-send-output-mark-processed.md.tmp.247863.1765752599911
+2025-12-14T22:49:59.917Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.4ms)
+2025-12-14T22:49:59.917Z [DEBUG] Temp file written successfully, size: 1167 bytes
+2025-12-14T22:49:59.917Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-004-send-output-mark-processed.md.tmp.247863.1765752599911 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-004-send-output-mark-processed.md
+2025-12-14T22:49:59.917Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-004-send-output-mark-processed.md written atomically
+2025-12-14T22:49:59.926Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:49:59.927Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/GMAIL-004-send-output-mark-processed.md
+2025-12-14T22:49:59.973Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:49:59.973Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:49:59.973Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.058Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:00.081Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:00.081Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:00.081Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.152Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:00.157Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:50:00.157Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-001-prompt-builder.md.tmp.247863.1765752600157
+2025-12-14T22:50:00.160Z [DEBUG] Temp file written successfully, size: 1137 bytes
+2025-12-14T22:50:00.160Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-001-prompt-builder.md.tmp.247863.1765752600157 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-001-prompt-builder.md
+2025-12-14T22:50:00.160Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-001-prompt-builder.md written atomically
+2025-12-14T22:50:00.171Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.6ms)
+2025-12-14T22:50:00.172Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-001-prompt-builder.md
+2025-12-14T22:50:00.221Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:00.221Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:00.221Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.303Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:00.326Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:00.326Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:00.326Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.396Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:00.400Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:00.400Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-002-openrouter-client.md.tmp.247863.1765752600400
+2025-12-14T22:50:00.405Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:50:00.405Z [DEBUG] Temp file written successfully, size: 1106 bytes
+2025-12-14T22:50:00.405Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-002-openrouter-client.md.tmp.247863.1765752600400 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-002-openrouter-client.md
+2025-12-14T22:50:00.405Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-002-openrouter-client.md written atomically
+2025-12-14T22:50:00.417Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-002-openrouter-client.md
+2025-12-14T22:50:00.485Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:00.485Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:00.485Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.565Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:00.593Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:00.593Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:00.593Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.685Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:00.689Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:00.689Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-003-parse-validate-responses.md.tmp.247863.1765752600689
+2025-12-14T22:50:00.694Z [DEBUG] Temp file written successfully, size: 1119 bytes
+2025-12-14T22:50:00.694Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-003-parse-validate-responses.md.tmp.247863.1765752600689 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-003-parse-validate-responses.md
+2025-12-14T22:50:00.694Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-003-parse-validate-responses.md written atomically
+2025-12-14T22:50:00.701Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/AI-003-parse-validate-responses.md
+2025-12-14T22:50:00.745Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:00.745Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:00.745Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.816Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:00.841Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:00.841Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:00.841Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:00.918Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:00.921Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:00.921Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/RENDER-001-html-email-renderer.md.tmp.247863.1765752600921
+2025-12-14T22:50:00.924Z [DEBUG] Temp file written successfully, size: 1226 bytes
+2025-12-14T22:50:00.924Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/RENDER-001-html-email-renderer.md.tmp.247863.1765752600921 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/RENDER-001-html-email-renderer.md
+2025-12-14T22:50:00.924Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/RENDER-001-html-email-renderer.md written atomically
+2025-12-14T22:50:00.932Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/RENDER-001-html-email-renderer.md
+2025-12-14T22:50:00.980Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:00.980Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:00.980Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.065Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:01.092Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:01.092Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:01.092Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.177Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:01.179Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 2ms
+2025-12-14T22:50:01.179Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/LOG-001-winston-logger-config.md.tmp.247863.1765752601179
+2025-12-14T22:50:01.184Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.0ms)
+2025-12-14T22:50:01.184Z [DEBUG] Temp file written successfully, size: 1060 bytes
+2025-12-14T22:50:01.184Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/LOG-001-winston-logger-config.md.tmp.247863.1765752601179 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/LOG-001-winston-logger-config.md
+2025-12-14T22:50:01.184Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/LOG-001-winston-logger-config.md written atomically
+2025-12-14T22:50:01.192Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/LOG-001-winston-logger-config.md
+2025-12-14T22:50:01.246Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:01.246Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:01.246Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.319Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:01.352Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:01.352Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:01.352Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.451Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:01.456Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:50:01.456Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/MAIN-001-batch-processor-orchestration.md.tmp.247863.1765752601456
+2025-12-14T22:50:01.460Z [DEBUG] Temp file written successfully, size: 1221 bytes
+2025-12-14T22:50:01.460Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/MAIN-001-batch-processor-orchestration.md.tmp.247863.1765752601456 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/MAIN-001-batch-processor-orchestration.md
+2025-12-14T22:50:01.460Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/MAIN-001-batch-processor-orchestration.md written atomically
+2025-12-14T22:50:01.466Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/MAIN-001-batch-processor-orchestration.md
+2025-12-14T22:50:01.514Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:01.514Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:01.514Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.587Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:01.615Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:01.615Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:01.615Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.717Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:01.722Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:50:01.723Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/CI-001-github-actions-workflow.md.tmp.247863.1765752601723
+2025-12-14T22:50:01.727Z [DEBUG] Temp file written successfully, size: 1246 bytes
+2025-12-14T22:50:01.727Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/CI-001-github-actions-workflow.md.tmp.247863.1765752601723 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/CI-001-github-actions-workflow.md
+2025-12-14T22:50:01.727Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/CI-001-github-actions-workflow.md written atomically
+2025-12-14T22:50:01.736Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/CI-001-github-actions-workflow.md
+2025-12-14T22:50:01.792Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:01.792Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:01.792Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:01.877Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:01.906Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:01.906Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:01.906Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:02.017Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:02.021Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:02.021Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md.tmp.247863.1765752602021
+2025-12-14T22:50:02.026Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2025-12-14T22:50:02.026Z [DEBUG] Temp file written successfully, size: 1147 bytes
+2025-12-14T22:50:02.026Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md.tmp.247863.1765752602021 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md
+2025-12-14T22:50:02.026Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md written atomically
+2025-12-14T22:50:02.035Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:50:02.036Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md
+2025-12-14T22:50:02.120Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:02.120Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:02.120Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:02.195Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:02.196Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:50:02.196Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:50:02.196Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:50:02.196Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:50:02.199Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:05.888Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:07.898Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:50:07.927Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:50:07.927Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:07.927Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:50:07.953Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752607953
+2025-12-14T22:50:07.953Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:50:07.956Z [DEBUG] Temp file written successfully, size: 681 bytes
+2025-12-14T22:50:07.956Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:50:07.956Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752607953 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:50:07.956Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:50:07.969Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:50:07.969Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:07.969Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:50:07.995Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:07.995Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:50:07.995Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:50:07.995Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:50:07.995Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:50:08.001Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:50:10.418Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:41.314Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-14T22:50:41.321Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-14T22:50:41.321Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:41.321Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:41.339Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:41.343Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:50:41.343Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752641343
+2025-12-14T22:50:41.347Z [DEBUG] Temp file written successfully, size: 4818 bytes
+2025-12-14T22:50:41.347Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752641343 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md
+2025-12-14T22:50:41.347Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md written atomically
+2025-12-14T22:50:41.356Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md
+2025-12-14T22:50:41.373Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-14T22:50:41.373Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:41.373Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-14T22:50:41.400Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:41.400Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:50:41.400Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:50:41.400Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:50:41.400Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:50:41.406Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:50:45.336Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:48.149Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:50:48.170Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:50:48.170Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:48.170Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:50:48.199Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752648199
+2025-12-14T22:50:48.199Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:50:48.204Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.0ms)
+2025-12-14T22:50:48.204Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-14T22:50:48.204Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:50:48.204Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752648199 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:50:48.204Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:50:48.221Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:50:48.221Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:48.221Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:50:48.245Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:48.245Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:50:48.245Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:50:48.245Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:50:48.245Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:50:48.252Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:50:52.093Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:53.800Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-14T22:50:53.809Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-14T22:50:53.809Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:50:53.809Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-14T22:50:53.881Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:50:54.631Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:55.157Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:55.166Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:55.167Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:55.371Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-14T22:50:55.371Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:50:55.371Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-14T22:50:55.397Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:50:55.397Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:50:55.397Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:50:55.397Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:50:55.397Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:50:55.404Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:50:56.308Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:50:58.931Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:51:09.197Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-14T22:51:09.197Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:51:09.197Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-14T22:51:11.120Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:51:11.692Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-14T22:51:11.692Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:51:11.692Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-14T22:51:14.535Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:51:14.611Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752674611
+2025-12-14T22:51:14.611Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:51:14.616Z [DEBUG] Temp file written successfully, size: 53299 bytes
+2025-12-14T22:51:14.616Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:51:14.616Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752674611 to /home/kevdev/.claude.json
+2025-12-14T22:51:14.616Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:51:14.620Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752674620
+2025-12-14T22:51:14.620Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:51:14.626Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.7ms)
+2025-12-14T22:51:14.626Z [DEBUG] Temp file written successfully, size: 53300 bytes
+2025-12-14T22:51:14.626Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:51:14.626Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752674620 to /home/kevdev/.claude.json
+2025-12-14T22:51:14.626Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:53:30.019Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:30.019Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:53:30.019Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:53:30.019Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:53:30.019Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:53:30.022Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 3ms
+2025-12-14T22:53:30.042Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-14T22:53:30.042Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:30.042Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-14T22:53:30.042Z [DEBUG] FileHistory: Making snapshot for message 865c4e84-9184-4175-bd3e-155936bc801f
+2025-12-14T22:53:30.051Z [DEBUG] FileHistory: Added snapshot for 865c4e84-9184-4175-bd3e-155936bc801f, tracking 15 files
+2025-12-14T22:53:30.072Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-14T22:53:30.098Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 26ms
+2025-12-14T22:53:31.230Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:53:33.279Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:53:37.692Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:53:37.713Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:53:37.713Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:37.713Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:53:37.737Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752817737
+2025-12-14T22:53:37.737Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:53:37.742Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:53:37.742Z [DEBUG] Temp file written successfully, size: 417 bytes
+2025-12-14T22:53:37.742Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:53:37.742Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752817737 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:53:37.742Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:53:37.755Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:53:37.755Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:37.755Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:53:37.779Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:37.780Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:53:37.780Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:53:37.780Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:53:37.780Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:53:37.791Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 12ms
+2025-12-14T22:53:42.025Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:53:44.259Z [DEBUG] executePreToolHooks called for tool: Grep
+2025-12-14T22:53:44.283Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2025-12-14T22:53:44.283Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:44.283Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:53:44.350Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2025-12-14T22:53:44.350Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:44.350Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:53:44.374Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:44.374Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:53:44.374Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:53:44.374Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:53:44.374Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:53:44.383Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 9ms
+2025-12-14T22:53:46.290Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:53:48.812Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-14T22:53:48.813Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-14T22:53:48.821Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-14T22:53:48.821Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:48.821Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:53:48.821Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-14T22:53:48.821Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:48.821Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:53:48.869Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-14T22:53:48.869Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:48.869Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:53:48.869Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-14T22:53:48.869Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:48.869Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-14T22:53:48.891Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:48.891Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:53:48.891Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:53:48.891Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:53:48.891Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:53:48.898Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 7ms
+2025-12-14T22:53:50.962Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:53:58.555Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-14T22:53:58.563Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-14T22:53:58.563Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:58.563Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:53:58.585Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:58.590Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:53:58.594Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752838594
+2025-12-14T22:53:58.594Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:53:58.599Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-14T22:53:58.599Z [DEBUG] Temp file written successfully, size: 1531 bytes
+2025-12-14T22:53:58.599Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:53:58.599Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752838594 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md
+2025-12-14T22:53:58.599Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md written atomically
+2025-12-14T22:53:58.619Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-14T22:53:58.619Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:58.619Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:53:58.670Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-14T22:53:58.683Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-14T22:53:58.683Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:53:58.683Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:53:58.729Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:58.732Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 3ms
+2025-12-14T22:53:58.733Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752838733
+2025-12-14T22:53:58.733Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:53:58.738Z [DEBUG] Temp file written successfully, size: 1533 bytes
+2025-12-14T22:53:58.738Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:53:58.738Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md.tmp.247863.1765752838733 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md
+2025-12-14T22:53:58.738Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/SETUP-001-project-initialization.md written atomically
+2025-12-14T22:53:58.770Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-14T22:53:58.770Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:53:58.770Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:53:58.803Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:53:58.803Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:53:58.803Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:53:58.803Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:53:58.803Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:53:58.808Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:54:01.027Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:05.452Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:54:05.462Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:54:05.462Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:05.462Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:05.489Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752845489
+2025-12-14T22:54:05.489Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:05.494Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2025-12-14T22:54:05.494Z [DEBUG] Temp file written successfully, size: 419 bytes
+2025-12-14T22:54:05.494Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:05.494Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752845489 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:54:05.494Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:54:05.513Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:54:05.513Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:05.513Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:05.542Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-14T22:54:05.554Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-14T22:54:05.554Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:05.554Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:05.574Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:05.579Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 5ms
+2025-12-14T22:54:05.580Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md.tmp.247863.1765752845580
+2025-12-14T22:54:05.580Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:05.583Z [DEBUG] Temp file written successfully, size: 1149 bytes
+2025-12-14T22:54:05.583Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:05.583Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md.tmp.247863.1765752845580 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md
+2025-12-14T22:54:05.583Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/TEST-001-jest-tests-parser-renderer.md written atomically
+2025-12-14T22:54:05.600Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-14T22:54:05.600Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:05.600Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:05.625Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:05.625Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:05.625Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:05.625Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:05.625Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:05.627Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 2ms
+2025-12-14T22:54:07.688Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:11.729Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-14T22:54:11.753Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-14T22:54:11.753Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:11.753Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-14T22:54:11.817Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:54:11.914Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-14T22:54:11.914Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:11.914Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-14T22:54:11.921Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:54:11.950Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:54:11.950Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:11.950Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:11.981Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752851981
+2025-12-14T22:54:11.981Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:11.984Z [DEBUG] Temp file written successfully, size: 417 bytes
+2025-12-14T22:54:11.984Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:11.985Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752851981 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:54:11.985Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:54:11.999Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:54:11.999Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:11.999Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:12.024Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:12.025Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:12.025Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:12.025Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:12.025Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:12.032Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 8ms
+2025-12-14T22:54:12.748Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:14.851Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:16.543Z [DEBUG] executePreToolHooks called for tool: Grep
+2025-12-14T22:54:16.553Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2025-12-14T22:54:16.553Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:16.553Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:16.610Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2025-12-14T22:54:16.610Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:16.611Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:16.633Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:16.634Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:16.634Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:16.634Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:16.634Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:16.637Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:54:18.742Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:21.525Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-14T22:54:21.533Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-14T22:54:21.533Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:21.533Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:21.552Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:21.554Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 2ms
+2025-12-14T22:54:21.556Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752861556
+2025-12-14T22:54:21.556Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:21.561Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.4ms)
+2025-12-14T22:54:21.561Z [DEBUG] Temp file written successfully, size: 4820 bytes
+2025-12-14T22:54:21.561Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:21.561Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752861556 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md
+2025-12-14T22:54:21.561Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md written atomically
+2025-12-14T22:54:21.578Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-14T22:54:21.578Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:21.578Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:21.614Z [DEBUG] executePreToolHooks called for tool: Edit
+2025-12-14T22:54:21.629Z [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+2025-12-14T22:54:21.629Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:21.629Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:21.663Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:21.669Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:54:21.671Z [DEBUG] Writing to temp file: /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752861671
+2025-12-14T22:54:21.671Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:21.674Z [DEBUG] Temp file written successfully, size: 4822 bytes
+2025-12-14T22:54:21.674Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:21.674Z [DEBUG] Renaming /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md.tmp.247863.1765752861671 to /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md
+2025-12-14T22:54:21.674Z [DEBUG] File /home/kevdev/Developpement/Workspaces/TypeScript/newsletter-automation/.claude/memory-bank/stories/INDEX.md written atomically
+2025-12-14T22:54:21.695Z [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+2025-12-14T22:54:21.695Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:21.695Z [DEBUG] Matched 0 unique hooks for query "Edit" (0 before deduplication)
+2025-12-14T22:54:21.726Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:21.726Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:21.726Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:21.726Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:21.726Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:21.730Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:54:24.887Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:28.742Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:54:28.749Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:54:28.749Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:28.749Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:28.778Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752868778
+2025-12-14T22:54:28.778Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:28.784Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.9ms)
+2025-12-14T22:54:28.784Z [DEBUG] Temp file written successfully, size: 566 bytes
+2025-12-14T22:54:28.784Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:28.784Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752868778 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:54:28.784Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:54:28.797Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:54:28.797Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:28.797Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:28.807Z [DEBUG] executePreToolHooks called for tool: Grep
+2025-12-14T22:54:28.830Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2025-12-14T22:54:28.830Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:28.830Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:28.894Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2025-12-14T22:54:28.894Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:28.894Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:28.919Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:28.919Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:28.919Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:28.919Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:28.919Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:28.921Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 2ms
+2025-12-14T22:54:30.777Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:34.548Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-14T22:54:34.573Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-14T22:54:34.573Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:34.573Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:34.599Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752874599
+2025-12-14T22:54:34.599Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:34.604Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.2ms)
+2025-12-14T22:54:34.604Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-14T22:54:34.604Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:34.604Z [DEBUG] Renaming /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json.tmp.247863.1765752874599 to /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json
+2025-12-14T22:54:34.604Z [DEBUG] File /home/kevdev/.claude/todos/cc479c94-f0a3-4081-a862-f3f65c443a33-agent-cc479c94-f0a3-4081-a862-f3f65c443a33.json written atomically
+2025-12-14T22:54:34.618Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-14T22:54:34.619Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:34.619Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-14T22:54:34.626Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-14T22:54:34.648Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-14T22:54:34.648Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:34.648Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-14T22:54:34.716Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:54:35.390Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:35.580Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-14T22:54:35.580Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:35.580Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-14T22:54:35.603Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:35.603Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:35.603Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:35.603Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:35.603Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:35.607Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 4ms
+2025-12-14T22:54:36.252Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:38.158Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:42.679Z [DEBUG] executePreToolHooks called for tool: Grep
+2025-12-14T22:54:42.687Z [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+2025-12-14T22:54:42.687Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:42.687Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:42.754Z [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+2025-12-14T22:54:42.754Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:42.754Z [DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+2025-12-14T22:54:42.782Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-14T22:54:42.782Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-14T22:54:42.782Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-14T22:54:42.782Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-14T22:54:42.782Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-14T22:54:42.788Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 6ms
+2025-12-14T22:54:45.777Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:51.857Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-14T22:54:51.857Z [DEBUG] Found 1 hook matchers in settings
+2025-12-14T22:54:51.857Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-14T22:54:53.892Z [DEBUG] Stream started - received first chunk
+2025-12-14T22:54:57.184Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-14T22:54:57.249Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.247863.1765752897249
+2025-12-14T22:54:57.249Z [DEBUG] Preserving file permissions: 100600
+2025-12-14T22:54:57.255Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.8ms)
+2025-12-14T22:54:57.255Z [DEBUG] Temp file written successfully, size: 53301 bytes
+2025-12-14T22:54:57.255Z [DEBUG] Applied original permissions to temp file
+2025-12-14T22:54:57.255Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.247863.1765752897249 to /home/kevdev/.claude.json
+2025-12-14T22:54:57.255Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-14T22:54:59.117Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-14T22:54:59.117Z [DEBUG] Found 0 hook matchers in settings
+2025-12-14T22:54:59.117Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)

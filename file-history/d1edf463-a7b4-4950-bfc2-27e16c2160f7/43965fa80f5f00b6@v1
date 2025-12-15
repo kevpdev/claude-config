@@ -1,0 +1,103 @@
+# GMAIL-003: Extract and Clean Email Metadata
+
+**Status**: Not Started
+**Priority**: High (Data transformation layer)
+**Estimated effort**: 1 hour
+
+## User Need
+
+As the automation system, I need to extract domain-specific metadata and clean email content so it's ready for AI summarization (no formatting issues, appropriate length).
+
+## Context
+
+Transforms raw InputEmail objects into EmailMetadata by extracting domain info, mapping to colors, and sanitizing content for AI processing. Critical for reliable AI parsing.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 3.3)
+
+## Implementation Scope
+
+### File: `src/gmail/extract.ts`
+
+**Function**: `extractMetadata(email: InputEmail, domainConfig: Record<string, DomainConfig>): EmailMetadata`
+
+**Algorithm**:
+1. Extract domain from email.label ("Java", "Angular", etc.)
+2. Lookup domain config → get color
+3. Clean content:
+   - Remove `\r\n` → replace with single space
+   - Remove escaped quotes (`\"`) → replace with normal quotes
+   - Strip HTML tags (use cheerio for text extraction)
+   - Truncate to ~2000 characters max (for AI prompt size)
+   - Trim whitespace
+4. Return EmailMetadata object
+
+**Helper function**: `cleanContent(html: string): string`
+- Use cheerio to parse HTML and extract text
+- Remove script/style tags
+- Collapse multiple spaces/newlines
+- Limit length to 2000 chars (configurable)
+
+## Acceptance Criteria
+
+- [ ] src/gmail/extract.ts file created
+- [ ] extractMetadata() function exported
+- [ ] Extracts domain from email.label correctly
+- [ ] Maps domain to color via domainConfig lookup
+- [ ] Removes `\r\n` from content
+- [ ] Removes escaped quotes (`\"`)
+- [ ] Strips HTML tags (extracts clean text)
+- [ ] Truncates content to ~2000 chars max
+- [ ] Returns EmailMetadata object (typed)
+- [ ] Handles unknown domains gracefully (throws error or defaults)
+- [ ] Preserves original subject, from, date fields
+
+## Test Scenarios
+
+1. **Domain extraction**: InputEmail with label="Java" → metadata.domain="Java"
+2. **Color mapping**: Domain "Java" → metadata.domainColor="#FF6B6B"
+3. **Content cleaning**: HTML with `\r\n` and `\"` → clean text
+4. **HTML stripping**: `<p>Hello</p>` → "Hello"
+5. **Length truncation**: 3000 char email → 2000 char content
+6. **Unknown domain**: Label "Unknown" → throws error
+7. **Whitespace collapse**: Multiple spaces → single space
+
+## Dependencies
+
+**Blocks**: AI-001 (needs cleaned content for prompts), RENDER-001 (needs metadata for HTML)
+**Blocked by**: GMAIL-002 (needs InputEmail), CONFIG-001 (needs domainConfig), TYPES-001 (needs EmailMetadata interface)
+
+## Implementation Notes
+
+- **cheerio usage**: `const $ = cheerio.load(html); const text = $('body').text();`
+- **Truncation strategy**: Take first 2000 chars (don't split mid-word)
+  - Better: Truncate at last sentence/period before 2000 chars
+- **Domain lookup**: `domainConfig[email.label.toLowerCase()]` (case-insensitive)
+- **PII removal**: No explicit PII scrubbing needed (newsletters are public)
+  - BUT: Remove email addresses from content if found (privacy for AI)
+- **Error handling**: Throw if domain not found in config (fail fast)
+
+## Content Cleaning Examples
+
+**Input**:
+```
+<p>Hello\r\nWorld</p>\n<script>alert('x')</script>\n\"Important\" news
+```
+
+**Output**:
+```
+Hello World Important news
+```
+
+## Security Considerations
+
+- Remove script/style tags (XSS prevention, though not rendering)
+- Consider removing email addresses from content before AI (privacy)
+- Never send credentials/tokens in content to AI
+- Truncate to prevent excessive API costs
+
+## Related Stories
+
+- GMAIL-002: Provides InputEmail objects
+- CONFIG-001: Provides domainConfig for color mapping
+- AI-001: Uses metadata.contentCleaned for prompts
+- RENDER-001: Uses metadata (domain, color, from, date) for HTML

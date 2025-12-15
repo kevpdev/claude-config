@@ -1,0 +1,212 @@
+# RENDER-001: ADHD-Friendly HTML Renderer
+
+**Status**: Not Started
+**Priority**: High (Core output functionality)
+**Estimated effort**: 1.5 hours
+
+## User Need
+
+As a user with ADHD, I need newsletter summaries rendered as visually scannable HTML with clear sections, emoji markers, and domain-specific colors so I can quickly absorb key information.
+
+## Context
+
+Generates ADHD-friendly HTML emails from EmailMetadata + AISummary. Uses domain colors, emoji section markers, and structured layout. Non-negotiable UX requirements.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 5.1)
+
+## Implementation Scope
+
+### File: `src/renderer.ts`
+
+**Function**: `renderOutputEmail(metadata: EmailMetadata, summary: AISummary): string`
+
+**HTML Structure** (from CLAUDE.md - non-negotiable):
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .domain-header {
+      border-left: 8px solid [COLOR];
+      padding: 20px;
+      background-color: [COLOR]20;  /* 20% opacity */
+    }
+    .key-point { margin: 10px 0; }
+    .action-box {
+      background: #fffacd;
+      border-left: 4px solid #FF6B6B;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="border-left: 8px solid [COLOR]; padding-left: 15px;">
+    [TITLE]
+  </h1>
+
+  <div class="domain-header">
+    <strong>Domaine:</strong> [DOMAIN] |
+    <strong>Source:</strong> [FROM] |
+    <strong>Date:</strong> [DATE]
+  </div>
+
+  <h2>💡 Impact</h2>
+  <p>[IMPACT]</p>
+
+  <h2>📌 3 Points clés</h2>
+  <ul>
+    <li class="key-point">[POINT 1]</li>
+    <li class="key-point">[POINT 2]</li>
+    <li class="key-point">[POINT 3]</li>
+  </ul>
+
+  <h2>🎯 Action concrète</h2>
+  <div class="action-box">
+    [ACTION]
+  </div>
+</body>
+</html>
+```
+
+**Substitutions**:
+- `[COLOR]` → metadata.domainColor (e.g., "#FF6B6B")
+- `[TITLE]` → summary.title
+- `[DOMAIN]` → metadata.domain
+- `[FROM]` → metadata.from
+- `[DATE]` → metadata.date (formatted)
+- `[IMPACT]` → summary.impact
+- `[POINT 1/2/3]` → summary.keyPoints[0/1/2]
+- `[ACTION]` → summary.action
+
+## Acceptance Criteria
+
+- [ ] src/renderer.ts file created
+- [ ] renderOutputEmail() function exported
+- [ ] Returns valid HTML5 document
+- [ ] Injects domain color for h1 border and header background
+- [ ] Header background uses 20% opacity color (e.g., "#FF6B6B20")
+- [ ] Includes emoji markers (💡, 📌, 🎯)
+- [ ] Action box has yellow background (#fffacd) + red border
+- [ ] Formats date as readable string (not ISO)
+- [ ] Escapes HTML in content (prevent XSS)
+- [ ] All CSS inline (no external stylesheets)
+- [ ] Renders all 3 key points in order
+
+## Test Scenarios
+
+1. **Color injection**: domain="Java" → HTML contains "#FF6B6B" in multiple places
+2. **Opacity background**: HTML contains "[COLOR]20" for 20% opacity
+3. **Emoji presence**: HTML contains "💡", "📌", "🎯"
+4. **All fields rendered**: title, domain, from, date, impact, 3 points, action all present
+5. **HTML escaping**: summary with `<script>` → escaped in output
+6. **Date formatting**: Date object → "December 14, 2025" (locale string)
+7. **Valid HTML**: Can be parsed by HTML parser without errors
+
+## Dependencies
+
+**Blocks**: GMAIL-004 (needs HTML for sending), ORCH-001 (main loop needs rendering)
+**Blocked by**: GMAIL-003 (needs EmailMetadata), AI-003 (needs AISummary)
+
+## Implementation Notes
+
+### Color with Opacity
+
+**Problem**: CSS `background-color: #FF6B6B20;` not valid
+**Solution**: Use rgba or hex8
+```typescript
+// Option 1: Append opacity to hex
+const bgColor = `${metadata.domainColor}20`; // "#FF6B6B20" (hex8 format)
+
+// Option 2: Convert to rgba
+function hexToRgba(hex: string, opacity: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+}
+const bgColor = hexToRgba(metadata.domainColor, 0.2);
+```
+
+### Date Formatting
+
+```typescript
+const formattedDate = metadata.date.toLocaleDateString('fr-FR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+// "14 décembre 2025"
+```
+
+### HTML Escaping
+
+```typescript
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+```
+
+Apply to all user-controlled content:
+- summary.title, summary.impact, summary.keyPoints, summary.action
+- metadata.from (email addresses can contain special chars)
+
+### Template Strategy
+
+Use template literals for maintainability:
+```typescript
+export function renderOutputEmail(
+  metadata: EmailMetadata,
+  summary: AISummary
+): string {
+  const color = metadata.domainColor;
+  const bgColor = `${color}20`;
+  const formattedDate = formatDate(metadata.date);
+
+  return `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    .domain-header {
+      border-left: 8px solid ${color};
+      padding: 20px;
+      background-color: ${bgColor};
+    }
+    ...
+  </style>
+</head>
+<body>
+  <h1 style="border-left: 8px solid ${color}; padding-left: 15px;">
+    ${escapeHtml(summary.title)}
+  </h1>
+  ...
+</body>
+</html>
+  `.trim();
+}
+```
+
+## ADHD-Friendly Design Principles
+
+**From CLAUDE.md (non-negotiable)**:
+- **Visual hierarchy**: h1 (title) → h2 (sections) → content
+- **Color coding**: Domain-specific colors for quick recognition
+- **Emoji markers**: 💡 Impact, 📌 Key Points, 🎯 Action
+- **Action prominence**: Yellow box with red border (stands out)
+- **Whitespace**: Padding/margins for breathing room
+- **Scannable**: Can grasp structure in 3 seconds
+
+## Related Stories
+
+- GMAIL-003: Provides EmailMetadata
+- AI-003: Provides AISummary
+- GMAIL-004: Sends rendered HTML
+- TEST-001: Tests HTML structure and content
+- CONFIG-001: Provides domain colors

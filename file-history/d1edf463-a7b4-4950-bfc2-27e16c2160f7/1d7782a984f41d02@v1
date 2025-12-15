@@ -1,0 +1,178 @@
+# INFRA-001: Winston Logger Setup
+
+**Status**: Not Started
+**Priority**: Medium (Infrastructure)
+**Estimated effort**: 30 minutes
+
+## User Need
+
+As a developer/operator, I need structured logging with different levels (debug/info/error) and file output so I can monitor batch execution and debug failures in CI/CD.
+
+## Context
+
+Sets up Winston logger with console + file transports. Critical for debugging async failures in GitHub Actions where console output may be limited.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 6.1)
+
+## Implementation Scope
+
+### File: `src/logger.ts`
+
+**Configuration**:
+- Level: From LOG_LEVEL env var (default: "info")
+- Format: JSON with timestamps
+- Transports:
+  - Console (all levels)
+  - File: `logs/error.log` (error level only)
+  - File: `logs/combined.log` (all levels)
+
+**Export**: Default logger instance
+
+## Acceptance Criteria
+
+- [ ] src/logger.ts file created
+- [ ] Winston logger configured with JSON format
+- [ ] Timestamps included in all log entries
+- [ ] Console transport enabled
+- [ ] Error file transport (logs/error.log)
+- [ ] Combined file transport (logs/combined.log)
+- [ ] Log level from LOG_LEVEL env var (default "info")
+- [ ] Logger exported as default export
+- [ ] Logs directory created if missing (at runtime)
+
+## Test Scenarios
+
+1. **Log levels**: Set LOG_LEVEL=debug → debug messages appear
+2. **File output**: Log error → appears in error.log and combined.log
+3. **File output**: Log info → appears in combined.log only (not error.log)
+4. **JSON format**: Log entries are valid JSON
+5. **Timestamps**: All entries have timestamp field
+6. **Directory creation**: Delete logs/ → logger creates it on first write
+
+## Dependencies
+
+**Blocks**: All stories (logging used everywhere)
+**Blocked by**: SETUP-001 (needs winston dependency installed)
+
+## Implementation Notes
+
+### Winston Configuration
+
+```typescript
+import winston from 'winston';
+
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({
+      filename: 'logs/error.log',
+      level: 'error'
+    }),
+    new winston.transports.File({
+      filename: 'logs/combined.log'
+    })
+  ]
+});
+
+export default logger;
+```
+
+### Log Levels
+
+**Available levels** (Winston defaults):
+- error: Critical failures (batch stops)
+- warn: Recoverable issues (email skipped)
+- info: Key events (batch start, email processed)
+- debug: Detailed info (metadata, API responses)
+
+**Usage in code**:
+```typescript
+import logger from './logger';
+
+logger.info('Starting batch', { emailCount: 10 });
+logger.debug('Fetched email', { id: '123', domain: 'Java' });
+logger.error('Failed to parse AI response', { error, raw });
+```
+
+### Directory Handling
+
+Winston automatically creates `logs/` directory if missing (no manual mkdir needed).
+
+### Log Format Example
+
+```json
+{
+  "timestamp": "2025-12-14T08:00:00.123Z",
+  "level": "info",
+  "message": "Starting newsletter batch",
+  "emailCount": 10
+}
+```
+
+## Logging Strategy (from CLAUDE.md)
+
+**Never log**:
+- API keys, tokens, refresh tokens
+- Full email content (PII concerns)
+- Full AI responses (too large)
+
+**Always log**:
+- Batch start/end
+- Email processing (id, domain, status)
+- API calls (duration, tokens, status)
+- Errors with context (what failed, why)
+
+### Example Log Statements
+
+**From main.ts**:
+```typescript
+logger.info('🚀 Starting newsletter batch');
+logger.info('📧 Fetched emails', { count: emails.length });
+logger.info('✉️ Sent output email', { domain, messageId });
+logger.info('✅ Marked email as processed', { emailId });
+logger.info('✨ Batch complete', { processed: count });
+```
+
+**From API calls**:
+```typescript
+logger.info('Calling OpenRouter API', { model });
+logger.debug('OpenRouter response', {
+  duration: 1234,
+  tokens: 450,
+  status: 200
+});
+```
+
+**From errors**:
+```typescript
+logger.error('Failed to process email', {
+  emailId: '123',
+  domain: 'Java',
+  error: err.message,
+  stack: err.stack
+});
+```
+
+## GitHub Actions Integration
+
+**On failure**: Upload logs/ directory as artifact (CI-001)
+```yaml
+- name: Upload logs (if failed)
+  if: failure()
+  uses: actions/upload-artifact@v4
+  with:
+    name: logs
+    path: logs/
+```
+
+## Related Stories
+
+- SETUP-001: Installed winston dependency
+- ORCH-001: Uses logger throughout main loop
+- CI-001: Uploads logs/ on failure
+- All implementation stories use logger for debugging

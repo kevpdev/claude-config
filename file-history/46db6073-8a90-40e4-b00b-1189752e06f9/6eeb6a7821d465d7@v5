@@ -1,0 +1,100 @@
+# Plan: Migrer memory-bank vers .claude/memory-bank/
+
+## Objectif
+Déplacer l'emplacement du memory-bank de la racine du projet (`memory-bank/`) vers `.claude/memory-bank/` pour cohérence architecturale avec la philosophie Global-First.
+
+## Raison du changement
+- **Cohérence** : `~/.claude/` (global) ↔ `PROJECT/.claude/` (projet)
+- **Racine propre** : Moins de "pollution" à la racine du projet
+- **Groupement logique** : Tout ce qui est Claude au même endroit
+- **Scalabilité** : Facilite l'ajout futur de config projet-specific
+
+## Fichiers à modifier
+
+### 1. Commandes (6 fichiers)
+Remplacer tous les chemins `memory-bank/` par `.claude/memory-bank/`
+
+- `~/.claude/commands/memory-bank-init.md`
+  - Créer `.claude/memory-bank/` au lieu de `memory-bank/`
+  - Copier templates dans `.claude/memory-bank/`
+
+- `~/.claude/commands/session-start.md`
+  - Lire depuis `.claude/memory-bank/projectbrief.md`
+  - Lire depuis `.claude/memory-bank/techContext.md`
+  - Lire depuis `.claude/memory-bank/activeContext.md`
+
+- `~/.claude/commands/session-end.md`
+  - Vérifier `.claude/memory-bank/activeContext.md`
+  - Mettre à jour `.claude/memory-bank/activeContext.md`
+
+- `~/.claude/commands/capture.md`
+  - Créer `.claude/memory-bank/captures/` au lieu de `memory-bank/captures/`
+  - Appender à `.claude/memory-bank/captures/YYYY-MM-DD.md`
+
+- `~/.claude/commands/plan-to-stories.md`
+  - Créer `.claude/memory-bank/stories/` au lieu de `memory-bank/stories/`
+  - Générer fichiers dans `.claude/memory-bank/stories/`
+  - Créer `.claude/memory-bank/stories/INDEX.md`
+
+- `~/.claude/commands/story-create.md`
+  - Vérifier `.claude/memory-bank/stories/`
+  - Créer stories dans `.claude/memory-bank/stories/`
+  - Mettre à jour `.claude/memory-bank/stories/INDEX.md`
+
+### 2. Guide documentation
+- `~/.claude/MEMORY-BANK-GUIDE.md`
+  - Section "Structure" : Changer arborescence
+  - Section "Quick Start" : Modifier chemins exemples
+  - Section "The 3 Essential Files" : Mettre à jour chemins
+  - Section "Daily Workflow" : Exemples avec nouveaux chemins
+  - Section "Working with Stories" : Tous les chemins stories
+  - Tous les exemples de code bash : Chemins `.claude/memory-bank/`
+
+### 3. Templates (pas de changement)
+Les templates n'ont pas de chemins hardcodés, donc pas de modification nécessaire :
+- `~/.claude/templates/memory-bank/projectbrief.md` ✅ OK
+- `~/.claude/templates/memory-bank/techContext.md` ✅ OK
+- `~/.claude/templates/memory-bank/activeContext.md` ✅ OK
+- `~/.claude/templates/memory-bank/story.md` ✅ OK
+
+## Stratégie de remplacement
+
+**Pattern de recherche :** `memory-bank/`
+**Remplacement :** `.claude/memory-bank/`
+
+**Cas spéciaux à vérifier :**
+- Chemins dans blocs de code (```bash)
+- Chemins dans exemples inline
+- Descriptions textuelles
+- Arborescences visuelles
+
+## Structure projet après migration
+
+```
+my-app/
+├── .claude/
+│   └── memory-bank/
+│       ├── projectbrief.md
+│       ├── techContext.md
+│       ├── activeContext.md
+│       ├── captures/
+│       │   └── YYYY-MM-DD.md
+│       └── stories/
+│           ├── INDEX.md
+│           └── *.md
+└── src/
+```
+
+## Ordre d'exécution
+
+1. Modifier les 6 commandes (find & replace)
+2. Modifier MEMORY-BANK-GUIDE.md (find & replace + arborescence)
+3. Vérifier cohérence de tous les exemples
+
+## Validation
+
+Après modification, vérifier que :
+- ✅ Tous les chemins utilisent `.claude/memory-bank/`
+- ✅ Les exemples bash sont cohérents
+- ✅ L'arborescence dans le guide est correcte
+- ✅ Aucune référence à `memory-bank/` (sans `.claude/`) ne subsiste

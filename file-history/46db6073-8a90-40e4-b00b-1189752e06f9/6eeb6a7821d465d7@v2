@@ -1,0 +1,40 @@
+# Plan: Ajouter une règle d'optimisation des tokens dans CLAUDE.md
+
+## Objectif
+Ajouter une nouvelle section "Token Optimization" dans le fichier CLAUDE.md pour établir des règles strictes sur la concision et la structure des réponses, afin de minimiser la consommation de tokens à chaque génération.
+
+## Contexte
+- Le fichier CLAUDE.md contient actuellement des règles pour Git Commits & Pull Requests
+- L'utilisateur souhaite ajouter des règles d'optimisation applicables à **toutes les réponses**
+- Les aspects à couvrir:
+  - Éviter les explications redondantes
+  - Limiter les commentaires verbeux
+  - Privilégier structures concises (listes, bullet points)
+  - Éviter le sur-engineering dans le code
+
+## Approche
+
+### Étape 1: Ajouter une nouvelle section "Token Optimization & Communication"
+Créer une section dédiée après la section Git, avec des sous-sections claires.
+
+### Étape 2: Structurer les règles
+Organiser les règles en catégories:
+1. **Response Structure** - Format des réponses
+2. **Code Generation** - Règles pour le code
+3. **Communication** - Style de communication
+
+### Étape 3: Rédiger les directives spécifiques
+Pour chaque aspect sélectionné par l'utilisateur:
+- Explications redondantes → règle "No Redundancy"
+- Commentaires verbeux → règle "Concise Communication"
+- Structures concises → règle "Prefer Structured Formats"
+- Sur-engineering → règle "Minimal Code"
+
+## Fichier à modifier
+- `/home/kevdev/.claude/CLAUDE.md` - Ajouter la nouvelle section après la section Git
+
+## Résultat attendu
+Un fichier CLAUDE.md avec:
+- Section Git existante (inchangée)
+- Nouvelle section Token Optimization avec règles claires et actionnables
+- Format cohérent avec le reste du document

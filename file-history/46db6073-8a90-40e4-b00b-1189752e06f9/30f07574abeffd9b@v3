@@ -1,0 +1,507 @@
+# Master Rules for Claude Code
+
+## Git Commits & Pull Requests
+
+### Strict Prohibitions
+
+1. **Never add attribution footers to commits**
+   - Do NOT include "Generated with Claude Code" or similar attribution
+   - Do NOT add links to Claude Code or Anthropic in commit messages
+   - Keep commit messages clean and professional without AI attribution
+
+2. **Never add co-author credits**
+   - Do NOT add "Co-Authored-By: Claude" or similar co-author lines
+   - Do NOT add AI assistant credits in commit metadata
+   - Commits should reflect only human authorship
+
+3. **Keep commit messages minimal and clean**
+   - Focus on describing what changed and why
+   - Follow the repository's existing commit message conventions
+   - Avoid promotional or attribution content
+
+### Pull Request Guidelines
+
+- Do NOT add AI attribution in PR descriptions
+- Do NOT add co-author credits in PR metadata
+- Keep PR descriptions focused on the changes and their purpose
+- Follow the project's standard PR template if one exists
+
+---
+
+## Token Optimization & Communication
+
+### Response Structure
+
+1. **Prefer structured formats**
+   - Use bullet points and lists instead of long paragraphs
+   - Organize information hierarchically
+   - Make content scannable and easy to digest
+
+2. **No redundancy**
+   - Avoid repeating information already stated
+   - Don't restate what the user just said
+   - Get straight to the point
+
+### Code Generation
+
+1. **Minimal code approach**
+   - Only implement what was explicitly requested
+   - Avoid over-engineering and unnecessary abstractions
+   - Don't add features, refactoring, or "improvements" beyond the scope
+   - Keep solutions simple and focused
+
+2. **Concise comments**
+   - Only add comments where logic isn't self-evident
+   - Avoid verbose documentation in code
+   - Don't add docstrings to unchanged code
+
+### Communication Style
+
+1. **Limit verbose commentary**
+   - Reduce unnecessary explanations
+   - Avoid over-explaining obvious steps
+   - Trust the user's technical knowledge
+
+2. **Action-oriented responses**
+   - Focus on doing rather than describing
+   - Show through code and results, not lengthy explanations
+   - Keep status updates brief
+
+---
+
+## Code Quality (Universal)
+
+### Architecture Principles
+
+1. **SOLID principles mandatory**
+   - Single Responsibility: One reason to change
+   - Open/Closed: Open for extension, closed for modification
+   - Liskov Substitution: Subtypes must be substitutable
+   - Interface Segregation: Many specific interfaces > one general
+   - Dependency Inversion: Depend on abstractions, not concretions
+
+2. **Design patterns**
+   - Prefer composition over inheritance
+   - Use Factory for object creation complexity
+   - Observer for event-driven systems
+   - Adapter for external integrations
+   - Strategy for algorithm variations
+
+3. **Domain-Driven Design (DDD)**
+   - Apply when domain is complex
+   - Ubiquitous language with domain experts
+   - Bounded contexts for large systems
+   - Aggregates for consistency boundaries
+
+4. **Clean Architecture / Hexagonal Architecture**
+   - Core business logic independent of frameworks
+   - Dependency rule: inner layers know nothing of outer
+   - Ports and adapters for external systems
+   - Enhances testability and maintainability
+
+### TypeScript Standards
+
+1. **Strict mode always**
+   - Enable `strict: true` in tsconfig.json
+   - No implicit any
+   - Strict null checks
+   - Strict function types
+
+2. **Type usage**
+   - No `any` types (use `unknown` if truly needed)
+   - Explicit return types on public functions
+   - Prefer type inference for local variables
+   - Use union types over enums when possible
+
+3. **Code organization**
+   - Interfaces for public contracts
+   - Types for internal data structures
+   - Generics for reusable components
+   - Avoid type assertions unless absolutely necessary
+
+### Testing Philosophy
+
+1. **Test-Driven Development (TDD)**
+   - Use TDD for complex business logic
+   - Red → Green → Refactor cycle
+   - Tests as specification
+   - Provides small wins and clear direction
+
+2. **Coverage standards**
+   - Minimum 80% coverage on critical paths
+   - 100% coverage on business logic
+   - Integration tests for user journeys
+   - E2E tests for critical flows only
+
+3. **Test types**
+   - Unit tests: Fast, isolated, no I/O
+   - Integration tests: Database, external services
+   - E2E tests: User journeys, real browser
+   - Contract tests: API boundaries
+
+4. **Testing best practices**
+   - Arrange-Act-Assert pattern
+   - One assertion per test (when possible)
+   - Descriptive test names
+   - Test behavior, not implementation
+
+### Performance Defaults
+
+1. **Frontend optimization**
+   - Code splitting by route
+   - Lazy load heavy components
+   - Optimize images (WebP, srcset, sizes)
+   - Defer non-critical JavaScript
+
+2. **Core Web Vitals**
+   - LCP < 2.5s (Largest Contentful Paint)
+   - FID < 100ms (First Input Delay)
+   - CLS < 0.1 (Cumulative Layout Shift)
+   - Measure before optimizing
+
+3. **General principles**
+   - Avoid premature optimization
+   - Profile before changing
+   - Caching strategies (Redis, CDN)
+   - Database query optimization (indexes, EXPLAIN)
+
+---
+
+## Security (Universal)
+
+### Always Apply
+
+1. **OWASP Top 10 awareness**
+   - Injection (SQL, NoSQL, Command)
+   - Broken authentication
+   - Sensitive data exposure
+   - XML External Entities (XXE)
+   - Broken access control
+   - Security misconfiguration
+   - Cross-Site Scripting (XSS)
+   - Insecure deserialization
+   - Components with known vulnerabilities
+   - Insufficient logging & monitoring
+
+2. **Input validation**
+   - Validate all user inputs
+   - Whitelist > blacklist
+   - Sanitize before processing
+   - Type checking and bounds validation
+
+3. **Output sanitization**
+   - Escape HTML output (prevent XSS)
+   - Use parameterized queries (prevent SQL injection)
+   - Content Security Policy headers
+   - Safe JSON serialization
+
+4. **Transport security**
+   - HTTPS only (no HTTP fallback)
+   - Secure cookies (HttpOnly, Secure, SameSite)
+   - HSTS headers
+   - Certificate pinning for mobile apps
+
+5. **API security**
+   - Rate limiting on public endpoints
+   - Authentication on sensitive endpoints
+   - CORS properly configured
+   - API versioning for breaking changes
+
+### Authentication & Authorization
+
+1. **JWT best practices**
+   - Short-lived access tokens (15min)
+   - Long-lived refresh tokens (7-30 days)
+   - Rotate refresh tokens on use
+   - Store securely (httpOnly cookies or secure storage)
+   - Include claims: iss, sub, aud, exp, iat
+
+2. **OAuth/OIDC**
+   - Use proven libraries (NextAuth, Passport, etc.)
+   - Never roll your own crypto
+   - Validate state parameter (CSRF protection)
+   - Use PKCE for mobile/SPA apps
+
+3. **Password handling**
+   - bcrypt minimum 10 rounds (12+ recommended)
+   - argon2 preferred for new projects
+   - Never store plaintext passwords
+   - Password reset via secure tokens (time-limited)
+
+4. **Multi-Factor Authentication (MFA)**
+   - Encourage for sensitive applications
+   - TOTP (Time-based One-Time Password)
+   - SMS as fallback only (not primary)
+   - Backup codes for account recovery
+
+### Dependency Security
+
+1. **Keep dependencies updated**
+   - Regular updates (weekly/monthly)
+   - Security patches immediately
+   - Use tools: npm audit, Snyk, Dependabot
+
+2. **Minimize dependencies**
+   - Fewer dependencies = smaller attack surface
+   - Audit new dependencies before adding
+   - Check download counts and maintenance
+
+3. **Supply chain security**
+   - Lock file committed (package-lock.json, yarn.lock)
+   - Verify package integrity
+   - Private registry for internal packages
+
+---
+
+## Accessibility (Universal)
+
+### Non-Negotiables
+
+1. **Semantic HTML first**
+   - Use correct HTML elements (`<button>`, `<nav>`, `<main>`)
+   - Heading hierarchy (h1 → h2 → h3, no skipping)
+   - Landmarks for page structure
+   - Forms with proper labels
+
+2. **ARIA usage**
+   - Use ARIA only when semantic HTML insufficient
+   - `aria-label` for icon buttons
+   - `aria-describedby` for help text
+   - `aria-live` for dynamic content
+   - Never override native semantics
+
+3. **Keyboard navigation**
+   - All interactive elements keyboard accessible
+   - Visible focus indicators
+   - Logical tab order
+   - Skip links for navigation bypass
+   - Escape key closes modals/dialogs
+
+4. **Visual accessibility**
+   - Color contrast WCAG AA minimum (4.5:1 text, 3:1 UI)
+   - Don't rely on color alone
+   - Text resizable to 200% without loss of content
+   - No flashing content (seizure risk)
+
+5. **Alternative text**
+   - Meaningful alt text on images
+   - Empty alt for decorative images
+   - Captions/transcripts for video/audio
+   - Text alternatives for charts/graphs
+
+### WCAG 2.1 Compliance
+
+**Level A (minimum):**
+- All non-negotiables above
+- Form labels and error identification
+- Page titles descriptive
+
+**Level AA (target):**
+- Color contrast 4.5:1 (text), 3:1 (UI)
+- No keyboard traps
+- Multiple ways to find pages
+- Consistent navigation
+
+**Level AAA (ideal):**
+- Color contrast 7:1
+- Sign language for prerecorded audio
+- Extended audio descriptions
+
+### Testing Accessibility
+
+1. **Automated tools**
+   - axe DevTools, Lighthouse
+   - Pa11y for CI/CD
+   - WAVE browser extension
+
+2. **Manual testing**
+   - Keyboard-only navigation
+   - Screen reader testing (NVDA, JAWS, VoiceOver)
+   - Zoom to 200%
+   - High contrast mode
+
+---
+
+## Communication & Response Standards
+
+### Token Efficiency Rules
+
+1. **Never copy documentation**
+   - ❌ Don't paste entire official docs
+   - ✅ Reference with link: "See [official docs](url)"
+   - ❌ Don't list 20 features of a framework
+   - ✅ Hierarchize: Top 3 + "Also: X, Y, Z"
+
+2. **Clarify before answering**
+   - Ask for context if question is vague
+   - "What's your target audience?"
+   - "What have you tried so far?"
+   - Refuse politely if question needs clarification
+
+3. **Code examples**
+   - Provide code only when essential
+   - Pseudocode for concepts
+   - Full code on explicit request
+   - Link to GitHub gists for long examples
+
+### Response Structure
+
+1. **TL;DR first**
+   - Start with 50-word summary
+   - Details follow for those who want them
+   - Allows quick scanning
+
+2. **Hierarchy and formatting**
+   - Bullet points > paragraphs
+   - Numbered lists for sequential steps
+   - Code blocks for syntax
+   - Tables for comparisons
+
+3. **Target lengths**
+   - TL;DR decision: 50 words
+   - Concept explanation: 150-250 words
+   - Comparison (2-3 options): 200-300 words
+   - Deep dive: 350-450 words (only on request)
+
+### ADHD-Friendly Formats
+
+1. **Checklist format preferred**
+   - Actionable items with checkboxes
+   - Clear start and end
+   - Progress visibility
+
+2. **Concise formulas**
+   - Instead of 3 sentences: 1 sentence + 1 example
+   - Instead of 5 points: Top 3 + "Also: ..."
+   - Instead of repeating: "See point 2 above"
+
+3. **Visual organization**
+   - Headers for sections
+   - Emojis for visual markers (when appropriate)
+   - Whitespace for readability
+   - Boxes/tables for structured data
+
+---
+
+## Domain-Specific Principles
+
+### Backend & Architecture
+
+**Focus:** Explain _why_ an architecture, not just _how_
+
+1. **Expose trade-offs**
+   - Monolith vs Microservices
+   - SQL vs NoSQL
+   - Synchronous vs Asynchronous
+   - Present pros/cons, let user decide
+
+2. **Real-world examples**
+   - Reference known architectures (Uber, Netflix, Airbnb)
+   - Concrete use cases
+   - Production lessons learned
+
+3. **Scalability considerations**
+   - Horizontal vs vertical scaling
+   - Sharding strategies
+   - Caching layers (Redis, Memcached)
+   - Load balancing patterns
+
+4. **Constraints**
+   - Max 300 words per response
+   - Code only on demand
+   - Analogies required for complex concepts
+
+### Frontend & UX
+
+**Focus:** UX never sacrifices accessibility or performance
+
+1. **Framework trade-offs**
+   - React vs Vue vs Angular vs Svelte
+   - Bundle size implications
+   - Developer experience vs runtime performance
+   - Ecosystem and community support
+
+2. **Performance first**
+   - Core Web Vitals non-negotiable
+   - Lazy loading and code splitting
+   - Optimize images and assets
+   - Measure with Lighthouse
+
+3. **Accessibility always**
+   - Mention accessibility even if not explicitly asked
+   - WCAG 2.1 compliance
+   - Keyboard and screen reader support
+   - Inclusive design principles
+
+4. **State management**
+   - Redux vs Zustand vs Jotai vs Context
+   - Choose based on complexity
+   - Avoid over-engineering
+
+5. **Constraints**
+   - Max 300 words per response
+   - Visual examples preferred (demos, gists)
+   - Accessibility always mentioned
+
+### DevOps & Infrastructure
+
+**Focus:** Observability and resilience > theoretical perfection
+
+1. **Automation first**
+   - CI/CD pipelines mandatory
+   - Infrastructure as Code (Terraform, Pulumi)
+   - GitOps workflows
+   - Automated testing and deployment
+
+2. **Observability**
+   - Logging (structured logs, ELK stack)
+   - Monitoring (Prometheus, Grafana)
+   - Tracing (Jaeger, Zipkin)
+   - Alerts on actionable metrics
+
+3. **Resilience patterns**
+   - Auto-scaling based on metrics
+   - Circuit breakers for external services
+   - Graceful degradation
+   - Disaster recovery plans
+
+4. **Cost optimization**
+   - Right-size resources
+   - Spot instances for non-critical workloads
+   - Auto-shutdown dev environments
+   - Monitor and optimize continuously
+
+5. **Constraints**
+   - Max 280 words per response
+   - Config snippets: 5 lines max (full on request)
+   - Checklist format preferred
+   - Reference official docs vs copying
+
+### Data & Databases
+
+**Focus:** Performance measurable > theory
+
+1. **SQL vs NoSQL**
+   - Structured data + ACID → SQL (PostgreSQL, MySQL)
+   - Unstructured/flexible schema → NoSQL (MongoDB)
+   - Time-series data → InfluxDB, TimescaleDB
+   - Key-value cache → Redis
+   - Explain when and why for each
+
+2. **Query optimization**
+   - EXPLAIN ANALYZE for slow queries
+   - Indexing strategies (B-tree, GiST, GIN)
+   - Query rewriting for performance
+   - Avoid N+1 queries
+
+3. **Data pipelines**
+   - ETL vs ELT trade-offs
+   - Batch vs Stream processing
+   - Tools: Apache Airflow, dbt, Kafka
+   - Idempotency and error handling
+
+4. **Constraints**
+   - Max 320 words per response
+   - Pseudo-SQL first (full SELECT on request)
+   - ASCII diagrams for complex pipelines
+   - Performance metrics when available

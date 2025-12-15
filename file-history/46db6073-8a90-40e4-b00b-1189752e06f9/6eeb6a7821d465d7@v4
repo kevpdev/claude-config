@@ -1,0 +1,337 @@
+# Plan: Setup Context Engineering Global-First
+
+## Objectif
+Créer un setup optimisé qui centralise les rules universelles dans `~/.claude/` et minimise la configuration par projet via Memory-Bank simplifié.
+
+## Philosophie: Global-First, Project-Minimal
+
+**Principe:** 80% des rules sont universelles → dans global. Projets ne spécifient que leur stack et état courant.
+
+## Analyse Setup Actuel
+
+### ✅ Existant
+- **Global rules**: CLAUDE.md (Git, Token optimization)
+- **Commands**: oneshot, epct, explore, commit, create-pr, etc.
+- **Agents**: explore-codebase, explore-docs, websearch
+- **Hooks**: Command validator, audio notifications
+- **idea_box**: Guidelines token efficiency, agent personas
+
+### ❌ Manquant
+- **Rules universelles étendues**: Architecture, Security, Accessibility, Performance
+- **Memory-Bank minimal**: Pas de templates projet légers
+- **Session management**: Pas de commandes start/end session
+- **Context tools**: Pas de `/capture`, `/memory-bank-init`
+
+## Plan d'Implémentation
+
+### Phase 1: Étendre CLAUDE.md (Rules Universelles)
+
+**Fichier:** `~/.claude/CLAUDE.md`
+
+**Ajouter sections:**
+
+#### 3. Code Quality (Universal)
+- Architecture principles (SOLID, DDD, Clean Architecture)
+- TypeScript standards (strict mode, no `any`, explicit types)
+- Testing philosophy (TDD, 80% coverage critical paths)
+- Performance defaults (code splitting, lazy load, optimize images)
+
+**Source:** Principes universels applicables à tous projets
+
+#### 4. Security (Universal)
+- OWASP Top 10 awareness
+- Input validation, output sanitization
+- Authentication patterns (JWT, OAuth best practices)
+- Dependency security
+
+**Source:** agent-security-humans.json + standards industrie
+
+#### 5. Accessibility (Universal)
+- WCAG 2.1 standards
+- Semantic HTML first
+- ARIA usage guidelines
+- Keyboard navigation, color contrast
+
+**Source:** agent-frontend-ux.json (a11y_always)
+
+#### 6. Communication & Responses
+- Token efficiency rules (de guidelines-token-efficiency.md)
+- Response structure (TL;DR first, details after)
+- Target lengths (250 words explanations, 400 max)
+- ADHD-friendly formats (checklists, bullet points)
+
+**Source:** guidelines-token-efficiency.md + agent constraints
+
+#### 7. Domain-Specific Principles
+- Backend: Expose trade-offs, real examples, explain why
+- Frontend: UX + accessibility + performance (no sacrifices)
+- DevOps: Observability first, automation, configs minimal
+- Data: Performance measurable, pseudo-SQL first
+
+**Source:** agent-*.json personas
+
+### Phase 2: Memory-Bank Templates (Minimal)
+
+**Structure:** `~/.claude/templates/memory-bank/`
+
+**3 fichiers essentiels:**
+
+#### 1. `projectbrief.md`
+```markdown
+# [Project Name]
+
+## What
+[1 ligne description]
+
+## For whom
+[Target users]
+
+## Key features
+- [Feature 1]
+- [Feature 2]
+
+## Constraints
+- [Constraint 1]
+```
+
+#### 2. `techContext.md`
+```markdown
+# Tech Stack
+
+## Core
+- [Framework/language]
+- [Database]
+- [Key libraries]
+
+## Notes
+Follow global CLAUDE.md rules unless specified below.
+
+## Deviations from global
+(None = follow all global rules)
+```
+
+#### 3. `activeContext.md`
+```markdown
+# Active Context
+
+Last update: [Date]
+
+## Current Focus
+[What you're working on]
+
+## Recent Changes
+[Date]: [Change description] (files)
+
+## Next Steps
+1. [ ] [Task 1]
+2. [ ] [Task 2]
+
+## Challenges
+[Current blockers or issues]
+```
+
+**Optionnels (créés seulement si besoin):**
+- `productContext.md` - Si vision/roadmap complexe
+- `systemPatterns.md` - Si patterns spéciaux projet
+- `progress.md` - Si tracking historique important
+
+### Phase 3: Commands Context Management
+
+**Créer:** `~/.claude/commands/`
+
+#### `/memory-bank-init`
+```markdown
+---
+description: Initialize memory-bank in current project
+---
+
+Initialize minimal Memory-Bank structure in current project.
+
+**Steps:**
+1. Create `memory-bank/` directory
+2. Copy 3 essential templates:
+   - projectbrief.md
+   - techContext.md
+   - activeContext.md
+3. Prompt user to fill projectbrief.md
+
+**Options:**
+- `--minimal` (default): 3 files only
+- `--full`: Include optional files (productContext, systemPatterns, progress)
+```
+
+#### `/session-start`
+```markdown
+---
+description: Start coding session with context
+argument-hint: <session-goal>
+---
+
+Start a focused coding session.
+
+**Steps:**
+1. Read `memory-bank/activeContext.md` (if exists)
+2. Read `memory-bank/techContext.md` for stack
+3. Display current focus and next steps
+4. Ask user: "What's your goal for this session?"
+5. Update activeContext.md with new focus
+
+**Output:**
+- Current project context summary
+- Suggested next steps based on activeContext
+- Ready to code message
+```
+
+#### `/session-end`
+```markdown
+---
+description: End session and update context
+---
+
+End coding session and preserve context.
+
+**Steps:**
+1. Ask user: "What did you accomplish?"
+2. Ask: "What's the next step?"
+3. Update `memory-bank/activeContext.md`:
+   - Add to Recent Changes with timestamp
+   - Update Next Steps
+   - Note any new Challenges
+4. Optional: Commit changes with `/commit`
+
+**Output:**
+- Updated activeContext.md
+- Summary of session progress
+```
+
+#### `/capture`
+```markdown
+---
+description: Quick note capture without breaking flow
+argument-hint: <note>
+---
+
+Capture a quick idea, bug, or todo without losing focus.
+
+**Steps:**
+1. Create `memory-bank/captures/` if not exists
+2. Append to `captures/YYYY-MM-DD.md`:
+   ```
+   [HH:MM] <note>
+   ```
+3. Confirm saved
+
+**Usage:**
+- `/capture "Bug: Login fails on Safari"`
+- `/capture "Idea: Add dark mode toggle"`
+- `/capture "TODO: Refactor auth middleware"`
+```
+
+### Phase 4: Guide Documentation
+
+**Créer:** `~/.claude/MEMORY-BANK-GUIDE.md`
+
+```markdown
+# Memory-Bank Guide
+
+## Philosophy
+Global rules in CLAUDE.md cover 80% of standards.
+Projects only specify stack + current state.
+
+## Setup New Project
+
+1. `/memory-bank-init`
+2. Fill `projectbrief.md` (2 min)
+3. Fill `techContext.md` (1 min)
+4. Start coding with `/session-start`
+
+## Daily Workflow
+
+**Morning:**
+- `/session-start "Implement feature X"`
+
+**During work:**
+- `/capture "Quick note"` as needed
+
+**End of day:**
+- `/session-end`
+
+## When to Add Optional Files
+
+- `productContext.md`: Complex product vision/roadmap
+- `systemPatterns.md`: Project-specific patterns that override global
+- `progress.md`: Need detailed milestone tracking
+
+Default: Don't add unless you hit friction.
+
+## Global vs Project
+
+**Global (CLAUDE.md):**
+- Architecture principles
+- Security standards
+- Accessibility rules
+- Code quality
+- Communication style
+
+**Project (memory-bank/):**
+- Tech stack (Next.js vs Vue)
+- Current focus
+- Active work state
+- Project-specific overrides (rare)
+```
+
+## Fichiers à Créer/Modifier
+
+### Modifier
+- `~/.claude/CLAUDE.md` - Ajouter sections 3-7
+
+### Créer
+```
+~/.claude/
+├── commands/
+│   ├── memory-bank-init.md
+│   ├── session-start.md
+│   ├── session-end.md
+│   └── capture.md
+├── templates/memory-bank/
+│   ├── projectbrief.md
+│   ├── techContext.md
+│   └── activeContext.md
+└── MEMORY-BANK-GUIDE.md
+```
+
+## Résultat Attendu
+
+**Setup projet:**
+- Avant: 2-3h remplir rules complètes
+- Après: 20min (3 fichiers minimaux)
+
+**Benefits:**
+- ✅ Rules universelles centralisées (maintenance facile)
+- ✅ Setup projet ultra-rapide
+- ✅ Context preservation automatique (activeContext)
+- ✅ Session workflow structuré
+- ✅ Quick capture sans friction
+
+**Workflow quotidien:**
+```bash
+cd ~/projects/mon-app
+claude
+
+> /session-start "Add auth"
+# Lit context, affiche next steps
+
+# ... code ...
+
+> /capture "Bug: JWT expiry not handled"
+# Saved to captures/
+
+> /session-end
+# Update activeContext automatiquement
+```
+
+## Sources
+
+- [Memory-Bank](https://github.com/ai-driven-dev/rules/tree/main/memory-bank)
+- [BMAD Method](https://github.com/bmad-code-org/BMAD-METHOD)
+- idea_box local (guidelines, agent personas)

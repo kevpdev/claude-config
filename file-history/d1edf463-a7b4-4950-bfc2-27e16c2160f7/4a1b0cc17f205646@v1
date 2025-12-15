@@ -1,0 +1,107 @@
+# GMAIL-002: Fetch Emails from Input/* Labels
+
+**Status**: Not Started
+**Priority**: High (Core functionality)
+**Estimated effort**: 1.5 hours
+
+## User Need
+
+As the automation system, I need to fetch unread emails from all Input/* labels (Java, Angular, DevOps, etc.) so they can be processed and summarized.
+
+## Context
+
+Implements email fetching from Gmail using labels. Queries each Input/* label for unread messages, retrieves full message data (headers + content), and converts to InputEmail objects.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 3.2)
+
+## Implementation Scope
+
+### File: `src/gmail/fetch.ts`
+
+**Function**: `fetchInputEmails(gmail: gmail_v1.Gmail, inputLabels: string[], maxPerLabel = 5): Promise<InputEmail[]>`
+
+**Algorithm**:
+1. For each input label ("Input/Java", "Input/Angular", etc.):
+   - Query: `label:"Input/Java" is:unread` (or omit `is:unread` if processing all labeled)
+   - List messages: `users.messages.list({ q: query, maxResults: maxPerLabel })`
+   - For each message ID:
+     - Get full message: `users.messages.get({ id, format: "full" })`
+     - Parse headers: Subject, From, Date
+     - Extract content: HTML body (prefer) or plain text (fallback)
+     - Extract domain from label name (Input/Java → "Java")
+2. Return array of InputEmail objects
+
+**Helper function**: `parseEmailContent(message: gmail_v1.Schema$Message): { htmlContent: string, plainContent?: string }`
+- Handle multipart/alternative MIME structure
+- Decode base64url content
+- Prefer HTML over plain text
+
+## Acceptance Criteria
+
+- [ ] src/gmail/fetch.ts file created
+- [ ] fetchInputEmails() function exported
+- [ ] Queries all provided input labels
+- [ ] Limits results to maxPerLabel per domain (default 5)
+- [ ] Parses email headers (Subject, From, Date)
+- [ ] Extracts HTML content (or plain text fallback)
+- [ ] Extracts domain from label (Input/Java → "Java")
+- [ ] Returns array of InputEmail objects (typed)
+- [ ] Handles empty results gracefully (returns empty array)
+- [ ] Handles API errors (throws with context)
+- [ ] Decodes base64url content correctly
+
+## Test Scenarios
+
+1. **Multiple labels**: Fetch from 3 labels → returns combined array
+2. **Max results**: Set maxPerLabel=2 → fetches max 2 per label
+3. **No unread emails**: Query with no results → returns empty array
+4. **HTML content**: Email with HTML → extracts HTML body
+5. **Plain text fallback**: Email without HTML → uses plain text
+6. **Multipart email**: Complex MIME structure → extracts correct part
+7. **Date parsing**: Email date header → converts to Date object
+
+## Dependencies
+
+**Blocks**: ORCH-001 (main loop needs email fetching)
+**Blocked by**: GMAIL-001 (needs authenticated Gmail client), TYPES-001 (needs InputEmail interface)
+
+## Implementation Notes
+
+- **Query syntax**: Use Gmail search operators (`label:"Input/Java" is:unread`)
+- **MIME parsing**: Gmail API returns base64url-encoded parts
+  - Decode with: `Buffer.from(data, 'base64url').toString('utf-8')`
+- **Content priority**: HTML > plain text (HTML needed for content extraction)
+- **Label extraction**: Parse "Input/Java" → "Java" (split on "/" and take second part)
+- **Error handling**: If one label fails, log and continue with others (don't stop batch)
+- **Pagination**: Not needed if maxPerLabel kept small (5-10)
+
+## MIME Structure Example
+
+```json
+{
+  "payload": {
+    "headers": [
+      { "name": "Subject", "value": "..." },
+      { "name": "From", "value": "..." },
+      { "name": "Date", "value": "..." }
+    ],
+    "parts": [
+      {
+        "mimeType": "text/plain",
+        "body": { "data": "<base64url>" }
+      },
+      {
+        "mimeType": "text/html",
+        "body": { "data": "<base64url>" }
+      }
+    ]
+  }
+}
+```
+
+## Related Stories
+
+- GMAIL-001: Provides authenticated Gmail client
+- GMAIL-003: Processes InputEmail → EmailMetadata
+- TYPES-001: Defines InputEmail interface
+- CONFIG-001: Provides inputLabel strings for each domain

@@ -1,0 +1,17 @@
+[
+  {
+    "content": "Add all files to staging area",
+    "status": "completed",
+    "activeForm": "Adding all files to staging area"
+  },
+  {
+    "content": "Create commit with AI-Blueprint restructuring message",
+    "status": "in_progress",
+    "activeForm": "Creating commit with AI-Blueprint restructuring message"
+  },
+  {
+    "content": "Verify commit status",
+    "status": "pending",
+    "activeForm": "Verifying commit status"
+  }
+]

@@ -1,0 +1,115 @@
+---
+description: Start coding session with context
+argument-hint: <optional-goal>
+---
+
+Start a focused coding session by loading project context and setting a goal.
+
+## What this does
+
+1. Reads project context from `memory-bank/` (if exists)
+2. Shows last session's progress and next steps
+3. Asks for your goal for this session
+4. Updates `activeContext.md` with new focus
+5. Prepares you to code with full context
+
+## Steps
+
+1. Check for `memory-bank/` directory
+   - If not found: Suggest running `/memory-bank-init` first
+   - If found: Continue
+
+2. Read context files:
+   - `projectbrief.md` - Understand project goals
+   - `techContext.md` - Know the tech stack
+   - `activeContext.md` - See where you left off
+
+3. Display summary:
+   - Project name and description
+   - Tech stack
+   - Last session info (from activeContext)
+   - Recent changes
+   - Planned next steps
+   - Current challenges
+
+4. Ask user: "What's your goal for this session?"
+   - Accept argument if provided: `/session-start "Implement auth"`
+   - Otherwise prompt interactively
+
+5. Update `activeContext.md`:
+   - Set "Current Focus" to stated goal
+   - Update "Last update" timestamp
+   - Keep existing Next Steps (user can modify during work)
+
+6. Confirm ready to code
+
+## Usage
+
+```bash
+# Interactive - will ask for goal
+/session-start
+
+# With goal specified
+/session-start "Implement JWT authentication"
+/session-start "Fix bug in user registration"
+/session-start "Refactor API layer"
+```
+
+## Example Output
+
+```
+📖 Loading project context...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Project: Task Manager App
+Description: Team task management, simpler than Jira
+Stack: Next.js 15, Prisma, PostgreSQL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📌 Last session (2025-12-13 17:30):
+
+Focus: Implementing authentication system
+
+Recent changes:
+  - Protected routes middleware (middleware.ts)
+  - JWT sign/verify functions (lib/auth.ts)
+
+Next steps:
+  1. [ ] Add refresh token rotation
+  2. [ ] Test edge cases (expiry, invalid tokens)
+  3. [ ] Add error handling
+
+⚠️  Known challenges:
+  - JWT validation slow on edge runtime (investigating)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+What's your goal for this session?
+> Add refresh token rotation
+
+✅ Session started!
+Updated activeContext.md with new focus.
+
+🚀 Ready to code! All context loaded.
+
+Global rules active from ~/.claude/CLAUDE.md
+Project context from memory-bank/
+```
+
+## If no memory-bank exists
+
+```
+⚠️  No memory-bank found in current directory.
+
+Would you like to initialize one?
+> /memory-bank-init
+
+Or continue without context preservation (not recommended)
+```
+
+## Notes
+
+- This command is designed to be run at the start of each coding session
+- Helps you quickly remember where you left off
+- Prevents "where was I?" context loss
+- Works great after breaks (lunch, next day, after interruptions)

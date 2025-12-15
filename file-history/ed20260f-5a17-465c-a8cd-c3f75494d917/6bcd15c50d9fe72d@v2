@@ -1,0 +1,236 @@
+# Plan: Smart Project Detection pour `/plan-to-stories`
+
+## Objectif
+Modifier `/plan-to-stories` pour détecter automatiquement si un projet Node/TS est déjà initialisé, et éviter de créer des SETUP stories redondantes.
+
+## Comportement Cible
+
+### Projet Déjà Initialisé
+**Détection** : `package.json` ET `tsconfig.json` existent
+**Action** : Skip toutes les SETUP stories, créer uniquement les feature stories
+
+### Projet Non Initialisé
+**Détection** : `package.json` OU `tsconfig.json` manquant
+**Action** : Demander à l'utilisateur via AskUserQuestion :
+```
+Projet non initialisé (package.json et/ou tsconfig.json manquants).
+Options :
+1. Lancer /init-node-ts maintenant (Recommandé)
+2. Créer SETUP-001 story
+3. Ignorer setup (je l'ai déjà fait manuellement)
+```
+
+**Résultat selon choix** :
+- Option 1 : Execute /init-node-ts, puis continue avec feature stories only
+- Option 2 : Crée SETUP-001 story (comportement actuel)
+- Option 3 : Continue sans SETUP stories
+
+## Fichiers à Modifier
+
+### 1. `/home/kevdev/.claude/commands/plan-to-stories.md` (172 lignes)
+
+**Insertion Point** : Après ligne 23 (step "Determine dependencies"), avant ligne 25 (step "For each story")
+
+**Nouveau Step 2.5** : "Check Project Initialization"
+
+```markdown
+### Step 2.5: Check Project Initialization (Smart Detection)
+
+Before creating stories, detect if the project is already initialized:
+
+1. Check for existence of BOTH:
+   - `package.json` (in current working directory)
+   - `tsconfig.json` (in current working directory)
+
+2. Branch logic:
+
+   **Case A: Both files exist** (Project Initialized)
+   - Set `skipSetupStories = true`
+   - Do NOT create any SETUP-### stories
+   - Proceed directly to feature story generation
+
+   **Case B: One or both files missing** (Project NOT Initialized)
+   - Use AskUserQuestion to prompt user:
+     Question: "Ce projet n'est pas initialisé (package.json et/ou tsconfig.json manquants). Comment souhaitez-vous procéder ?"
+     Options:
+       1. "Lancer /init-node-ts maintenant (Recommandé)" → Execute /init-node-ts via SlashCommand tool, then set skipSetupStories = true
+       2. "Créer SETUP-001 story" → Set skipSetupStories = false (current behavior)
+       3. "Ignorer (déjà fait manuellement)" → Set skipSetupStories = true
+
+   - Wait for user response before proceeding
+
+3. Continue to Step 3 (story generation) with `skipSetupStories` flag set
+```
+
+**Modification dans Step 3** (ligne 25+) : "For each story, create a file..."
+
+Ajouter au début du step 3 :
+```markdown
+When generating stories:
+- If `skipSetupStories = true`: Do NOT create stories with ID prefix SETUP-###
+- Only create feature stories (AUTH-###, USER-###, API-###, etc.)
+```
+
+**Modification dans SETUP Story Pattern** (nouvelle section à ajouter après ligne 130)
+
+```markdown
+### SETUP Story Pattern
+
+**When to create**: Only if project not initialized AND user chose "Create SETUP-001 story"
+
+**Prefix**: `SETUP-###` (e.g., SETUP-001, SETUP-002)
+
+**Template**:
+```markdown
+# SETUP-001: Initialize Node.js TypeScript Project
+
+**Status**: pending
+**Priority**: critical
+**Effort**: 1h
+
+## Context
+**Parent**: [plan name]
+**Why**: Foundation for entire project with strict TypeScript, package management, and test infrastructure.
+
+## Scope
+**Files to create**:
+- package.json - Project manifest with scripts
+- tsconfig.json - TypeScript strict mode configuration
+- .gitignore - Exclude node_modules, dist/, .env
+
+**Key packages**: typescript, @types/node, [others from plan]
+
+## Acceptance Criteria
+- [ ] Package manager initialized (pnpm/npm/yarn)
+- [ ] TypeScript strict mode enabled (strict: true)
+- [ ] All dependencies installed
+- [ ] Scripts functional (build, start, test)
+- [ ] .gitignore configured
+
+## Dependencies
+**Blocks**: ALL other stories
+**Blocked by**: None
+
+## Notes
+Use package manager specified in plan. Target ES2022, module: NodeNext.
+```
+
+**Why SETUP stories block all others**: Project must be initialized before any feature work can begin.
+```
+
+## Modifications Détaillées
+
+### Changement 1 : Detection Logic (après ligne 23)
+```diff
+3. Determine dependencies between features
++
++### Step 2.5: Check Project Initialization
++
++Before generating stories, check if project is already initialized:
++
++1. Check current working directory for:
++   - package.json (exists?)
++   - tsconfig.json (exists?)
++
++2. If BOTH exist:
++   - Project is initialized
++   - Set internal flag: skipSetupStories = true
++   - Do NOT create SETUP-### stories
++
++3. If EITHER is missing:
++   - Project is NOT initialized
++   - Use AskUserQuestion tool with these options:
++     * "Lancer /init-node-ts maintenant (Recommandé)"
++     * "Créer SETUP-001 story"
++     * "Ignorer (déjà fait manuellement)"
++   - If user chooses option 1: Execute /init-node-ts using SlashCommand tool, then skipSetupStories = true
++   - If user chooses option 2: skipSetupStories = false (create SETUP story)
++   - If user chooses option 3: skipSetupStories = true (skip SETUP story)
++
++4. Continue to story generation with skipSetupStories flag
+
+4. For each story, create a file...
+```
+
+### Changement 2 : Story Filtering (ligne 25-30)
+```diff
+4. For each story, create a file `<STORY-ID>-<slug>.md`:
++
++   **Important**: If skipSetupStories = true, do NOT create stories with SETUP-### prefix.
++   Only create feature stories (AUTH-###, USER-###, etc.)
++
+   - Extract feature name and create unique story ID
+```
+
+### Changement 3 : SETUP Story Documentation (après ligne 130)
+Ajouter nouvelle section complète documentant quand/comment créer SETUP stories (voir template ci-dessus)
+
+## Cohérence avec Commandes Existantes
+
+Suit le même pattern que :
+- `/epct` (ligne 47-50) : Vérifie package.json pour scripts
+- `/oneshot` (ligne 32-35) : Vérifie package.json pour scripts
+- `/run-tasks` (ligne 68) : Vérifie package.json pour scripts
+
+**Pattern commun** : Toutes les workflow commands vérifient l'état du projet avant d'exécuter.
+
+## Exemple d'Utilisation
+
+### Scénario 1 : Projet Déjà Initialisé
+```bash
+$ cd /existing-project  # a package.json + tsconfig.json
+$ /plan-to-stories plan.md
+
+✓ Projet détecté comme initialisé (package.json, tsconfig.json présents)
+✓ Skip SETUP stories
+✓ Création de 5 feature stories: AUTH-001, AUTH-002, USER-001, API-001, API-002
+```
+
+### Scénario 2 : Projet Vierge (Auto-init)
+```bash
+$ cd /new-project  # vide
+$ /plan-to-stories plan.md
+
+⚠ Projet non initialisé (package.json, tsconfig.json manquants)
+? Comment procéder ?
+  → Lancer /init-node-ts maintenant (Recommandé)
+
+✓ Exécution de /init-node-ts...
+✓ Projet initialisé avec succès
+✓ Création de 5 feature stories (sans SETUP-001)
+```
+
+### Scénario 3 : Projet Vierge (SETUP Story)
+```bash
+$ cd /new-project
+$ /plan-to-stories plan.md
+
+⚠ Projet non initialisé
+? Comment procéder ?
+  → Créer SETUP-001 story
+
+✓ Création de 6 stories: SETUP-001, AUTH-001, AUTH-002, USER-001, API-001, API-002
+✓ SETUP-001 bloque toutes les autres stories
+```
+
+## Avantages
+
+1. **Token efficient** : Pas de SETUP stories redondantes dans projets existants
+2. **UX améliorée** : Pas besoin de se rappeler de lancer /init-node-ts avant
+3. **Flexibilité** : User garde le contrôle (3 options)
+4. **Cohérence** : Suit le pattern des autres workflow commands
+5. **Zero breaking change** : Comportement actuel préservé (option 2)
+
+## Limitations
+
+- Ne détecte que Node/TS projects (package.json + tsconfig.json)
+- Pour autres langages (Python, Rust, etc.), skip detection (comportement actuel)
+- Assume que si package.json + tsconfig.json existent, projet est "suffisamment initialisé"
+
+## Next Steps
+
+1. Modifier `/home/kevdev/.claude/commands/plan-to-stories.md`
+2. Tester avec projet initialisé (should skip SETUP)
+3. Tester avec projet vierge (should prompt user)
+4. Vérifier INDEX.md génère correctement les dépendances
+5. Documenter dans CLAUDE.md si pattern doit s'appliquer à d'autres commands

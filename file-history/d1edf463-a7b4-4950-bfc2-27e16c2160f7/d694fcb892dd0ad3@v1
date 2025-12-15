@@ -1,0 +1,234 @@
+# Newsletter Automation - Story Index
+
+**Project**: Newsletter Automation System
+**Total Stories**: 13
+**Parent Plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md`
+
+---
+
+## Story Overview
+
+| ID | Title | Priority | Est. Effort | Status |
+|---|---|---|---|---|
+| SETUP-001 | Project Structure and TypeScript Configuration | High | 30 min | Not Started |
+| TYPES-001 | Core Type Definitions and Interfaces | High | 45 min | Not Started |
+| CONFIG-001 | Domain Configuration and Environment Variables | High | 30 min | Not Started |
+| GMAIL-001 | OAuth2 Authentication | High | 1 hour | Not Started |
+| GMAIL-002 | Fetch Emails from Input/* Labels | High | 1.5 hours | Not Started |
+| GMAIL-003 | Extract and Clean Email Metadata | High | 1 hour | Not Started |
+| GMAIL-004 | Send Output Emails and Mark as Processed | High | 1.5 hours | Not Started |
+| AI-001 | Prompt Builder for Structured JSON | High | 45 min | Not Started |
+| AI-002 | OpenRouter API Client with Retry Logic | High | 1.5 hours | Not Started |
+| AI-003 | JSON Parser and Validator | High | 1 hour | Not Started |
+| RENDER-001 | ADHD-Friendly HTML Renderer | High | 1.5 hours | Not Started |
+| INFRA-001 | Winston Logger Setup | Medium | 30 min | Not Started |
+| ORCH-001 | Main Orchestration (Batch Processor) | High | 2 hours | Not Started |
+| CI-001 | GitHub Actions Workflow | High | 1 hour | Not Started |
+| TEST-001 | Jest Tests for Parser and Renderer | Medium | 2 hours | Not Started |
+
+**Total estimated effort**: ~16 hours
+
+---
+
+## Dependency Graph
+
+```
+Foundation Layer (Parallel)
+├── SETUP-001 (no deps)
+├── TYPES-001 ← SETUP-001
+├── CONFIG-001 ← TYPES-001
+└── INFRA-001 ← SETUP-001
+
+Gmail Layer (Sequential)
+├── GMAIL-001 ← CONFIG-001
+├── GMAIL-002 ← GMAIL-001, TYPES-001
+├── GMAIL-003 ← GMAIL-002, CONFIG-001, TYPES-001
+└── GMAIL-004 ← GMAIL-001, TYPES-001
+
+AI Layer (Sequential)
+├── AI-001 ← GMAIL-003
+├── AI-002 ← AI-001, CONFIG-001
+└── AI-003 ← AI-002, TYPES-001
+
+Output Layer
+└── RENDER-001 ← GMAIL-003, AI-003
+
+Orchestration
+└── ORCH-001 ← ALL (except CI-001, TEST-001)
+
+Deployment
+├── CI-001 ← ORCH-001, SETUP-001
+└── TEST-001 ← AI-003, RENDER-001
+```
+
+---
+
+## Suggested Implementation Order
+
+### Phase 1: Foundation (Parallel where possible)
+1. **SETUP-001** - Project structure (30 min)
+2. **TYPES-001** - Type definitions (45 min)
+   *Blocked by: SETUP-001*
+3. **CONFIG-001** - Configuration (30 min)
+   *Blocked by: TYPES-001*
+4. **INFRA-001** - Logger (30 min)
+   *Blocked by: SETUP-001, can run parallel with TYPES-001*
+
+**Checkpoint**: Project compiles, config loads, logger works
+
+### Phase 2: Gmail Integration (Sequential)
+5. **GMAIL-001** - Auth (1 hour)
+   *Blocked by: CONFIG-001*
+6. **GMAIL-002** - Fetch emails (1.5 hours)
+   *Blocked by: GMAIL-001*
+7. **GMAIL-003** - Extract metadata (1 hour)
+   *Blocked by: GMAIL-002*
+8. **GMAIL-004** - Send & label (1.5 hours)
+   *Blocked by: GMAIL-001*
+
+**Checkpoint**: Can fetch emails from Gmail, extract metadata, send test email
+
+### Phase 3: AI Integration (Sequential)
+9. **AI-001** - Prompt builder (45 min)
+   *Blocked by: GMAIL-003*
+10. **AI-002** - OpenRouter client (1.5 hours)
+    *Blocked by: AI-001*
+11. **AI-003** - Parser & validator (1 hour)
+    *Blocked by: AI-002*
+
+**Checkpoint**: Can call AI, parse JSON responses reliably
+
+### Phase 4: Output & Orchestration
+12. **RENDER-001** - HTML renderer (1.5 hours)
+    *Blocked by: GMAIL-003, AI-003*
+13. **ORCH-001** - Main orchestration (2 hours)
+    *Blocked by: ALL previous stories*
+
+**Checkpoint**: End-to-end flow works locally
+
+### Phase 5: Deployment & Quality (Parallel)
+14. **CI-001** - GitHub Actions (1 hour)
+    *Blocked by: ORCH-001*
+15. **TEST-001** - Jest tests (2 hours)
+    *Blocked by: AI-003, RENDER-001, can run parallel with CI-001*
+
+**Checkpoint**: Automated in CI, tests passing
+
+---
+
+## Critical Path
+
+**Longest dependency chain** (critical for timeline):
+```
+SETUP-001 → TYPES-001 → CONFIG-001 → GMAIL-001 → GMAIL-002 → GMAIL-003 → AI-001 → AI-002 → AI-003 → RENDER-001 → ORCH-001 → CI-001
+```
+
+**Estimated critical path duration**: ~13.5 hours
+
+**Parallelization opportunities**:
+- INFRA-001 parallel with TYPES-001 (saves 30 min)
+- GMAIL-004 parallel with AI-001/AI-002 (saves 1.5 hours)
+- TEST-001 parallel with CI-001 (saves 1 hour)
+
+**Optimized timeline**: ~10.5 hours (with parallelization)
+
+---
+
+## Story Categories
+
+### Foundation (3 stories)
+- SETUP-001: Project structure
+- TYPES-001: Type definitions
+- CONFIG-001: Configuration
+
+### Gmail Integration (4 stories)
+- GMAIL-001: OAuth2 auth
+- GMAIL-002: Fetch emails
+- GMAIL-003: Extract metadata
+- GMAIL-004: Send & label
+
+### AI Integration (3 stories)
+- AI-001: Prompt builder
+- AI-002: OpenRouter client
+- AI-003: JSON parser
+
+### Output & Infrastructure (3 stories)
+- RENDER-001: HTML renderer
+- INFRA-001: Logger
+- ORCH-001: Orchestration
+
+### Deployment & Quality (2 stories)
+- CI-001: GitHub Actions
+- TEST-001: Jest tests
+
+---
+
+## Quick Start Guide
+
+**To begin implementation**:
+
+1. Start with foundation stories (can be done in one session):
+   ```bash
+   # Session 1 (2 hours)
+   /session-start "Implement SETUP-001, TYPES-001, CONFIG-001, INFRA-001"
+   ```
+
+2. Then Gmail integration (requires GCP setup):
+   ```bash
+   # Session 2 (5 hours)
+   /session-start "Implement GMAIL-001, GMAIL-002, GMAIL-003, GMAIL-004"
+   ```
+
+3. AI integration (requires OpenRouter account):
+   ```bash
+   # Session 3 (3.5 hours)
+   /session-start "Implement AI-001, AI-002, AI-003"
+   ```
+
+4. Output & orchestration:
+   ```bash
+   # Session 4 (3.5 hours)
+   /session-start "Implement RENDER-001, ORCH-001"
+   ```
+
+5. Deployment & tests:
+   ```bash
+   # Session 5 (3 hours)
+   /session-start "Implement CI-001, TEST-001"
+   ```
+
+**Or use EPCT workflow**:
+```bash
+/epct "Implement newsletter automation - start with SETUP-001"
+```
+
+---
+
+## Notes
+
+- **Prerequisites**: GCP project with Gmail API enabled, OpenRouter account
+- **One-time setup**: Generate Gmail OAuth2 refresh token (not covered in stories, document in README)
+- **Testing strategy**: Manual testing for Gmail/AI integration, Jest for parser/renderer
+- **Documentation**: README.md and .env.example covered in respective stories
+
+---
+
+## Story Files
+
+All story files located in `.claude/memory-bank/stories/`:
+
+- `SETUP-001-project-structure.md`
+- `TYPES-001-core-interfaces.md`
+- `CONFIG-001-domain-config.md`
+- `GMAIL-001-oauth2-auth.md`
+- `GMAIL-002-fetch-emails.md`
+- `GMAIL-003-extract-metadata.md`
+- `GMAIL-004-send-and-label.md`
+- `AI-001-prompt-builder.md`
+- `AI-002-openrouter-client.md`
+- `AI-003-json-parser.md`
+- `RENDER-001-html-renderer.md`
+- `INFRA-001-winston-logger.md`
+- `ORCH-001-main-orchestration.md`
+- `CI-001-github-actions.md`
+- `TEST-001-jest-tests.md`

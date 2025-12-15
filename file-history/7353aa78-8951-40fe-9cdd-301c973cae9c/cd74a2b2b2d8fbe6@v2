@@ -1,0 +1,140 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+**Quick Start**: See `INDEX.md` for complete navigation guide.
+
+## Essential Commands
+
+### Development
+
+```bash
+pnpm dev        # Start dev server (localhost:4321)
+pnpm build      # Build for production
+pnpm quality    # Run all quality checks (typecheck + lint + format)
+```
+
+### Claude Commands
+
+- `/create-content [type] [title]` - Content creation
+- `/create-issue [type] [title]` - Issue templates
+- `/commit-push-smart [message?]` - Smart git operations
+- `/bootstrap-quality` - Setup quality tools
+- `/debug-issue` - Debug workflow
+
+**Full commands list**: See `core/development-workflow.mdx`
+
+## Project Overview
+
+**Astro 5.13.3** blog with TypeScript strict, Tailwind CSS 4.1.13, Vitest, and pre-commit hooks.
+
+**Architecture**: Component-based, mobile-first, design tokens, semantic HTML.
+
+**Layouts**: BaseLayout (root) → BlogLayout, HomeLayout, PageLayout, BlogListLayout, FormationsLayout
+
+**For details**: See `core/project-overview.mdx`
+
+## Context Loading Strategy
+
+**Level 1 (Always Loaded)**: ~600 tokens
+
+- This file + `core/` files
+
+**Level 2 (Contextual)**: ~150-300 tokens each
+
+- Load specific `rules/` folder based on task
+
+**Level 3 (On-Demand)**: ~50-150 tokens each
+
+- `templates/` and `snippets/` as needed
+
+**Optimization Guide**: See `context-maps/loading-strategy.md`
+
+## Navigation
+
+**Finding Documentation**:
+
+- **Architecture & Structure** → `core/project-overview.mdx`
+- **Workflows & Commands** → `core/development-workflow.mdx`
+- **Getting Started** → `core/getting-started.mdx`
+- **Component Patterns** → `rules/astro/components/`
+- **Code Quality Standards** → `rules/generic/code-quality/`
+- **Templates** → `templates/` directory
+- **Visual Guides** → `context-maps/` directory
+- **Complete Index** → `INDEX.md`
+
+## Important Instructions
+
+**File Operations**:
+
+- ALWAYS prefer editing existing files over creating new ones
+- NEVER create documentation files unless explicitly requested
+- Follow patterns from `rules/` directory
+
+**Quality Control**:
+
+- ALWAYS run `pnpm quality` after code changes
+- Pre-commit hooks enforce quality automatically
+- Standards defined in `rules/generic/code-quality/`
+
+**Architecture Compliance**:
+
+- Component-based patterns → `rules/astro/components/`
+- Layout hierarchy → `rules/astro/layouts/`
+- TypeScript strict → `rules/generic/code-quality/typescript.mdx`
+- Mobile-first design → `rules/astro/styling/tailwind-config.mdx`
+- Error handling → `rules/generic/error-handling/`
+
+## Core Standards (Quick Reference)
+
+**Code**:
+
+- Max 30 lines/function, 5 params max
+- TypeScript strict, no `any`
+- No comments, descriptive names
+- For details: `rules/generic/code-quality/clean-code.mdx`
+
+**Performance Targets**:
+
+- LCP < 2.5s, FID < 100ms, CLS < 0.1
+- For details: `rules/generic/performance/core-web-vitals.mdx`
+
+**Testing**:
+
+- 80%+ coverage with Vitest
+- For details: `rules/generic/testing/`
+
+## Context Referencing by Task
+
+**Creating Component** → `rules/astro/components/` + `templates/astro/component-template.astro.mdx`
+
+**Building Layout** → `rules/astro/layouts/` + `context-maps/component-hierarchy.md`
+
+**Managing Content** → `rules/astro/content/` + `templates/content/blog-post-template.md`
+
+**Writing Tests** → `rules/generic/testing/` + `templates/generic/test-template.spec.ts.mdx`
+
+**Styling** → `rules/astro/styling/` + `snippets/css/responsive-patterns.md`
+
+**Debugging** → `commands/debug-issue.md` + `rules/generic/error-handling/`
+
+**For complete task guide**: See `INDEX.md` or `context-maps/loading-strategy.md`
+
+## Automatic CLAUDE.md Updates
+
+Claude MUST automatically check and update this file after any:
+
+- `.claude/` structure changes
+- New components/pages added
+- New commands created
+- Workflow modifications
+
+**Update process**: Read current → Note impacts → Update immediately → Validate references
+
+---
+
+**Version**: 2.0 (AI-Blueprint Compliant)
+**Last Updated**: 2025-11-19
+**Lines**: ~150 (reduced from 333)
+**Token Estimate**: ~200 tokens
+**For full documentation**: See `INDEX.md`

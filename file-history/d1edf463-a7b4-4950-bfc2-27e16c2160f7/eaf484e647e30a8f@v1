@@ -1,0 +1,101 @@
+# GMAIL-001: OAuth2 Authentication
+
+**Status**: Not Started
+**Priority**: High (Blocker for all Gmail operations)
+**Estimated effort**: 1 hour
+
+## User Need
+
+As a developer, I need OAuth2 authentication with Gmail API so the application can access the user's Gmail account securely using refresh tokens.
+
+## Context
+
+Implements Gmail API authentication using Google OAuth2 with refresh token flow. This is the foundation for all Gmail operations (fetch, send, label modification).
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 3.1)
+
+## Implementation Scope
+
+### File: `src/gmail/auth.ts`
+
+**Function**: `authenticateGmail(config: Config): Promise<gmail_v1.Gmail>`
+
+```typescript
+import { google, gmail_v1 } from "googleapis";
+import { Config } from "../types";
+
+export async function authenticateGmail(config: Config): Promise<gmail_v1.Gmail> {
+  const { OAuth2 } = google.auth;
+
+  const oAuth2Client = new OAuth2(
+    config.gmail.clientId,
+    config.gmail.clientSecret,
+    "urn:ietf:wg:oauth:2.0:oob" // Out-of-band redirect for CLI/server apps
+  );
+
+  oAuth2Client.setCredentials({
+    refresh_token: config.gmail.refreshToken
+  });
+
+  // Force token refresh to validate credentials
+  await oAuth2Client.getAccessToken();
+
+  return google.gmail({ version: "v1", auth: oAuth2Client });
+}
+```
+
+## Acceptance Criteria
+
+- [ ] src/gmail/auth.ts file created
+- [ ] authenticateGmail() function exported
+- [ ] Function accepts Config parameter
+- [ ] Returns authenticated gmail_v1.Gmail client
+- [ ] Uses refresh token from config (no interactive login)
+- [ ] Calls getAccessToken() to validate credentials
+- [ ] Throws error if authentication fails (invalid token/credentials)
+- [ ] TypeScript compiles without errors
+- [ ] No hardcoded credentials (all from config)
+
+## Test Scenarios
+
+1. **Valid auth**: Call with valid config → returns Gmail client without errors
+2. **Invalid refresh token**: Call with bad token → throws authentication error
+3. **Missing credentials**: Call with incomplete config → throws error
+4. **Token refresh**: Client should auto-refresh access token when expired
+5. **Type safety**: Return type should be gmail_v1.Gmail (not `any`)
+
+## Dependencies
+
+**Blocks**: GMAIL-002, GMAIL-003, GMAIL-004 (all Gmail operations need authenticated client)
+**Blocked by**: CONFIG-001 (needs Config type and gmail credentials)
+
+## Implementation Notes
+
+- **Scopes required** (configured in GCP Console):
+  - `https://www.googleapis.com/auth/gmail.readonly` - Read emails
+  - `https://www.googleapis.com/auth/gmail.modify` - Send + modify labels
+- Redirect URI: `urn:ietf:wg:oauth:2.0:oob` (for server/CLI apps, no web callback)
+- `getAccessToken()` validates credentials and auto-refreshes if needed
+- Error handling: Let googleapis errors propagate (will be caught in ORCH-001)
+
+## Security Considerations
+
+- Never log refresh token or access token
+- Refresh token stored in .env (excluded from git)
+- Access token auto-refreshed by googleapis library (short-lived)
+- Scopes limited to minimum required (readonly + modify, NOT full gmail access)
+
+## Setup Prerequisites
+
+**One-time setup** (document in README later):
+1. Create GCP project + enable Gmail API
+2. Create OAuth2 credentials (Desktop app type)
+3. Generate refresh token using oauth-playground or CLI script
+4. Add credentials to .env file
+
+## Related Stories
+
+- CONFIG-001: Provides gmail config (clientId, clientSecret, refreshToken)
+- GMAIL-002: Uses authenticated client to fetch emails
+- GMAIL-004: Uses authenticated client to send emails + modify labels
+- ORCH-001: Calls authenticateGmail() at batch startup

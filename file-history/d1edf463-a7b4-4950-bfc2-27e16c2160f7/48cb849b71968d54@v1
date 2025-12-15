@@ -1,0 +1,121 @@
+# SETUP-001: Project Structure and TypeScript Configuration
+
+**Status**: Not Started
+**Priority**: High (Blocker for all other stories)
+**Estimated effort**: 30 minutes
+
+## User Need
+
+As a developer, I need a properly configured TypeScript project structure with pnpm so I can start implementing the newsletter automation features with type safety and proper tooling.
+
+## Context
+
+This is the foundation story for the entire project. Sets up the monorepo structure, package manager, TypeScript compiler, and initial scripts. All subsequent stories depend on this foundation.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 1)
+
+## Implementation Scope
+
+### Directory Structure
+```
+newsletter-automation/
+├── .github/
+│   └── workflows/
+│       └── run-batch.yml (placeholder, implemented in CI-001)
+├── src/
+│   ├── gmail/
+│   ├── ai/
+│   └── (files added in later stories)
+├── tests/
+├── logs/ (created at runtime)
+├── .env.example
+├── package.json
+├── pnpm-lock.yaml
+├── tsconfig.json
+└── .gitignore
+```
+
+### Dependencies to Install
+```bash
+pnpm add typescript @types/node dotenv googleapis nodemailer winston axios cheerio
+pnpm add -D jest ts-jest @types/jest ts-node @types/winston
+```
+
+### package.json Scripts
+```json
+{
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  }
+}
+```
+
+### tsconfig.json Configuration
+- `strict: true` (TypeScript strict mode)
+- `target: "ES2022"`
+- `module: "commonjs"`
+- `outDir: "./dist"`
+- `rootDir: "./src"`
+- `esModuleInterop: true`
+- `skipLibCheck: true`
+- `resolveJsonModule: true`
+
+### .gitignore
+```
+node_modules/
+dist/
+.env
+logs/
+*.log
+.DS_Store
+```
+
+### .env.example
+```
+GMAIL_CLIENT_ID=<client-id>.apps.googleusercontent.com
+GMAIL_CLIENT_SECRET=<client-secret>
+GMAIL_REFRESH_TOKEN=<refresh-token-oauth2>
+OPENROUTER_API_KEY=<openrouter-key>
+OPENROUTER_MODEL=meta-llama/llama-3.3-70b-instruct-free
+USER_EMAIL=your-email@gmail.com
+LOG_LEVEL=info
+```
+
+## Acceptance Criteria
+
+- [ ] pnpm workspace initialized with package.json
+- [ ] All dependencies installed successfully
+- [ ] TypeScript compiles with `pnpm run build` (even with empty src/)
+- [ ] Directory structure matches spec (src/, tests/, .github/workflows/)
+- [ ] tsconfig.json configured with strict mode
+- [ ] .gitignore excludes node_modules/, dist/, .env, logs/
+- [ ] .env.example exists with all required variables
+- [ ] Scripts (build, start, test) added to package.json
+
+## Test Scenarios
+
+1. **Build validation**: Run `pnpm run build` → should complete without errors (even with no .ts files)
+2. **Dependency check**: Run `pnpm list` → all dependencies installed
+3. **TypeScript strict mode**: Create dummy .ts file with `let x: any` → should fail compilation
+4. **Git ignore**: Create .env file → should not appear in `git status`
+
+## Dependencies
+
+**Blocks**: All other stories (TYPES-001, CONFIG-001, GMAIL-001, etc.)
+**Blocked by**: None (foundation story)
+
+## Implementation Notes
+
+- Use pnpm 8+ (specified in package.json: `"packageManager": "pnpm@10.22.0"`)
+- Create placeholder directories (src/gmail/, src/ai/) even if empty
+- Verify `pnpm run build` creates dist/ directory
+- Do NOT implement actual TypeScript files yet (covered in TYPES-001, CONFIG-001)
+
+## Related Stories
+
+- TYPES-001: Will create src/types.ts
+- CONFIG-001: Will create src/config.ts
+- CI-001: Will implement .github/workflows/run-batch.yml

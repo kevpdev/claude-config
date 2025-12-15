@@ -1,0 +1,271 @@
+2025-12-15T19:34:40.659Z [DEBUG] Watching for changes in setting files /home/kevdev/.claude/settings.json...
+2025-12-15T19:34:40.712Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2025-12-15T19:34:40.712Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2025-12-15T19:34:40.712Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2025-12-15T19:34:40.715Z [DEBUG] LSP server manager initialized successfully
+2025-12-15T19:34:40.715Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2025-12-15T19:34:40.727Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2025-12-15T19:34:40.737Z [DEBUG] Stats cache is up to date
+2025-12-15T19:34:40.752Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults (14.0ms): ldd /bin/ls 2>/dev/null
+2025-12-15T19:34:40.759Z [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kevdev/.claude/skills, project=[]
+2025-12-15T19:34:40.768Z [DEBUG] Loaded 0 installed plugins from /home/kevdev/.claude/plugins/installed_plugins.json
+2025-12-15T19:34:40.768Z [DEBUG] Official marketplace auto-install already attempted, skipping
+2025-12-15T19:34:40.816Z [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+2025-12-15T19:34:40.816Z [DEBUG] Looking for shell config file: /home/kevdev/.zshrc
+2025-12-15T19:34:40.816Z [DEBUG] Snapshots directory: /home/kevdev/.claude/shell-snapshots
+2025-12-15T19:34:40.817Z [DEBUG] Creating snapshot at: /home/kevdev/.claude/shell-snapshots/snapshot-zsh-1765827280816-wgd1tt.sh
+2025-12-15T19:34:40.817Z [DEBUG] Shell binary exists: true
+2025-12-15T19:34:40.817Z [DEBUG] Execution timeout: 10000ms
+2025-12-15T19:34:40.823Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827280823
+2025-12-15T19:34:40.826Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-15T19:34:40.826Z [DEBUG] Renaming /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827280823 to /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json
+2025-12-15T19:34:40.826Z [DEBUG] File /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json written atomically
+2025-12-15T19:34:40.831Z [DEBUG] Auto-updating 1 installed marketplaces in background
+2025-12-15T19:34:40.831Z [DEBUG] Auto-updating marketplace "claude-plugins-official"
+2025-12-15T19:34:40.841Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2025-12-15T19:34:40.841Z [DEBUG] Total plugin skills loaded: 0
+2025-12-15T19:34:40.841Z [DEBUG] Total plugin commands loaded: 0
+2025-12-15T19:34:40.842Z [DEBUG] Registered 0 hooks from 0 plugins
+2025-12-15T19:34:40.858Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+2025-12-15T19:34:40.864Z [DEBUG] getSkills returning: 0 skill dir commands, 0 plugin skills
+2025-12-15T19:34:40.885Z [DEBUG] Git remote URL: null
+2025-12-15T19:34:40.885Z [DEBUG] No git remote URL found
+2025-12-15T19:34:40.885Z [DEBUG] Not in a GitHub repository, skipping path mapping update
+2025-12-15T19:34:40.886Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+2025-12-15T19:34:40.905Z [DEBUG] Total plugin agents loaded: 0
+2025-12-15T19:34:41.000Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827281000
+2025-12-15T19:34:41.000Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:41.007Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (6.8ms)
+2025-12-15T19:34:41.007Z [DEBUG] Temp file written successfully, size: 53308 bytes
+2025-12-15T19:34:41.007Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:41.007Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827281000 to /home/kevdev/.claude.json
+2025-12-15T19:34:41.007Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:41.226Z [DEBUG] Shell snapshot created successfully (139836 bytes)
+2025-12-15T19:34:41.377Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.9ms)
+2025-12-15T19:34:41.377Z [DEBUG] Successfully refreshed marketplace: claude-plugins-official
+2025-12-15T19:34:41.377Z [DEBUG] Successfully auto-updated marketplace "claude-plugins-official"
+2025-12-15T19:34:42.099Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2025-12-15T19:34:42.103Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827282103
+2025-12-15T19:34:42.103Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:42.108Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2025-12-15T19:34:42.108Z [DEBUG] Temp file written successfully, size: 53308 bytes
+2025-12-15T19:34:42.108Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:42.108Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827282103 to /home/kevdev/.claude.json
+2025-12-15T19:34:42.109Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:42.118Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2025-12-15T19:34:42.118Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:42.118Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2025-12-15T19:34:42.139Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-15T19:34:42.139Z [DEBUG] Slash commands included in SlashCommand tool: /init-node-ts, /fix-pr-comments, /session-start, /story-create, /explore, /new-front-app, /oneshot, /epct, /plan-to-stories, /memory-bank-init, /run-tasks, /watch-ci, /create-pull-request, /capture, /session-end, /commit
+2025-12-15T19:34:42.213Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827282213
+2025-12-15T19:34:42.213Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:42.217Z [DEBUG] Temp file written successfully, size: 53235 bytes
+2025-12-15T19:34:42.217Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:42.217Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827282213 to /home/kevdev/.claude.json
+2025-12-15T19:34:42.217Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:42.233Z [DEBUG] performStartupChecks called
+2025-12-15T19:34:42.233Z [DEBUG] Starting background plugin installations
+2025-12-15T19:34:42.233Z [DEBUG] performBackgroundPluginInstallations called
+2025-12-15T19:34:42.245Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-15T19:34:42.248Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827282248
+2025-12-15T19:34:42.248Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:42.253Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.6ms)
+2025-12-15T19:34:42.253Z [DEBUG] Temp file written successfully, size: 53308 bytes
+2025-12-15T19:34:42.253Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:42.253Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827282248 to /home/kevdev/.claude.json
+2025-12-15T19:34:42.254Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:42.257Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2025-12-15T19:34:42.258Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2025-12-15T19:34:42.272Z [DEBUG] Getting matching hook commands for SubagentStart with query: Explore
+2025-12-15T19:34:42.272Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:42.272Z [DEBUG] Matched 0 unique hooks for query "Explore" (0 before deduplication)
+2025-12-15T19:34:42.280Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2025-12-15T19:34:42.280Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:42.280Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2025-12-15T19:34:42.306Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.0ms)
+2025-12-15T19:34:42.321Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827282321
+2025-12-15T19:34:42.321Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:42.326Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2025-12-15T19:34:42.326Z [DEBUG] Temp file written successfully, size: 53911 bytes
+2025-12-15T19:34:42.326Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:42.327Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827282321 to /home/kevdev/.claude.json
+2025-12-15T19:34:42.327Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:42.331Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827282331
+2025-12-15T19:34:42.331Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:34:42.335Z [DEBUG] Temp file written successfully, size: 53911 bytes
+2025-12-15T19:34:42.335Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:34:42.335Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827282331 to /home/kevdev/.claude.json
+2025-12-15T19:34:42.335Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:34:43.112Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:34:44.636Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:34:45.761Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-15T19:34:45.762Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:45.762Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T19:34:49.765Z [DEBUG] Metadata string for new-front-app:
+2025-12-15T19:34:49.765Z [DEBUG] <command-message>new-front-app is running…</command-message>
+<command-name>/new-front-app</command-name>
+2025-12-15T19:34:49.765Z [DEBUG] command-message tags in metadata: 1
+2025-12-15T19:34:49.791Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-15T19:34:49.807Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:34:49.807Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:34:49.807Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:34:49.807Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:34:49.821Z [DEBUG] processPromptSlashCommand creating 3 messages for new-front-app
+2025-12-15T19:34:49.821Z [DEBUG] Message 1: <command-message>new-front-app is running…</command-message>
+<command-name>/new-front-app</command-name>
+2025-12-15T19:34:49.821Z [DEBUG] Message 2 [META]: [{"type":"text","text":"Initialize a new frontend project using official scaffolding tools.\n\n## What this does\n\nAsks for your preferred framework (React/Vue/Next/Nuxt/Svelte/Angular) and creates a
+2025-12-15T19:34:49.821Z [DEBUG] Message 3: [ATTACHMENT]
+2025-12-15T19:34:49.829Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-15T19:34:49.829Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:49.829Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T19:34:49.831Z [DEBUG] FileHistory: Added snapshot for 1a8b6577-771c-488a-9a0a-cd83e341de7b, tracking 0 files
+2025-12-15T19:34:49.835Z [DEBUG] UserCommandMessage rendering: "new-front-app is running…" (args: "none")
+2025-12-15T19:34:49.835Z [DEBUG] isSkillFormat: false, prefix: "/"
+2025-12-15T19:34:49.860Z [DEBUG] Total plugin output styles loaded: 0
+2025-12-15T19:34:51.665Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-15T19:34:51.665Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:51.665Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T19:34:56.027Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:34:59.811Z [DEBUG] executePreToolHooks called for tool: AskUserQuestion
+2025-12-15T19:34:59.824Z [DEBUG] Getting matching hook commands for PreToolUse with query: AskUserQuestion
+2025-12-15T19:34:59.824Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:34:59.824Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:34:59.852Z [DEBUG] executePermissionRequestHooks called for tool: AskUserQuestion
+2025-12-15T19:34:59.860Z [DEBUG] Getting matching hook commands for PermissionRequest with query: AskUserQuestion
+2025-12-15T19:34:59.860Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:34:59.860Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:35:02.813Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-15T19:35:02.829Z [DEBUG] Getting matching hook commands for PostToolUse with query: AskUserQuestion
+2025-12-15T19:35:02.829Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:35:02.829Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:35:02.852Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:35:02.852Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:35:02.852Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:35:02.852Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:35:05.069Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:35:07.378Z [DEBUG] executePreToolHooks called for tool: AskUserQuestion
+2025-12-15T19:35:07.382Z [DEBUG] Getting matching hook commands for PreToolUse with query: AskUserQuestion
+2025-12-15T19:35:07.382Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:35:07.382Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:35:07.400Z [DEBUG] executePermissionRequestHooks called for tool: AskUserQuestion
+2025-12-15T19:35:07.405Z [DEBUG] Getting matching hook commands for PermissionRequest with query: AskUserQuestion
+2025-12-15T19:35:07.405Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:35:07.405Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:35:20.322Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-15T19:35:20.336Z [DEBUG] Getting matching hook commands for PostToolUse with query: AskUserQuestion
+2025-12-15T19:35:20.336Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:35:20.336Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-15T19:35:20.352Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:35:20.352Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:35:20.352Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:35:20.352Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:35:23.182Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:35:23.701Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-15T19:35:23.701Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:35:23.702Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-15T19:35:29.013Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T19:35:29.053Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.200733.1765827329053
+2025-12-15T19:35:29.053Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:35:29.059Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.9ms)
+2025-12-15T19:35:29.059Z [DEBUG] Temp file written successfully, size: 53911 bytes
+2025-12-15T19:35:29.059Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:35:29.059Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.200733.1765827329053 to /home/kevdev/.claude.json
+2025-12-15T19:35:29.059Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-15T19:35:46.670Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:35:46.670Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:35:46.670Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:35:46.670Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:35:46.695Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-15T19:35:46.695Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:35:46.695Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T19:35:46.696Z [DEBUG] FileHistory: Making snapshot for message c63edf4b-828a-41e8-aafe-501492642cb6
+2025-12-15T19:35:46.696Z [DEBUG] FileHistory: Added snapshot for c63edf4b-828a-41e8-aafe-501492642cb6, tracking 0 files
+2025-12-15T19:35:47.658Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:35:49.295Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:35:56.724Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-15T19:35:56.730Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-15T19:35:56.730Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:35:56.730Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:35:56.754Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827356754
+2025-12-15T19:35:56.754Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:35:56.759Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2025-12-15T19:35:56.759Z [DEBUG] Temp file written successfully, size: 438 bytes
+2025-12-15T19:35:56.759Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:35:56.759Z [DEBUG] Renaming /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827356754 to /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json
+2025-12-15T19:35:56.759Z [DEBUG] File /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json written atomically
+2025-12-15T19:35:56.774Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-15T19:35:56.774Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:35:56.774Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:35:56.783Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-15T19:35:56.798Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-15T19:35:56.798Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:35:56.799Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-15T19:35:56.859Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T19:35:56.873Z [DEBUG] tree-sitter: WASM files not found
+2025-12-15T19:35:58.724Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:35:59.042Z [DEBUG] No session environment scripts found
+2025-12-15T19:36:34.438Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-15T19:36:34.438Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:36:34.438Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-15T19:36:34.459Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:36:34.459Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:36:34.459Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:36:34.459Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:36:35.598Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:36:36.992Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:36:41.382Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-15T19:36:41.398Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-15T19:36:41.398Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:36:41.398Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:36:41.425Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827401425
+2025-12-15T19:36:41.425Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:36:41.430Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.6ms)
+2025-12-15T19:36:41.430Z [DEBUG] Temp file written successfully, size: 440 bytes
+2025-12-15T19:36:41.430Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:36:41.430Z [DEBUG] Renaming /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827401425 to /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json
+2025-12-15T19:36:41.430Z [DEBUG] File /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json written atomically
+2025-12-15T19:36:41.446Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-15T19:36:41.446Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:36:41.446Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:36:41.469Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-15T19:36:41.470Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-15T19:36:41.477Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-15T19:36:41.477Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:36:41.477Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T19:36:41.477Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-15T19:36:41.477Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:36:41.477Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T19:36:41.530Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-15T19:36:41.530Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:36:41.530Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T19:36:41.530Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-15T19:36:41.530Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:36:41.530Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-15T19:36:41.548Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:36:41.548Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:36:41.548Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:36:41.548Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:36:45.252Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:36:50.773Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-15T19:36:50.791Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-15T19:36:50.791Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:36:50.791Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:36:50.812Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827410812
+2025-12-15T19:36:50.812Z [DEBUG] Preserving file permissions: 100600
+2025-12-15T19:36:50.818Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2025-12-15T19:36:50.818Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-15T19:36:50.818Z [DEBUG] Applied original permissions to temp file
+2025-12-15T19:36:50.818Z [DEBUG] Renaming /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json.tmp.200733.1765827410812 to /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json
+2025-12-15T19:36:50.818Z [DEBUG] File /home/kevdev/.claude/todos/e3abbe22-c8f8-4b67-a4a4-018ca60ac703-agent-e3abbe22-c8f8-4b67-a4a4-018ca60ac703.json written atomically
+2025-12-15T19:36:50.837Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-15T19:36:50.837Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T19:36:50.837Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-15T19:36:50.855Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T19:36:50.855Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T19:36:50.855Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T19:36:50.855Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T19:36:53.821Z [DEBUG] Stream started - received first chunk
+2025-12-15T19:37:00.067Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-15T19:37:00.067Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T19:37:00.067Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-15T19:37:05.413Z [DEBUG] Hook output does not start with {, treating as plain text

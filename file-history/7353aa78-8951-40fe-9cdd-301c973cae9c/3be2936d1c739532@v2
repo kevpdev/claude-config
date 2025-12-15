@@ -1,0 +1,238 @@
+---
+title: 'Getting Started Guide'
+description: 'Quick onboarding guide for new developers and AI assistants'
+category: 'core'
+priority: 'critical'
+alwaysApply: false
+tokenEstimate: 150
+loadingLevel: 1
+tags: ['onboarding', 'quickstart', 'setup', 'introduction']
+relatedFiles:
+  - 'project-overview.mdx'
+  - 'development-workflow.mdx'
+  - '../INDEX.md'
+lastUpdated: '2025-11-19'
+version: '1.0'
+deprecates: null
+useWhen:
+  - 'First time accessing the project'
+  - 'Onboarding new team members'
+  - 'Setting up development environment'
+---
+
+# Getting Started Guide
+
+Welcome to the Astro blog project! This guide will help you get up and running quickly.
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+- **Node.js 24+** installed
+- **pnpm** package manager
+- **Git** for version control
+- **VS Code** (recommended) or your preferred editor
+
+## Quick Start
+
+### 1. Install Dependencies
+
+```bash
+pnpm install
+```
+
+### 2. Start Development Server
+
+```bash
+pnpm dev
+```
+
+Visit `http://localhost:4321` to see your site.
+
+### 3. Run Quality Checks
+
+```bash
+pnpm quality
+```
+
+This runs typecheck + lint + format check.
+
+## Project Structure Overview
+
+```
+src/
+├── components/     # Reusable UI components
+├── layouts/        # Page layout templates
+├── pages/          # File-based routing
+├── content/        # Markdown content (blog, pages)
+├── styles/         # CSS and design tokens
+└── utils/          # Utility functions
+```
+
+See `core/project-overview.mdx` for detailed architecture.
+
+## Common Tasks
+
+### Create a New Component
+
+1. Use template: `templates/astro/component-template.astro.mdx`
+2. Follow patterns: `rules/astro/components/component-architecture.mdx`
+3. Add TypeScript interfaces
+4. Use Tailwind for styling
+5. Test responsiveness
+6. Run `pnpm quality`
+
+### Write a Blog Post
+
+1. Use command: `/create-content blog "Your Title"`
+2. Or use template: `templates/content/blog-post-template.md`
+3. Add frontmatter (title, description, pubDate, tags)
+4. Write content in Markdown
+5. Add hero image (optional)
+6. Preview with `pnpm dev`
+
+### Create a New Page
+
+1. Add file to `src/pages/`
+2. Use layout: `BaseLayout.astro` or `PageLayout.astro`
+3. Add SEO meta tags
+4. Ensure responsive design
+5. Test accessibility
+
+### Run Tests
+
+```bash
+pnpm test          # Run once
+pnpm test:watch    # Watch mode
+```
+
+### Fix Code Quality Issues
+
+```bash
+pnpm lint:fix      # Auto-fix ESLint issues
+pnpm format        # Format with Prettier
+```
+
+## Development Workflow
+
+1. **Start dev server**: `pnpm dev`
+2. **Make changes**: Edit files in `src/`
+3. **Check quality**: `pnpm quality`
+4. **Commit changes**: Git hooks will validate automatically
+5. **Push**: `git push`
+
+## Key Commands
+
+| Command         | Description                  |
+| --------------- | ---------------------------- |
+| `pnpm dev`      | Start dev server (port 4321) |
+| `pnpm build`    | Build for production         |
+| `pnpm preview`  | Preview production build     |
+| `pnpm quality`  | Run all quality checks       |
+| `pnpm lint:fix` | Auto-fix linting issues      |
+| `pnpm test`     | Run tests                    |
+
+## Quality Standards
+
+### Code Quality
+
+- TypeScript strict mode (no `any`)
+- Max 30 lines per function
+- Max 5 parameters per function
+- Descriptive variable names
+- No magic numbers
+
+### Testing
+
+- 80%+ test coverage
+- Unit tests for utilities
+- Integration tests for features
+- Follow AAA pattern (Arrange-Act-Assert)
+
+### Performance
+
+- LCP < 2.5s
+- FID < 100ms
+- CLS < 0.1
+
+### Accessibility
+
+- WCAG 2.2 AA compliant
+- Semantic HTML
+- Proper ARIA labels
+- Keyboard navigation
+
+## Helpful Resources
+
+### Documentation
+
+- `core/project-overview.mdx` - Architecture details
+- `core/development-workflow.mdx` - Commands and workflow
+- `INDEX.md` - Complete documentation index
+- `rules/INDEX.md` - Coding standards index
+
+### Templates
+
+- `templates/astro/` - Astro component templates
+- `templates/content/` - Content templates
+- `templates/generic/` - Test and command templates
+
+### Rules & Patterns
+
+- `rules/astro/` - Astro-specific patterns
+- `rules/generic/` - Universal coding standards
+- `snippets/` - Code fragments and configs
+
+## Slash Commands
+
+Use these commands with Claude Code:
+
+- `/create-content [type] [title]` - Create blog posts
+- `/commit-push-smart` - Smart git commit
+- `/debug-issue` - Debug with systematic workflow
+- `/bootstrap-quality` - Setup quality tools
+
+## Troubleshooting
+
+### Dev server won't start
+
+- Check port 4321 is not in use
+- Run `pnpm install` to ensure dependencies
+- Clear `.astro` cache directory
+
+### TypeScript errors
+
+- Run `pnpm typecheck` for details
+- Check `tsconfig.json` configuration
+- Ensure strict mode compliance
+
+### Linting errors
+
+- Run `pnpm lint` to see issues
+- Run `pnpm lint:fix` to auto-fix
+- Check `eslint.config.cjs` for rules
+
+### Tests failing
+
+- Run `pnpm test` for details
+- Check test setup in `vitest.config.ts`
+- Review test patterns in `rules/generic/testing/`
+
+## Next Steps
+
+1. **Explore the codebase**: Start with `src/pages/index.astro`
+2. **Read architecture docs**: `core/project-overview.mdx`
+3. **Try creating a component**: Use templates and rules
+4. **Write a blog post**: Use `/create-content` command
+5. **Run quality checks**: `pnpm quality`
+
+## Getting Help
+
+- Check `INDEX.md` for complete documentation index
+- Search `.claude/` directory for relevant guides
+- Use Claude Code slash commands for workflows
+- Review existing code for patterns
+
+---
+
+**Ready to start?** Run `pnpm dev` and begin coding!

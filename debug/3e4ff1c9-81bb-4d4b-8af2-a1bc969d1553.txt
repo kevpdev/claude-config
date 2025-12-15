@@ -1,0 +1,1027 @@
+2025-12-13T16:21:00.599Z [DEBUG] Watching for changes in setting files /home/kevdev/.claude/settings.json...
+2025-12-13T16:21:00.649Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2025-12-13T16:21:00.649Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2025-12-13T16:21:00.650Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2025-12-13T16:21:00.650Z [DEBUG] [LSP SERVER MANAGER] initialize() called
+2025-12-13T16:21:00.650Z [DEBUG] [LSP SERVER MANAGER] Calling getAllLspServers()
+2025-12-13T16:21:00.673Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2025-12-13T16:21:00.675Z [DEBUG] Total LSP servers loaded: 0
+2025-12-13T16:21:00.686Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2025-12-13T16:21:00.686Z [DEBUG] LSP manager initialized with 0 servers
+2025-12-13T16:21:00.690Z [DEBUG] LSP server manager initialized successfully
+2025-12-13T16:21:00.691Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2025-12-13T16:21:00.722Z [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kevdev/.claude/skills, project=/home/kevdev/Developpement/Workspaces/AstroJs/mon-blog-astro-starter-blog/.claude/skills
+2025-12-13T16:21:00.722Z [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+2025-12-13T16:21:00.794Z [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+2025-12-13T16:21:00.794Z [DEBUG] Looking for shell config file: /home/kevdev/.zshrc
+2025-12-13T16:21:00.794Z [DEBUG] Snapshots directory: /home/kevdev/.claude/shell-snapshots
+2025-12-13T16:21:00.795Z [DEBUG] Creating snapshot at: /home/kevdev/.claude/shell-snapshots/snapshot-zsh-1765642860794-wxwbpv.sh
+2025-12-13T16:21:00.796Z [DEBUG] Shell binary exists: true
+2025-12-13T16:21:00.796Z [DEBUG] Execution timeout: 10000ms
+2025-12-13T16:21:00.802Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765642860802
+2025-12-13T16:21:00.808Z [DEBUG] Temp file written successfully, size: 2 bytes
+2025-12-13T16:21:00.808Z [DEBUG] Renaming /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765642860802 to /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json
+2025-12-13T16:21:00.808Z [DEBUG] File /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json written atomically
+2025-12-13T16:21:00.834Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2025-12-13T16:21:00.834Z [DEBUG] Total plugin skills loaded: 0
+2025-12-13T16:21:00.834Z [DEBUG] Total plugin commands loaded: 0
+2025-12-13T16:21:00.834Z [DEBUG] Registered 0 hooks from 0 plugins
+2025-12-13T16:21:00.842Z [DEBUG] Loaded 0 unique skills (managed: 0, user: 0, project: 0, duplicates removed: 0)
+2025-12-13T16:21:00.850Z [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+2025-12-13T16:21:00.897Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/x64-linux/rg)
+2025-12-13T16:21:00.980Z [DEBUG] Total plugin agents loaded: 0
+2025-12-13T16:21:01.011Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861010
+2025-12-13T16:21:01.011Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.015Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:01.015Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.015Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861010 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.015Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.052Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861052
+2025-12-13T16:21:01.052Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.059Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:01.059Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.059Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861052 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.059Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.061Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861061
+2025-12-13T16:21:01.062Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.067Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:01.067Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.067Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861061 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.068Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.122Z [ERROR] AxiosError: AxiosError: Request failed with status code 401
+    at Dj (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:62:1137)
+    at IncomingMessage.<anonymous> (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:67:9858)
+    at IncomingMessage.emit (node:events:520:35)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at cFA.request (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:69:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async fY2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1965:43209)
+2025-12-13T16:21:01.277Z [DEBUG] Shell snapshot created successfully (139960 bytes)
+2025-12-13T16:21:01.657Z [DEBUG] Failed to fetch Grove notice config: AxiosError: Request failed with status code 401
+2025-12-13T16:21:01.690Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861690
+2025-12-13T16:21:01.690Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.695Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:01.696Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.696Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861690 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.696Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.731Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2025-12-13T16:21:01.731Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:01.731Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2025-12-13T16:21:01.766Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:21:01.766Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:21:01.777Z [DEBUG] Getting matching hook commands for SubagentStart with query: Explore
+2025-12-13T16:21:01.777Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:01.777Z [DEBUG] Matched 0 unique hooks for query "Explore" (0 before deduplication)
+2025-12-13T16:21:01.789Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2025-12-13T16:21:01.789Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:01.789Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2025-12-13T16:21:01.893Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861893
+2025-12-13T16:21:01.893Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.899Z [DEBUG] Temp file written successfully, size: 49975 bytes
+2025-12-13T16:21:01.900Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.900Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861893 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.900Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.904Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861904
+2025-12-13T16:21:01.904Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.910Z [DEBUG] Temp file written successfully, size: 49975 bytes
+2025-12-13T16:21:01.910Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.910Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861904 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.910Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:01.930Z [DEBUG] performStartupChecks called
+2025-12-13T16:21:01.930Z [DEBUG] Starting background plugin installations
+2025-12-13T16:21:01.930Z [DEBUG] performBackgroundPluginInstallations called
+2025-12-13T16:21:01.967Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:21:01.977Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642861977
+2025-12-13T16:21:01.977Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:01.987Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:01.987Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:01.987Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642861977 to /home/kevdev/.claude.json
+2025-12-13T16:21:01.987Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:02.085Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2025-12-13T16:21:02.108Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2025-12-13T16:21:02.186Z [DEBUG] MCP server "ide": Starting connection with timeout of 30000ms
+2025-12-13T16:21:02.227Z [DEBUG] Summarizing all 23 messages (~11128 tokens)
+2025-12-13T16:21:02.249Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642862249
+2025-12-13T16:21:02.249Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:02.255Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:02.255Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:02.255Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642862249 to /home/kevdev/.claude.json
+2025-12-13T16:21:02.256Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:02.258Z [DEBUG] MCP server "ide": Successfully connected to ws-ide server in 110ms
+2025-12-13T16:21:02.259Z [DEBUG] MCP server "ide": Connection established with capabilities: {"hasTools":true,"hasPrompts":false,"hasResources":false,"serverVersion":{"name":"Claude Code VSCode MCP","version":"2.0.62"}}
+2025-12-13T16:21:02.304Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642862304
+2025-12-13T16:21:02.305Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:02.311Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:02.311Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:02.311Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642862304 to /home/kevdev/.claude.json
+2025-12-13T16:21:02.311Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:02.392Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642862392
+2025-12-13T16:21:02.392Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:02.398Z [DEBUG] Temp file written successfully, size: 50080 bytes
+2025-12-13T16:21:02.399Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:02.399Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642862392 to /home/kevdev/.claude.json
+2025-12-13T16:21:02.399Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:03.017Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:21:03.017Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:21:03.290Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:21:03.642Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642863642
+2025-12-13T16:21:03.642Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:03.652Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:21:03.653Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:03.653Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642863642 to /home/kevdev/.claude.json
+2025-12-13T16:21:03.653Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:04.672Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:21:05.047Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:21:05.132Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642865132
+2025-12-13T16:21:05.133Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:05.141Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:21:05.141Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:05.142Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642865132 to /home/kevdev/.claude.json
+2025-12-13T16:21:05.142Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:05.550Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:21:07.152Z [DEBUG] Applying permission update: Setting mode to 'default'
+2025-12-13T16:21:07.536Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-13T16:21:07.536Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:07.536Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:21:08.563Z [DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+2025-12-13T16:21:09.631Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642869631
+2025-12-13T16:21:09.631Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:09.641Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:21:09.641Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:09.642Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642869631 to /home/kevdev/.claude.json
+2025-12-13T16:21:09.642Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:09.642Z [DEBUG] Applying permission update: Setting mode to 'plan'
+2025-12-13T16:21:11.391Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642871391
+2025-12-13T16:21:11.391Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:11.395Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:21:11.395Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:11.395Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642871391 to /home/kevdev/.claude.json
+2025-12-13T16:21:11.395Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:12.090Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-13T16:21:12.091Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:12.091Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:21:45.951Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:21:46.013Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:21:46.014Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:21:46.026Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:21:46.026Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:21:46.088Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-13T16:21:46.088Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:21:46.089Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:21:46.091Z [DEBUG] FileHistory: Added snapshot for f4a25aaf-b4af-4e83-a9d9-f0de82b20868, tracking 0 files
+2025-12-13T16:21:46.149Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-13T16:21:46.169Z [DEBUG] Total plugin output styles loaded: 0
+2025-12-13T16:21:46.192Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 43ms
+2025-12-13T16:21:46.217Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:21:46.217Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:21:46.870Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:21:46.870Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:21:47.285Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:21:48.266Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765642908266
+2025-12-13T16:21:48.266Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:21:48.277Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:21:48.277Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:21:48.277Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765642908266 to /home/kevdev/.claude.json
+2025-12-13T16:21:48.277Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:21:48.822Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:06.901Z [DEBUG] executePreToolHooks called for tool: Task
+2025-12-13T16:22:06.912Z [DEBUG] Getting matching hook commands for PreToolUse with query: Task
+2025-12-13T16:22:06.912Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:06.912Z [DEBUG] Matched 0 unique hooks for query "Task" (0 before deduplication)
+2025-12-13T16:22:07.017Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2025-12-13T16:22:07.017Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:07.017Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2025-12-13T16:22:09.099Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:14.354Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:14.360Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:14.366Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:14.372Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:14.381Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:14.381Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:14.381Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:14.381Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:14.382Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:14.382Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:14.382Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:14.382Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:14.382Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:14.382Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:14.382Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:14.382Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:14.656Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:14.693Z [DEBUG] No hook environment files found
+2025-12-13T16:22:14.708Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:14.813Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:14.813Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:14.813Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:14.854Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:14.917Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:15.020Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:15.021Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:15.021Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:15.132Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:15.132Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:15.132Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:15.225Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:15.225Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:15.225Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:15.520Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:16.312Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:16.334Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:16.520Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:17.801Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:22.199Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:22.206Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:22.212Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:22.219Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:22.230Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:22.230Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:22.230Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.230Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:22.230Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:22.230Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.230Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:22.230Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:22.230Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.230Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:22.230Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:22.230Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.378Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:22.379Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:22.379Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.379Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:22.379Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:22.379Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.379Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:22.379Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:22.379Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:22.379Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:22.379Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:22.379Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:29.792Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:35.268Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:35.274Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:35.283Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:35.289Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:35.296Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:35.296Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:35.297Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:35.297Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:35.297Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:35.297Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:35.297Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:35.297Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:35.298Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:35.298Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:35.298Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:35.298Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:35.461Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:35.511Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:35.557Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:35.604Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:35.721Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:35.721Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:35.721Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:35.786Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:35.786Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:35.786Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:35.847Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:35.847Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:35.847Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:35.952Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:35.952Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:35.952Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:36.615Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:37.167Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:38.089Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:39.457Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:39.664Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:44.075Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:44.084Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:44.091Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:44.097Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:44.105Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:44.105Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:44.105Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:44.105Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:44.105Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:44.105Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:44.106Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:44.106Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:44.106Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:44.106Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:44.106Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:44.106Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:44.274Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:44.324Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:44.377Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:44.423Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:44.516Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:44.516Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:44.516Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:44.584Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:44.584Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:44.584Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:44.649Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:44.649Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:44.649Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:44.750Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:44.750Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:44.750Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:45.838Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:46.243Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:46.299Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:46.862Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:47.291Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:48.856Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:22:48.865Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:22:48.865Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:48.865Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:22:48.937Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:22:49.033Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:22:49.033Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:49.033Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:22:49.985Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:51.899Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:22:55.412Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:55.418Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:22:55.425Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:55.425Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:55.425Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:55.425Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:22:55.425Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:22:55.425Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:55.500Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:55.500Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:55.500Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:55.500Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:22:55.501Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:22:55.501Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:22:59.911Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:23:02.692Z [DEBUG] executePreToolHooks called for tool: Read
+2025-12-13T16:23:02.702Z [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+2025-12-13T16:23:02.703Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:23:02.703Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:23:02.739Z [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+2025-12-13T16:23:02.739Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:23:02.739Z [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+2025-12-13T16:23:05.406Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:24:03.924Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2025-12-13T16:24:03.924Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:24:03.924Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:24:03.983Z [DEBUG] Getting matching hook commands for PostToolUse with query: Task
+2025-12-13T16:24:03.983Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:24:03.983Z [DEBUG] Matched 0 unique hooks for query "Task" (0 before deduplication)
+2025-12-13T16:24:04.111Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:24:04.116Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:24:04.116Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:24:04.138Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:24:04.138Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:24:04.182Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 71ms
+2025-12-13T16:24:04.237Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:24:04.237Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:24:06.270Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:24:27.494Z [DEBUG] executePreToolHooks called for tool: AskUserQuestion
+2025-12-13T16:24:27.500Z [DEBUG] Getting matching hook commands for PreToolUse with query: AskUserQuestion
+2025-12-13T16:24:27.500Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:24:27.500Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-13T16:24:27.545Z [DEBUG] executePermissionRequestHooks called for tool: AskUserQuestion
+2025-12-13T16:24:27.553Z [DEBUG] Getting matching hook commands for PermissionRequest with query: AskUserQuestion
+2025-12-13T16:24:27.553Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:24:27.553Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-13T16:24:33.534Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2025-12-13T16:24:33.534Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:24:33.534Z [DEBUG] Matched 1 unique hooks for query "permission_prompt" (1 before deduplication)
+2025-12-13T16:24:33.553Z [DEBUG] Notification:permission_prompt [afplay -v 0.1 /home/kevdev/.claude/song/need-human.mp3] completed with status 127
+2025-12-13T16:24:33.553Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:31:14.900Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:31:14.961Z [DEBUG] Getting matching hook commands for PostToolUse with query: AskUserQuestion
+2025-12-13T16:31:14.961Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:31:14.961Z [DEBUG] Matched 0 unique hooks for query "AskUserQuestion" (0 before deduplication)
+2025-12-13T16:31:15.032Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:31:15.032Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:31:15.032Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:31:15.051Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:31:15.051Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:31:15.092Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 60ms
+2025-12-13T16:31:15.161Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:31:15.161Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:31:15.689Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:31:15.689Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:31:17.467Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:31:17.651Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643477651
+2025-12-13T16:31:17.651Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:31:17.673Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:31:17.673Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:31:17.673Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643477651 to /home/kevdev/.claude.json
+2025-12-13T16:31:17.673Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:31:34.089Z [DEBUG] executePreToolHooks called for tool: ExitPlanMode
+2025-12-13T16:31:34.099Z [DEBUG] Getting matching hook commands for PreToolUse with query: ExitPlanMode
+2025-12-13T16:31:34.099Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:31:34.099Z [DEBUG] Matched 0 unique hooks for query "ExitPlanMode" (0 before deduplication)
+2025-12-13T16:31:34.139Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5464
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5435)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5351
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5340)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+2025-12-13T16:31:34.169Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5464
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5435)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5351
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5340)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+2025-12-13T16:31:34.177Z [DEBUG] executePermissionRequestHooks called for tool: ExitPlanMode
+2025-12-13T16:31:34.180Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5464
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5435)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5351
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5340)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+2025-12-13T16:31:34.189Z [DEBUG] Getting matching hook commands for PermissionRequest with query: ExitPlanMode
+2025-12-13T16:31:34.189Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:31:34.189Z [DEBUG] Matched 0 unique hooks for query "ExitPlanMode" (0 before deduplication)
+2025-12-13T16:31:34.391Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5464
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5435)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5351
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5340)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+2025-12-13T16:31:42.179Z [DEBUG] Applying permission update: Setting mode to 'default'
+2025-12-13T16:31:42.244Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:31:42.290Z [DEBUG] Getting matching hook commands for PostToolUse with query: ExitPlanMode
+2025-12-13T16:31:42.290Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:31:42.290Z [DEBUG] Matched 0 unique hooks for query "ExitPlanMode" (0 before deduplication)
+2025-12-13T16:31:42.303Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5464
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5435)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5351
+    at Array.map (<anonymous>)
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:5340)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+2025-12-13T16:31:42.354Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:31:42.355Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:31:42.355Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:31:42.369Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:31:42.369Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:31:42.395Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 41ms
+2025-12-13T16:31:42.415Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:31:42.415Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:31:42.828Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:31:42.829Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:31:44.293Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643504293
+2025-12-13T16:31:44.293Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:31:44.301Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:31:44.302Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:31:44.302Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643504293 to /home/kevdev/.claude.json
+2025-12-13T16:31:44.302Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:31:45.513Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:31:51.299Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-13T16:31:51.304Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-13T16:31:51.304Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:31:51.304Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-13T16:31:51.329Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765643511329
+2025-12-13T16:31:51.329Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:31:51.335Z [DEBUG] Temp file written successfully, size: 440 bytes
+2025-12-13T16:31:51.335Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:31:51.335Z [DEBUG] Renaming /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765643511329 to /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json
+2025-12-13T16:31:51.335Z [DEBUG] File /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json written atomically
+2025-12-13T16:31:51.356Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-13T16:31:51.356Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:31:51.356Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-13T16:31:51.413Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:31:51.413Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:31:51.413Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:31:51.423Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:31:51.423Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:31:51.455Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 42ms
+2025-12-13T16:31:51.479Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:31:51.479Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:31:54.018Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:31:55.340Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:31:55.352Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:31:55.352Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:31:55.352Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:31:55.432Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:31:56.160Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:31:56.213Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "git add:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+2025-12-13T16:31:56.248Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2025-12-13T16:31:56.254Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2025-12-13T16:31:56.254Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:31:56.254Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:32:02.241Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2025-12-13T16:32:02.242Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:32:02.242Z [DEBUG] Matched 1 unique hooks for query "permission_prompt" (1 before deduplication)
+2025-12-13T16:32:02.274Z [DEBUG] Notification:permission_prompt [afplay -v 0.1 /home/kevdev/.claude/song/need-human.mp3] completed with status 127
+2025-12-13T16:32:02.274Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:32:02.563Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:32:02.736Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:32:02.736Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:32:02.736Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:32:02.834Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:32:02.835Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:32:02.835Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:32:02.849Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:32:02.849Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:32:02.907Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 73ms
+2025-12-13T16:32:02.929Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:32:02.929Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:32:03.480Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:32:03.481Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:32:04.000Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:32:04.988Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643524988
+2025-12-13T16:32:04.988Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:32:04.999Z [DEBUG] Temp file written successfully, size: 50082 bytes
+2025-12-13T16:32:04.999Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:32:05.000Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643524988 to /home/kevdev/.claude.json
+2025-12-13T16:32:05.000Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:32:05.015Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:32:07.613Z [DEBUG] executePreToolHooks called for tool: TodoWrite
+2025-12-13T16:32:07.621Z [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+2025-12-13T16:32:07.621Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:32:07.621Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-13T16:32:07.641Z [DEBUG] Writing to temp file: /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765643527641
+2025-12-13T16:32:07.641Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:32:07.645Z [DEBUG] Temp file written successfully, size: 442 bytes
+2025-12-13T16:32:07.645Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:32:07.645Z [DEBUG] Renaming /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json.tmp.134163.1765643527641 to /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json
+2025-12-13T16:32:07.645Z [DEBUG] File /home/kevdev/.claude/todos/3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553-agent-3e4ff1c9-81bb-4d4b-8af2-a1bc969d1553.json written atomically
+2025-12-13T16:32:07.667Z [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+2025-12-13T16:32:07.667Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:32:07.667Z [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+2025-12-13T16:32:07.724Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:32:07.724Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:32:07.725Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:32:07.736Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:32:07.736Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:32:07.788Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 64ms
+2025-12-13T16:32:07.816Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:32:07.816Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:32:10.135Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:32:17.990Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:32:18.004Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:32:18.004Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:32:18.004Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:32:18.089Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:32:19.099Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:32:19.302Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:32:19.845Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "git commit -m \"$(cat <<''EOF''\nfeat: restructure .claude/ with AI-Blueprint compliance\n\n- Reduce token usage by 70% (~2,163 → ~600 tokens)\n- Add 24 new documentation files (INDEX, CHANGELOG, context-maps, ADRs, glossary)\n- Enhance CLAUDE.md with 3-level context loading strategy\n- Merge generate-commit-message into commit-push-smart (4 modes)\n- Reorganize configs into snippets/configs/{tool}/ structure\n- Achieve 95% AI-Blueprint compliance with standardized metadata\n\nChanges:\n- Modified: 4 core files (CLAUDE.md, commit-push-smart.md, 2 core docs)\n- Added: 24 files (navigation, rules, context-maps, decisions, glossary)\n- Removed: 1 file (merged), 5 configs (reorganized)\n- New: pnpm-workspace.yaml for faster installs\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\""
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+2025-12-13T16:32:19.908Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2025-12-13T16:32:19.920Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2025-12-13T16:32:19.920Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:32:19.920Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:32:25.895Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2025-12-13T16:32:25.895Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:32:25.895Z [DEBUG] Matched 1 unique hooks for query "permission_prompt" (1 before deduplication)
+2025-12-13T16:32:25.933Z [DEBUG] Notification:permission_prompt [afplay -v 0.1 /home/kevdev/.claude/song/need-human.mp3] completed with status 127
+2025-12-13T16:32:25.933Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:33:08.010Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:33:08.152Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643588152
+2025-12-13T16:33:08.152Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:33:08.158Z [DEBUG] Temp file written successfully, size: 50120 bytes
+2025-12-13T16:33:08.158Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:33:08.158Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643588152 to /home/kevdev/.claude.json
+2025-12-13T16:33:08.158Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:33:08.165Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643588165
+2025-12-13T16:33:08.165Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:33:08.170Z [DEBUG] Temp file written successfully, size: 50120 bytes
+2025-12-13T16:33:08.171Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:33:08.171Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643588165 to /home/kevdev/.claude.json
+2025-12-13T16:33:08.171Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:33:08.581Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:33:08.581Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:33:09.949Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643589949
+2025-12-13T16:33:09.949Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:33:09.958Z [DEBUG] Temp file written successfully, size: 50120 bytes
+2025-12-13T16:33:09.958Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:33:09.958Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643589949 to /home/kevdev/.claude.json
+2025-12-13T16:33:09.958Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:37:10.410Z [DEBUG] Applying permission update: Setting mode to 'acceptEdits'
+2025-12-13T16:37:11.116Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643831116
+2025-12-13T16:37:11.116Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:37:11.121Z [DEBUG] Temp file written successfully, size: 50120 bytes
+2025-12-13T16:37:11.122Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:37:11.122Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643831116 to /home/kevdev/.claude.json
+2025-12-13T16:37:11.122Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:37:11.122Z [DEBUG] Applying permission update: Setting mode to 'plan'
+2025-12-13T16:38:04.855Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:38:04.945Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:38:04.947Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:38:04.947Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:38:04.967Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:38:04.967Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:38:04.998Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 53ms
+2025-12-13T16:38:05.034Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-13T16:38:05.034Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:38:05.034Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:38:05.036Z [DEBUG] FileHistory: Making snapshot for message 928f8614-dcad-44f4-9728-582788689e71
+2025-12-13T16:38:05.036Z [DEBUG] FileHistory: Added snapshot for 928f8614-dcad-44f4-9728-582788689e71, tracking 0 files
+2025-12-13T16:38:05.085Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-13T16:38:05.129Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 44ms
+2025-12-13T16:38:05.149Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:38:05.149Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:38:05.742Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:38:05.742Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:38:06.343Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:38:07.662Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643887662
+2025-12-13T16:38:07.663Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:38:07.670Z [DEBUG] Temp file written successfully, size: 50120 bytes
+2025-12-13T16:38:07.670Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:38:07.670Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643887662 to /home/kevdev/.claude.json
+2025-12-13T16:38:07.670Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:38:07.720Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:38:42.093Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-13T16:38:42.093Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:38:42.093Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-13T16:38:42.163Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:38:42.277Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643922277
+2025-12-13T16:38:42.277Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:38:42.281Z [DEBUG] Temp file written successfully, size: 50151 bytes
+2025-12-13T16:38:42.281Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:38:42.281Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643922277 to /home/kevdev/.claude.json
+2025-12-13T16:38:42.281Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:38:42.288Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765643922288
+2025-12-13T16:38:42.288Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:38:42.293Z [DEBUG] Temp file written successfully, size: 50151 bytes
+2025-12-13T16:38:42.293Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:38:42.293Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765643922288 to /home/kevdev/.claude.json
+2025-12-13T16:38:42.293Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:40:33.663Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:40:33.664Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:40:33.665Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:40:33.675Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:40:33.675Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:40:33.698Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 35ms
+2025-12-13T16:40:33.766Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-13T16:40:33.766Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:40:33.766Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:40:33.768Z [DEBUG] FileHistory: Making snapshot for message aa747a15-4668-41ef-9c5b-96ae923561b3
+2025-12-13T16:40:33.768Z [DEBUG] FileHistory: Added snapshot for aa747a15-4668-41ef-9c5b-96ae923561b3, tracking 0 files
+2025-12-13T16:40:33.824Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-13T16:40:33.865Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 41ms
+2025-12-13T16:40:33.888Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:40:33.888Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:40:35.084Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:40:36.195Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:41:07.638Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+    at sB2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1828:3681)
+    at kN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:105:19417)
+    at QQA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:42847)
+    at s9 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38379)
+    at nn (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38307)
+    at cN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38161)
+2025-12-13T16:41:07.640Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+    at sB2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1828:3681)
+    at kN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:105:19417)
+    at QQA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:42847)
+    at s9 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38379)
+    at nn (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38307)
+    at cN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38161)
+2025-12-13T16:41:07.641Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+    at sB2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1828:3681)
+    at kN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:105:19417)
+    at QQA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:42847)
+    at s9 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38379)
+    at nn (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38307)
+    at cN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38161)
+2025-12-13T16:41:07.643Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+    at sB2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1828:3681)
+    at kN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:105:19417)
+    at QQA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:42847)
+    at s9 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38379)
+    at nn (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38307)
+    at cN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38161)
+2025-12-13T16:41:07.644Z [ERROR] Error: Error: Language not supported while highlighting code, falling back to markdown: 
+    at sE (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4488)
+    at file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4217
+    at Array.map (<anonymous>)
+    at tK (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1105:4208)
+    at sB2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1828:3681)
+    at kN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:105:19417)
+    at QQA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:42847)
+    at s9 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38379)
+    at nn (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38307)
+    at cN (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:107:38161)
+2025-12-13T16:41:07.733Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-13T16:41:07.733Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:41:07.733Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-13T16:41:07.838Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:41:07.953Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644067952
+2025-12-13T16:41:07.953Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:41:07.958Z [DEBUG] Temp file written successfully, size: 50185 bytes
+2025-12-13T16:41:07.958Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:41:07.958Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644067952 to /home/kevdev/.claude.json
+2025-12-13T16:41:07.958Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:41:07.965Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644067965
+2025-12-13T16:41:07.965Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:41:07.971Z [DEBUG] Temp file written successfully, size: 50185 bytes
+2025-12-13T16:41:07.971Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:41:07.971Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644067965 to /home/kevdev/.claude.json
+2025-12-13T16:41:07.971Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:42:20.457Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:42:20.496Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:42:20.496Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:42:20.499Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:42:21.046Z [ERROR] Error: Error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"max_tokens: Extra inputs are not permitted"},"request_id":"req_011CW527zk63Ai8WCyccuDex"}
+    at C9.generate (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:436:20044)
+    at mR.makeStatusError (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:2195)
+    at mR.makeRequest (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:5419)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2698
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2196
+    at async EF5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1728:2364)
+    at async WA2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2129)
+    at async WLA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:97)
+    at async vv5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:2297)
+2025-12-13T16:42:21.072Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:42:21.072Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:42:22.028Z [DEBUG] FileHistory: Making snapshot for message 8e107e0f-8e17-4e8e-aa85-9c5ad4459564
+2025-12-13T16:42:22.029Z [DEBUG] FileHistory: Added snapshot for 8e107e0f-8e17-4e8e-aa85-9c5ad4459564, tracking 0 files
+2025-12-13T16:42:22.041Z [DEBUG] Rendering user message with 1 content blocks
+2025-12-13T16:42:22.041Z [DEBUG] Block 0: <command-name>/context</command-name>
+            <command-message>context</command-message>
+       ...
+2025-12-13T16:42:22.042Z [DEBUG] UserCommandMessage rendering: "context" (args: "none")
+2025-12-13T16:42:22.042Z [DEBUG] isSkillFormat: false, prefix: "/"
+2025-12-13T16:42:22.112Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644142112
+2025-12-13T16:42:22.112Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:42:22.119Z [DEBUG] Temp file written successfully, size: 50204 bytes
+2025-12-13T16:42:22.119Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:42:22.119Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644142112 to /home/kevdev/.claude.json
+2025-12-13T16:42:22.119Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:42:22.505Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644142505
+2025-12-13T16:42:22.505Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:42:22.514Z [DEBUG] Temp file written successfully, size: 50204 bytes
+2025-12-13T16:42:22.514Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:42:22.514Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644142505 to /home/kevdev/.claude.json
+2025-12-13T16:42:22.514Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:46:50.699Z [DEBUG] [FileIndex] Not in bundled mode, using Fuse.js fallback
+2025-12-13T16:46:50.700Z [DEBUG] [FileIndex] Using Fuse.js fallback for search
+2025-12-13T16:46:51.950Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:46:51.951Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:46:51.952Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:46:51.962Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:46:51.962Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:46:51.982Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 32ms
+2025-12-13T16:46:52.049Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-13T16:46:52.049Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:46:52.049Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:46:52.050Z [DEBUG] FileHistory: Making snapshot for message 2f5d1a6c-9981-4d9b-ac78-8a7ed3243ca5
+2025-12-13T16:46:52.051Z [DEBUG] FileHistory: Added snapshot for 2f5d1a6c-9981-4d9b-ac78-8a7ed3243ca5, tracking 0 files
+2025-12-13T16:46:52.107Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-13T16:46:52.154Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 47ms
+2025-12-13T16:46:52.175Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:46:52.175Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:46:53.400Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:46:55.448Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:47:04.055Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-13T16:47:04.055Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:47:04.055Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-13T16:47:04.117Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:47:04.207Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644424207
+2025-12-13T16:47:04.207Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:47:04.214Z [DEBUG] Temp file written successfully, size: 50224 bytes
+2025-12-13T16:47:04.214Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:47:04.214Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644424207 to /home/kevdev/.claude.json
+2025-12-13T16:47:04.214Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:47:04.221Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644424221
+2025-12-13T16:47:04.221Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:47:04.226Z [DEBUG] Temp file written successfully, size: 50224 bytes
+2025-12-13T16:47:04.226Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:47:04.226Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644424221 to /home/kevdev/.claude.json
+2025-12-13T16:47:04.227Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:47:36.175Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:47:36.175Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:47:36.176Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:47:36.184Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:47:36.184Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:47:36.199Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 24ms
+2025-12-13T16:47:36.221Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-13T16:47:36.221Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:47:36.221Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-13T16:47:36.222Z [DEBUG] FileHistory: Making snapshot for message 5df9bc46-9e1a-49de-8680-b104bb7ef4e7
+2025-12-13T16:47:36.222Z [DEBUG] FileHistory: Added snapshot for 5df9bc46-9e1a-49de-8680-b104bb7ef4e7, tracking 0 files
+2025-12-13T16:47:36.278Z [DEBUG] MCP server "ide": Calling MCP tool: closeAllDiffTabs
+2025-12-13T16:47:36.322Z [DEBUG] MCP server "ide": Tool 'closeAllDiffTabs' completed successfully in 44ms
+2025-12-13T16:47:36.341Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:47:36.341Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:47:37.531Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:47:38.610Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:47:44.739Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:47:44.746Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:47:44.746Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:47:44.746Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:47:44.827Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:47:46.242Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:47:46.317Z [DEBUG] Permission suggestions for Bash: [
+  {
+    "type": "addRules",
+    "rules": [
+      {
+        "toolName": "Bash",
+        "ruleContent": "claude mcp list:*"
+      }
+    ],
+    "behavior": "allow",
+    "destination": "localSettings"
+  }
+]
+2025-12-13T16:47:46.352Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2025-12-13T16:47:46.360Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2025-12-13T16:47:46.360Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:47:46.360Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:47:52.345Z [DEBUG] Getting matching hook commands for Notification with query: permission_prompt
+2025-12-13T16:47:52.346Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:47:52.346Z [DEBUG] Matched 1 unique hooks for query "permission_prompt" (1 before deduplication)
+2025-12-13T16:47:52.372Z [DEBUG] Notification:permission_prompt [afplay -v 0.1 /home/kevdev/.claude/song/need-human.mp3] completed with status 127
+2025-12-13T16:47:52.372Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:47:53.419Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:47:54.044Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:47:54.044Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:47:54.982Z [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+2025-12-13T16:47:54.982Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:47:54.982Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:47:55.091Z [DEBUG] MCP server "ide": Calling MCP tool: getDiagnostics
+2025-12-13T16:47:55.092Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-13T16:47:55.092Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-13T16:47:55.105Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-13T16:47:55.105Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-13T16:47:55.142Z [DEBUG] MCP server "ide": Tool 'getDiagnostics' completed successfully in 51ms
+2025-12-13T16:47:55.227Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:47:55.227Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:47:55.831Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644475831
+2025-12-13T16:47:55.831Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:47:55.838Z [DEBUG] Temp file written successfully, size: 50259 bytes
+2025-12-13T16:47:55.838Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:47:55.838Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644475831 to /home/kevdev/.claude.json
+2025-12-13T16:47:55.838Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:47:56.112Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:47:57.859Z [DEBUG] Stream started - received first chunk
+2025-12-13T16:48:02.857Z [DEBUG] executePreToolHooks called for tool: Bash
+2025-12-13T16:48:02.865Z [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+2025-12-13T16:48:02.865Z [DEBUG] Found 1 hook matchers in settings
+2025-12-13T16:48:02.865Z [DEBUG] Matched 1 unique hooks for query "Bash" (1 before deduplication)
+2025-12-13T16:48:02.946Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-13T16:48:02.981Z [DEBUG] Permission suggestions for Bash: []
+2025-12-13T16:48:03.013Z [DEBUG] executePermissionRequestHooks called for tool: Bash
+2025-12-13T16:48:03.020Z [DEBUG] Getting matching hook commands for PermissionRequest with query: Bash
+2025-12-13T16:48:03.020Z [DEBUG] Found 0 hook matchers in settings
+2025-12-13T16:48:03.020Z [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+2025-12-13T16:48:11.135Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:48:11.143Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644491143
+2025-12-13T16:48:11.143Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:11.149Z [DEBUG] Temp file written successfully, size: 50281 bytes
+2025-12-13T16:48:11.149Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:11.149Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644491143 to /home/kevdev/.claude.json
+2025-12-13T16:48:11.149Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:11.283Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644491283
+2025-12-13T16:48:11.283Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:11.290Z [DEBUG] Temp file written successfully, size: 50311 bytes
+2025-12-13T16:48:11.290Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:11.290Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644491283 to /home/kevdev/.claude.json
+2025-12-13T16:48:11.290Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:11.299Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644491299
+2025-12-13T16:48:11.300Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:11.305Z [DEBUG] Temp file written successfully, size: 50311 bytes
+2025-12-13T16:48:11.305Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:11.305Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644491299 to /home/kevdev/.claude.json
+2025-12-13T16:48:11.305Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:11.668Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:48:11.668Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:48:12.966Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644492966
+2025-12-13T16:48:12.966Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:12.973Z [DEBUG] Temp file written successfully, size: 50311 bytes
+2025-12-13T16:48:12.973Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:12.973Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644492966 to /home/kevdev/.claude.json
+2025-12-13T16:48:12.973Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:16.022Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-13T16:48:16.056Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:48:16.056Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:48:16.057Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:48:16.507Z [ERROR] Error: Error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"max_tokens: Extra inputs are not permitted"},"request_id":"req_011CW52aCDsx5goi5NFWV8G2"}
+    at C9.generate (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:436:20044)
+    at mR.makeStatusError (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:2195)
+    at mR.makeRequest (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:5419)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2698
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2196
+    at async EF5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1728:2364)
+    at async WA2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2129)
+    at async WLA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:97)
+    at async vv5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:2297)
+2025-12-13T16:48:16.593Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2025-12-13T16:48:16.593Z [DEBUG] AutoUpdater: Using global update method
+2025-12-13T16:48:17.931Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644497931
+2025-12-13T16:48:17.931Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:17.942Z [DEBUG] Temp file written successfully, size: 50311 bytes
+2025-12-13T16:48:17.942Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:17.942Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644497931 to /home/kevdev/.claude.json
+2025-12-13T16:48:17.942Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:20.179Z [DEBUG] FileHistory: Making snapshot for message 4f470bc1-5537-43d5-9200-64a7f132bd6a
+2025-12-13T16:48:20.180Z [DEBUG] FileHistory: Added snapshot for 4f470bc1-5537-43d5-9200-64a7f132bd6a, tracking 0 files
+2025-12-13T16:48:20.205Z [DEBUG] Rendering user message with 1 content blocks
+2025-12-13T16:48:20.205Z [DEBUG] Block 0: <command-name>/context</command-name>
+            <command-message>context</command-message>
+       ...
+2025-12-13T16:48:20.206Z [DEBUG] UserCommandMessage rendering: "context" (args: "none")
+2025-12-13T16:48:20.206Z [DEBUG] isSkillFormat: false, prefix: "/"
+2025-12-13T16:48:20.293Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644500293
+2025-12-13T16:48:20.293Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:20.299Z [DEBUG] Temp file written successfully, size: 50340 bytes
+2025-12-13T16:48:20.300Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:20.300Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644500293 to /home/kevdev/.claude.json
+2025-12-13T16:48:20.300Z [DEBUG] File /home/kevdev/.claude.json written atomically
+2025-12-13T16:48:50.532Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:48:50.532Z [DEBUG] Slash commands included in SlashCommand tool: /commit, /run-tasks, /watch-ci, /create-pull-request, /explore, /oneshot, /epct, /fix-pr-comments, /commit-push-smart
+2025-12-13T16:48:50.533Z [DEBUG] Skills and commands included in Skill tool:
+2025-12-13T16:48:50.934Z [ERROR] Error: Error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"max_tokens: Extra inputs are not permitted"},"request_id":"req_011CW52cji2DLz6GWi4PqP6Q"}
+    at C9.generate (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:436:20044)
+    at mR.makeStatusError (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:2195)
+    at mR.makeRequest (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:778:5419)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2698
+    at async file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2196
+    at async EF5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1728:2364)
+    at async WA2 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:1729:2129)
+    at async WLA (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:97)
+    at async vv5 (file:///home/kevdev/.nvm/versions/node/v25.2.1/lib/node_modules/@anthropic-ai/claude-code/cli.js:2102:2297)
+2025-12-13T16:48:54.717Z [DEBUG] FileHistory: Making snapshot for message 3ea835cd-f669-42d7-a1e8-45c91a319212
+2025-12-13T16:48:54.717Z [DEBUG] FileHistory: Added snapshot for 3ea835cd-f669-42d7-a1e8-45c91a319212, tracking 0 files
+2025-12-13T16:48:54.744Z [DEBUG] Rendering user message with 1 content blocks
+2025-12-13T16:48:54.744Z [DEBUG] Block 0: <command-name>/context</command-name>
+            <command-message>context</command-message>
+       ...
+2025-12-13T16:48:54.744Z [DEBUG] UserCommandMessage rendering: "context" (args: "none")
+2025-12-13T16:48:54.744Z [DEBUG] isSkillFormat: false, prefix: "/"
+2025-12-13T16:48:54.808Z [DEBUG] Writing to temp file: /home/kevdev/.claude.json.tmp.134163.1765644534808
+2025-12-13T16:48:54.808Z [DEBUG] Preserving file permissions: 100600
+2025-12-13T16:48:54.813Z [DEBUG] Temp file written successfully, size: 50513 bytes
+2025-12-13T16:48:54.814Z [DEBUG] Applied original permissions to temp file
+2025-12-13T16:48:54.814Z [DEBUG] Renaming /home/kevdev/.claude.json.tmp.134163.1765644534808 to /home/kevdev/.claude.json
+2025-12-13T16:48:54.814Z [DEBUG] File /home/kevdev/.claude.json written atomically

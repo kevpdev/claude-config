@@ -1,0 +1,117 @@
+# TYPES-001: Core Type Definitions and Interfaces
+
+**Status**: Not Started
+**Priority**: High (Blocker for implementation stories)
+**Estimated effort**: 45 minutes
+
+## User Need
+
+As a developer, I need strongly-typed interfaces for all data structures (emails, metadata, AI responses, outputs) so the codebase has type safety and clear contracts between modules.
+
+## Context
+
+Defines the core TypeScript interfaces used throughout the application. These types represent the data flow: Gmail → Metadata → AI Summary → HTML Output.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 2.1)
+
+## Implementation Scope
+
+### File: `src/types.ts`
+
+**Core Interfaces**:
+
+1. **InputEmail** - Raw email fetched from Gmail
+   - `id: string` (Gmail message ID)
+   - `label: string` (domain: "Java", "Angular", etc.)
+   - `subject: string`
+   - `from: string`
+   - `date: Date`
+   - `htmlContent: string`
+   - `plainContent?: string` (optional fallback)
+
+2. **EmailMetadata** - Extracted and cleaned data
+   - `domain: string` (e.g., "Java")
+   - `domainColor: string` (hex: "#FF6B6B")
+   - `subject: string`
+   - `from: string`
+   - `date: Date`
+   - `contentCleaned: string` (sanitized for AI, max ~2000 chars)
+
+3. **AISummary** - Structured AI response
+   - `title: string` (concise title, <50 chars)
+   - `impact: string` (1-2 lines why it matters)
+   - `keyPoints: [string, string, string]` (exactly 3 items - tuple type)
+   - `action: string` (concrete action item)
+
+4. **OutputEmail** - Final email to send
+   - `domain: string`
+   - `color: string` (hex)
+   - `subject: string` (formatted: `[Domain] Title`)
+   - `htmlContent: string` (rendered HTML)
+   - `to: string` (recipient email)
+
+5. **DomainConfig** - Per-domain configuration
+   - `label: string` (display name: "Java")
+   - `color: string` (hex color)
+   - `inputLabel: string` ("Input/Java")
+   - `outputLabel: string` ("Output/Java")
+   - `processedLabel: string` ("Processed")
+
+6. **Config** - Global application config
+   - `gmail: { clientId, clientSecret, refreshToken }`
+   - `openrouter: { apiKey, model }`
+   - `domains: Record<string, DomainConfig>`
+   - `userEmail: string`
+   - `logging: { level: "debug" | "info" | "warn" | "error" }`
+
+## Acceptance Criteria
+
+- [ ] src/types.ts file created with all 6 interfaces exported
+- [ ] TypeScript compiles without errors
+- [ ] AISummary.keyPoints uses tuple type `[string, string, string]` (enforces exactly 3)
+- [ ] Config.logging.level uses union type for valid log levels only
+- [ ] All interfaces documented with TSDoc comments explaining purpose
+- [ ] No use of `any` type (strict mode compliance)
+
+## Test Scenarios
+
+1. **Type safety**: Create mock data → should enforce all required fields
+2. **Tuple validation**: Try assigning 2 or 4 items to keyPoints → should fail compilation
+3. **Union types**: Try assigning invalid log level → should fail compilation
+4. **Import test**: Import types in another file → should work without errors
+
+## Dependencies
+
+**Blocks**: All implementation stories (CONFIG-001, GMAIL-002, AI-003, RENDER-001, etc.)
+**Blocked by**: SETUP-001 (needs TypeScript configured)
+
+## Implementation Notes
+
+- Use `export interface` for all types (prefer interfaces over types for objects)
+- Add JSDoc comments explaining each interface's role in the data flow
+- AISummary.keyPoints MUST be tuple `[string, string, string]`, not `string[]` (enforces exactly 3)
+- Config interface should match .env.example structure from SETUP-001
+- Date type for timestamps (not string) - will be parsed from Gmail API
+
+## Example Usage
+
+```typescript
+// Example of how these types connect:
+const inputEmail: InputEmail = /* fetched from Gmail */;
+const metadata: EmailMetadata = extractMetadata(inputEmail);
+const summary: AISummary = parseAISummary(aiResponse);
+const output: OutputEmail = {
+  domain: metadata.domain,
+  color: metadata.domainColor,
+  subject: `[${metadata.domain}] ${summary.title}`,
+  htmlContent: renderOutputEmail(metadata, summary),
+  to: config.userEmail
+};
+```
+
+## Related Stories
+
+- CONFIG-001: Implements Config interface with default values
+- GMAIL-003: Uses InputEmail → EmailMetadata transformation
+- AI-003: Uses EmailMetadata → AISummary transformation
+- RENDER-001: Uses EmailMetadata + AISummary → OutputEmail.htmlContent

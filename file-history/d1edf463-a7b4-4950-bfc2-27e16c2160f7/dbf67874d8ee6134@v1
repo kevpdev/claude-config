@@ -1,0 +1,129 @@
+# AI-001: Prompt Builder for Structured JSON
+
+**Status**: Not Started
+**Priority**: High (Critical for AI reliability)
+**Estimated effort**: 45 minutes
+
+## User Need
+
+As the automation system, I need to construct prompts that force the AI to return structured JSON (Title + Impact + KeyPoints + Action) so parsing is reliable and consistent.
+
+## Context
+
+Builds the AI prompt from EmailMetadata. The prompt MUST enforce JSON-only output (no markdown wrappers) to ensure reliable parsing. This is critical for 95%+ success rate.
+
+**Parent plan**: `.claude/inputs/Plan détaillé newsletter automatisée (Node js + Ty 2c7fe971789a801282bee743ae7c3635.md` (Phase 4.1)
+
+## Implementation Scope
+
+### File: `src/ai/prompt.ts`
+
+**Function**: `buildPrompt(metadata: EmailMetadata): string`
+
+**Template**:
+```
+You are a technical expert in ${metadata.domain}.
+Synthesize this newsletter into strict JSON (no markdown, no text before/after the JSON).
+
+Newsletter content:
+---
+${metadata.contentCleaned}
+---
+
+Respond ONLY with this JSON (valid, parseable):
+{
+  "title": "Very concise title of main topic (10-15 words max)",
+  "impact": "Why this matters in 1-2 lines",
+  "keyPoints": [
+    "Key point 1: specific detail (15-20 words)",
+    "Key point 2: specific detail (15-20 words)",
+    "Key point 3: specific detail (15-20 words)"
+  ],
+  "action": "One concrete action the reader can take now (20-30 words)"
+}
+```
+
+## Acceptance Criteria
+
+- [ ] src/ai/prompt.ts file created
+- [ ] buildPrompt() function exported
+- [ ] Accepts EmailMetadata parameter
+- [ ] Injects domain into prompt (e.g., "expert in Java")
+- [ ] Injects cleaned content into prompt
+- [ ] Explicitly forbids markdown wrappers (```json```)
+- [ ] Explicitly requires JSON-only output
+- [ ] Specifies exact schema with field descriptions
+- [ ] Includes word count constraints (10-15, 15-20, 20-30)
+- [ ] Returns complete prompt string
+
+## Test Scenarios
+
+1. **Domain injection**: metadata.domain="Java" → prompt contains "expert in Java"
+2. **Content injection**: metadata.contentCleaned="foo" → prompt contains "foo"
+3. **Schema clarity**: Prompt clearly shows 4 required fields
+4. **No markdown**: Prompt explicitly says "no markdown"
+5. **JSON-only**: Prompt says "ONLY with this JSON"
+
+## Dependencies
+
+**Blocks**: AI-002 (needs prompt to send to OpenRouter)
+**Blocked by**: GMAIL-003 (needs EmailMetadata with cleaned content)
+
+## Implementation Notes
+
+### Prompt Engineering Best Practices
+
+**Critical constraints** (from CLAUDE.md):
+- "no markdown" - Prevents ```json wrappers
+- "no text before/after" - Prevents explanations
+- "ONLY with this JSON" - Emphasizes strict format
+- "valid, parseable" - Ensures JSON validity
+
+**Domain context**:
+- Inject metadata.domain → "expert in Java", "expert in DevOps", etc.
+- Helps AI tailor language/terminology
+
+**Word counts**:
+- Title: 10-15 words (concise, scannable)
+- Impact: 1-2 lines (brief explanation)
+- Key points: 15-20 words each (detailed but focused)
+- Action: 20-30 words (specific, actionable)
+
+**Content safety**:
+- metadata.contentCleaned already sanitized (from GMAIL-003)
+- No additional cleaning needed
+- Max ~2000 chars (fits Llama 3.3 context)
+
+### Why JSON-Strict Matters
+
+Without strict enforcement:
+- AI might wrap in ```json...```
+- AI might add explanations before/after
+- Parser fails → email skipped → bad UX
+
+With strict enforcement:
+- AI outputs raw JSON only
+- Parser succeeds 95%+ of time
+- Rare failures logged for debugging
+
+## Example Output (from AI)
+
+**Good** (parseable):
+```json
+{"title":"Spring Boot 3.2 Released","impact":"...","keyPoints":["...","...","..."],"action":"..."}
+```
+
+**Bad** (not parseable):
+```
+Here's the summary:
+```json
+{"title":"..."}
+```
+```
+
+## Related Stories
+
+- GMAIL-003: Provides EmailMetadata with cleaned content
+- AI-002: Sends prompt to OpenRouter API
+- AI-003: Parses JSON response from AI
+- CONFIG-001: Provides domain names for context

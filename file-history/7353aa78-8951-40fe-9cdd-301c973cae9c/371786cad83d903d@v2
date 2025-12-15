@@ -1,0 +1,396 @@
+---
+title: 'Rules Directory Index'
+description: 'Navigation guide for all coding standards, patterns, and architectural guidelines'
+category: 'rules'
+priority: 'high'
+alwaysApply: false
+tokenEstimate: 250
+loadingLevel: 2
+tags: ['navigation', 'rules', 'standards', 'patterns']
+relatedFiles:
+  - '../INDEX.md'
+  - '../METADATA-SCHEMA.md'
+  - '../core/project-overview.mdx'
+lastUpdated: '2025-11-19'
+version: '2.0'
+deprecates: null
+useWhen:
+  - 'Looking for coding standards'
+  - 'Need architectural guidance'
+  - 'Implementing new features'
+---
+
+# Rules Directory Index
+
+This directory contains all coding standards, patterns, and architectural guidelines for the project. Rules are organized by technology (Astro-specific vs generic) and by domain (components, testing, performance, etc.).
+
+## Organization
+
+```
+rules/
+├── astro/          # Astro framework-specific patterns
+├── generic/        # Reusable across projects
+└── workflows/      # Process and methodology
+```
+
+---
+
+## Quick Navigation by Task
+
+### Creating Components
+
+- `astro/components/component-architecture.mdx` - Component patterns
+- `astro/components/error-components.mdx` - Error UI components
+- `generic/code-quality/typescript.mdx` - TypeScript standards
+
+### Building Layouts
+
+- `astro/layouts/layout-hierarchy.mdx` - Layout structure
+- `astro/layouts/slots-patterns.mdx` - Slot usage patterns
+
+### Managing Content
+
+- `astro/content/collections.mdx` - Content Collections setup
+- `astro/content/frontmatter.mdx` - Frontmatter schemas
+- `astro/content/images.mdx` - Image optimization
+
+### Styling
+
+- `astro/styling/tailwind-config.mdx` - Tailwind patterns
+- `generic/performance/performance-optimization.mdx` - CSS optimization
+
+### Testing
+
+- `generic/testing/testing-standards.mdx` - General testing principles
+- `generic/testing/testing-frontend.mdx` - Frontend testing patterns
+- `astro/testing/testing-standards.mdx` - Astro-specific testing
+
+### Performance
+
+- `generic/performance/core-web-vitals.mdx` - Web performance metrics
+- `generic/performance/performance-optimization.mdx` - Optimization strategies
+- `astro/performance/seo-optimization.mdx` - SEO best practices
+- `astro/performance/build-optimization.mdx` - Build performance
+
+### Security
+
+- `generic/security/frontend-security.mdx` - Security best practices
+- `generic/security/package-installation.mdx` - Dependency management
+
+### Error Handling
+
+- `generic/error-handling/error-handling.mdx` - Error patterns
+- `astro/components/error-components.mdx` - Error UI
+
+### Code Quality
+
+- `generic/code-quality/clean-code.mdx` - Clean code principles
+- `generic/code-quality/typescript.mdx` - TypeScript standards
+- `generic/code-quality/naming-conventions.mdx` - Naming guidelines
+
+### Workflows
+
+- `workflows/feature-implementation.md` - Feature development process
+- `workflows/content-creation.md` - Content creation workflow
+
+---
+
+## Astro Framework Rules
+
+### Components (`astro/components/`)
+
+| File                         | Description                           | Tokens | Priority |
+| ---------------------------- | ------------------------------------- | ------ | -------- |
+| `component-architecture.mdx` | Component patterns, props, TypeScript | 350    | High     |
+| `error-components.mdx`       | Error UI patterns, fallbacks          | 200    | Medium   |
+
+**Use When:** Creating Astro components, implementing UI elements
+
+### Content (`astro/content/`)
+
+| File              | Description                            | Tokens | Priority |
+| ----------------- | -------------------------------------- | ------ | -------- |
+| `collections.mdx` | Content Collections setup and patterns | 300    | High     |
+| `frontmatter.mdx` | Frontmatter schemas and validation     | 250    | High     |
+| `images.mdx`      | Image optimization and handling        | 200    | Medium   |
+
+**Use When:** Working with blog posts, managing content, optimizing images
+
+### Layouts (`astro/layouts/`)
+
+| File                   | Description                      | Tokens | Priority |
+| ---------------------- | -------------------------------- | ------ | -------- |
+| `layout-hierarchy.mdx` | Layout inheritance and structure | 250    | High     |
+| `slots-patterns.mdx`   | Slot usage and composition       | 200    | Medium   |
+
+**Use When:** Building page layouts, creating layout templates
+
+### Performance (`astro/performance/`)
+
+| File                     | Description                       | Tokens | Priority |
+| ------------------------ | --------------------------------- | ------ | -------- |
+| `seo-optimization.mdx`   | SEO patterns, meta tags, schema   | 300    | High     |
+| `build-optimization.mdx` | Build performance, code splitting | 250    | Medium   |
+
+**Use When:** Optimizing SEO, improving build times
+
+### Styling (`astro/styling/`)
+
+| File                  | Description                      | Tokens | Priority |
+| --------------------- | -------------------------------- | ------ | -------- |
+| `tailwind-config.mdx` | Tailwind patterns, design tokens | 300    | High     |
+
+**Use When:** Styling components, implementing design system
+
+### Testing (`astro/testing/`)
+
+| File                    | Description                            | Tokens | Priority |
+| ----------------------- | -------------------------------------- | ------ | -------- |
+| `testing-standards.mdx` | Astro testing patterns, best practices | 250    | Medium   |
+
+**Use When:** Writing tests for Astro components and pages
+
+---
+
+## Generic Rules (Reusable)
+
+### Code Quality (`generic/code-quality/`)
+
+| File                     | Description                                | Tokens | Priority |
+| ------------------------ | ------------------------------------------ | ------ | -------- |
+| `clean-code.mdx`         | Clean code principles, SOLID, DRY          | 400    | High     |
+| `typescript.mdx`         | TypeScript strict mode, patterns           | 350    | High     |
+| `naming-conventions.mdx` | Naming guidelines for variables, functions | 200    | Medium   |
+
+**Use When:** Writing any code, code review, refactoring
+
+**Key Principles:**
+
+- Max 30 lines per function
+- Max 5 parameters per function
+- Use strict types, avoid `any`
+- Explicit constants, no magic numbers
+- Long, readable variable names
+
+### Error Handling (`generic/error-handling/`)
+
+| File                 | Description                       | Tokens | Priority |
+| -------------------- | --------------------------------- | ------ | -------- |
+| `error-handling.mdx` | Error patterns, logging, recovery | 300    | High     |
+
+**Use When:** Implementing error handling, debugging
+
+**Patterns:**
+
+- Try-catch with specific error types
+- User-friendly error messages
+- Graceful degradation
+- Error logging and monitoring
+
+### Performance (`generic/performance/`)
+
+| File                           | Description                     | Tokens | Priority |
+| ------------------------------ | ------------------------------- | ------ | -------- |
+| `core-web-vitals.mdx`          | LCP, FID, CLS optimization      | 300    | High     |
+| `performance-optimization.mdx` | General optimization strategies | 350    | Medium   |
+
+**Use When:** Performance audits, optimization tasks
+
+**Targets:**
+
+- LCP < 2.5s
+- FID < 100ms
+- CLS < 0.1
+
+### Security (`generic/security/`)
+
+| File                       | Description                 | Tokens | Priority |
+| -------------------------- | --------------------------- | ------ | -------- |
+| `frontend-security.mdx`    | XSS, CSRF, secure coding    | 300    | High     |
+| `package-installation.mdx` | Dependency security, audits | 200    | Medium   |
+
+**Use When:** Security reviews, adding dependencies
+
+**Key Areas:**
+
+- Input validation and sanitization
+- XSS prevention
+- Dependency audits
+- Secure data handling
+
+### Testing (`generic/testing/`)
+
+| File                    | Description                      | Tokens | Priority |
+| ----------------------- | -------------------------------- | ------ | -------- |
+| `testing-standards.mdx` | Testing principles, organization | 300    | High     |
+| `testing-frontend.mdx`  | Frontend testing patterns        | 250    | Medium   |
+
+**Use When:** Writing tests, test planning
+
+**Standards:**
+
+- Unit tests for logic
+- Integration tests for workflows
+- 80% coverage target
+- Test naming: should_expectedBehavior_whenCondition
+
+---
+
+## Workflows (`workflows/`)
+
+| File                        | Description                        | Tokens | Priority |
+| --------------------------- | ---------------------------------- | ------ | -------- |
+| `feature-implementation.md` | 8-step feature development process | 400    | High     |
+| `content-creation.md`       | Content creation with SEO workflow | 300    | Medium   |
+
+**Use When:** Planning complex features, creating content
+
+**Feature Process:**
+
+1. Analyze requirements
+2. Explore architecture
+3. Design approach
+4. Create structure
+5. Implement with tests
+6. Integrate
+7. Validate
+8. Document
+
+---
+
+## Context Loading Guidelines
+
+**When to Load Astro Rules:**
+
+- Creating `.astro` files → Load `astro/components/` or `astro/layouts/`
+- Working with content → Load `astro/content/`
+- Styling → Load `astro/styling/`
+- Performance → Load `astro/performance/`
+
+**When to Load Generic Rules:**
+
+- Any TypeScript work → Load `generic/code-quality/typescript.mdx`
+- Writing tests → Load `generic/testing/`
+- Error handling → Load `generic/error-handling/`
+- Security concerns → Load `generic/security/`
+- Performance optimization → Load `generic/performance/`
+
+**Typical Session:**
+
+- Load 1-3 rule files (~300-900 tokens)
+- Prioritize files matching current task
+- Use `relatedFiles` metadata for discovery
+
+---
+
+## Rule File Structure
+
+All rule files follow this structure:
+
+```markdown
+---
+[Frontmatter with metadata]
+---
+
+# Title
+
+Brief introduction
+
+## Core Principles
+
+High-level guidelines
+
+## Patterns
+
+Specific code patterns
+
+## Examples
+
+✅ Good examples
+❌ Anti-patterns
+
+## Related Files
+
+Links to templates, snippets, other rules
+
+## References
+
+External resources
+```
+
+---
+
+## Adding New Rules
+
+1. **Choose Directory:**
+   - Astro-specific? → `astro/[domain]/`
+   - Generic/reusable? → `generic/[domain]/`
+   - Process/methodology? → `workflows/`
+
+2. **Follow Standards:**
+   - Use `.mdx` extension
+   - Add frontmatter (see `METADATA-SCHEMA.md`)
+   - Include examples (✅ good, ❌ bad)
+   - Estimate tokens accurately
+   - Define clear `useWhen` scenarios
+
+3. **Cross-Reference:**
+   - Add to this INDEX.md
+   - Link related files bidirectionally
+   - Update main `INDEX.md`
+
+4. **Validate:**
+   - Check frontmatter completeness
+   - Verify file paths in `relatedFiles`
+   - Ensure tags are consistent
+
+---
+
+## Metadata Example
+
+```yaml
+---
+title: 'Component Architecture Patterns'
+description: 'Standards for building reusable Astro components'
+category: 'rules'
+priority: 'high'
+alwaysApply: false
+tokenEstimate: 350
+loadingLevel: 2
+tags: ['architecture', 'components', 'astro', 'typescript']
+relatedFiles:
+  - '../../templates/astro/component-template.astro.mdx'
+  - '../generic/code-quality/typescript.mdx'
+lastUpdated: '2025-11-19'
+version: '2.0'
+deprecates: null
+useWhen:
+  - 'Creating new Astro components'
+  - 'Implementing component props'
+  - 'Structuring reusable UI elements'
+---
+```
+
+---
+
+## Quick Reference Card
+
+| Need               | File                                          |
+| ------------------ | --------------------------------------------- |
+| Component props?   | `astro/components/component-architecture.mdx` |
+| Layout structure?  | `astro/layouts/layout-hierarchy.mdx`          |
+| Content schema?    | `astro/content/frontmatter.mdx`               |
+| Tailwind patterns? | `astro/styling/tailwind-config.mdx`           |
+| TypeScript types?  | `generic/code-quality/typescript.mdx`         |
+| Test patterns?     | `generic/testing/testing-standards.mdx`       |
+| Error handling?    | `generic/error-handling/error-handling.mdx`   |
+| Performance?       | `generic/performance/core-web-vitals.mdx`     |
+| Security?          | `generic/security/frontend-security.mdx`      |
+| Feature process?   | `workflows/feature-implementation.md`         |
+
+---
+
+**Version:** 2.0
+**Last Updated:** 2025-11-19
+**Total Rules:** 21 files
+**Token Budget:** 300-900 tokens per session

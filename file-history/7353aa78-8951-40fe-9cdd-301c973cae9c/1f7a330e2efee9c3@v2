@@ -1,0 +1,396 @@
+# Metadata Schema for .claude/ Documentation
+
+This document defines the standard frontmatter schema for all documentation files in the `.claude/` directory. Consistent metadata enables efficient context loading, discovery, and maintenance.
+
+## Standard Frontmatter Template
+
+```yaml
+---
+# Core Metadata
+title: 'Short Descriptive Title'
+description: "One-line description of the file's purpose and content"
+category: 'core|rules|templates|snippets|commands|context-maps|decisions|glossary'
+priority: 'critical|high|medium|low'
+
+# Loading Strategy
+alwaysApply: true|false
+tokenEstimate: 100-1000
+loadingLevel: 1|2|3
+
+# Discovery
+tags: ['tag1', 'tag2', 'tag3']
+relatedFiles:
+  - 'path/to/related/file1.md'
+  - 'path/to/related/file2.mdx'
+
+# Maintenance
+lastUpdated: '2025-MM-DD'
+version: 'X.Y'
+deprecates: null|"path/to/deprecated/file.md"
+
+# Usage Context
+useWhen:
+  - 'Specific scenario 1'
+  - 'Specific scenario 2'
+  - 'Specific scenario 3'
+---
+```
+
+## Field Definitions
+
+### Core Metadata
+
+**`title`** (required)
+
+- Type: String
+- Description: Short, descriptive title for the document
+- Example: `"Component Architecture Patterns"`
+
+**`description`** (required)
+
+- Type: String
+- Description: One-line explanation of the file's purpose
+- Example: `"Standards for building reusable Astro components with proper TypeScript typing"`
+
+**`category`** (required)
+
+- Type: Enum
+- Values: `core`, `rules`, `templates`, `snippets`, `commands`, `context-maps`, `decisions`, `glossary`
+- Description: Primary category matching directory structure
+
+**`priority`** (required)
+
+- Type: Enum
+- Values: `critical`, `high`, `medium`, `low`
+- Description: Loading priority for AI context
+  - `critical`: Always loaded (core files)
+  - `high`: Loaded for relevant tasks
+  - `medium`: Loaded on specific request
+  - `low`: Reference documentation
+
+### Loading Strategy
+
+**`alwaysApply`** (required)
+
+- Type: Boolean
+- Description: Whether to always include in Claude's context
+- Values:
+  - `true`: Core files, always loaded (Level 1)
+  - `false`: Contextual loading (Level 2-3)
+
+**`tokenEstimate`** (required)
+
+- Type: Number
+- Range: 50-2000
+- Description: Approximate token count for this file
+- Guidelines:
+  - Short snippets: 50-150
+  - Single rules: 150-300
+  - Complex guides: 300-600
+  - Comprehensive docs: 600-1000+
+
+**`loadingLevel`** (required)
+
+- Type: Number
+- Values: 1, 2, 3
+- Description: Context loading hierarchy
+  - Level 1: Always loaded (~400 tokens total)
+  - Level 2: Contextual, task-specific (~150 tokens each)
+  - Level 3: On-demand, as needed (~100 tokens each)
+
+### Discovery
+
+**`tags`** (required)
+
+- Type: Array of Strings
+- Description: Searchable keywords for categorization
+- Examples:
+  - `["architecture", "components", "typescript"]`
+  - `["testing", "vitest", "unit-tests"]`
+  - `["styling", "tailwind", "responsive"]`
+
+**`relatedFiles`** (optional)
+
+- Type: Array of Strings
+- Description: Paths to related documentation files
+- Format: Relative paths from `.claude/` root
+- Example:
+  ```yaml
+  relatedFiles:
+    - 'templates/astro/component-template.astro.mdx'
+    - 'snippets/astro/component-patterns.md'
+    - 'rules/generic/code-quality/typescript.mdx'
+  ```
+
+### Maintenance
+
+**`lastUpdated`** (required)
+
+- Type: Date String
+- Format: `YYYY-MM-DD`
+- Description: Last modification date
+- Example: `"2025-11-19"`
+
+**`version`** (required)
+
+- Type: String
+- Format: `"major.minor"` (semantic versioning)
+- Description: Document version number
+- Examples: `"1.0"`, `"2.1"`, `"3.0"`
+
+**`deprecates`** (optional)
+
+- Type: String or null
+- Description: Path to deprecated file this replaces
+- Example: `"old-rules/legacy-component-guide.md"`
+
+### Usage Context
+
+**`useWhen`** (required)
+
+- Type: Array of Strings
+- Description: Specific scenarios when this file should be referenced
+- Examples:
+  ```yaml
+  useWhen:
+    - 'Creating new Astro components'
+    - 'Implementing TypeScript interfaces'
+    - 'Setting up component props'
+  ```
+
+## Category-Specific Guidelines
+
+### Core Files (category: "core")
+
+```yaml
+category: 'core'
+priority: 'critical'
+alwaysApply: true
+loadingLevel: 1
+tokenEstimate: 300-600
+```
+
+### Rules (category: "rules")
+
+```yaml
+category: 'rules'
+priority: 'high'
+alwaysApply: false
+loadingLevel: 2
+tokenEstimate: 150-400
+```
+
+### Templates (category: "templates")
+
+```yaml
+category: 'templates'
+priority: 'medium'
+alwaysApply: false
+loadingLevel: 3
+tokenEstimate: 100-300
+```
+
+### Snippets (category: "snippets")
+
+```yaml
+category: 'snippets'
+priority: 'medium'
+alwaysApply: false
+loadingLevel: 3
+tokenEstimate: 50-200
+```
+
+### Commands (category: "commands")
+
+```yaml
+category: 'commands'
+priority: 'high'
+alwaysApply: false
+loadingLevel: 2
+tokenEstimate: 200-400
+```
+
+### Context Maps (category: "context-maps")
+
+```yaml
+category: 'context-maps'
+priority: 'high'
+alwaysApply: false
+loadingLevel: 2
+tokenEstimate: 200-500
+```
+
+### Decisions (ADRs) (category: "decisions")
+
+```yaml
+category: 'decisions'
+priority: 'medium'
+alwaysApply: false
+loadingLevel: 3
+tokenEstimate: 150-300
+```
+
+### Glossary (category: "glossary")
+
+```yaml
+category: 'glossary'
+priority: 'low'
+alwaysApply: false
+loadingLevel: 3
+tokenEstimate: 100-250
+```
+
+## Tag Taxonomy
+
+### Domain Tags
+
+- `architecture` - System design and structure
+- `components` - UI component patterns
+- `layouts` - Page layout structure
+- `styling` - CSS and design systems
+- `testing` - Test strategies and patterns
+- `performance` - Optimization techniques
+- `security` - Security best practices
+- `accessibility` - A11y guidelines
+
+### Technology Tags
+
+- `astro` - Astro framework specific
+- `typescript` - TypeScript patterns
+- `tailwind` - Tailwind CSS
+- `vitest` - Vitest testing
+- `eslint` - ESLint configuration
+- `prettier` - Code formatting
+
+### Task Tags
+
+- `development` - Development workflows
+- `debugging` - Debugging strategies
+- `refactoring` - Code improvement
+- `deployment` - Deployment processes
+- `content` - Content creation
+- `seo` - SEO optimization
+
+### Pattern Tags
+
+- `error-handling` - Error management
+- `state-management` - State patterns
+- `data-flow` - Data architecture
+- `responsive` - Responsive design
+- `mobile-first` - Mobile-first approach
+
+## Migration Guide
+
+### Adding Metadata to Existing Files
+
+1. Read the existing file
+2. Determine appropriate category and priority
+3. Estimate token count (use Claude or word count ÷ 4)
+4. Add relevant tags based on content
+5. Identify related files
+6. Insert frontmatter at top of file
+
+### Example Migration
+
+**Before:**
+
+```markdown
+# Component Architecture
+
+This document describes how to structure Astro components...
+```
+
+**After:**
+
+```markdown
+---
+title: 'Component Architecture Patterns'
+description: 'Standards for building reusable Astro components with proper TypeScript typing'
+category: 'rules'
+priority: 'high'
+alwaysApply: false
+tokenEstimate: 350
+loadingLevel: 2
+tags: ['architecture', 'components', 'astro', 'typescript']
+relatedFiles:
+  - 'templates/astro/component-template.astro.mdx'
+  - 'rules/generic/code-quality/typescript.mdx'
+lastUpdated: '2025-11-19'
+version: '2.0'
+deprecates: null
+useWhen:
+  - 'Creating new Astro components'
+  - 'Implementing component props interfaces'
+  - 'Structuring reusable UI elements'
+---
+
+# Component Architecture
+
+This document describes how to structure Astro components...
+```
+
+## Validation Checklist
+
+Before committing changes to `.claude/` files:
+
+- [ ] All required fields are present
+- [ ] Token estimate is accurate (±20%)
+- [ ] Tags are lowercase and use hyphens
+- [ ] Related files paths are valid
+- [ ] Date format is YYYY-MM-DD
+- [ ] Version follows semantic versioning
+- [ ] useWhen scenarios are specific and actionable
+- [ ] Category matches directory structure
+
+## Token Budget Guidelines
+
+**Per-Session Budget:** 5,000-10,000 tokens optimal
+
+**Level 1 (Always Loaded):** ~600 tokens
+
+- CLAUDE.md: ~200 tokens
+- core/ files: ~400 tokens
+
+**Level 2 (Contextual):** ~150-300 tokens each
+
+- Load 1-3 rules per task
+- Total: 300-900 tokens
+
+**Level 3 (On-Demand):** ~50-150 tokens each
+
+- Load as needed
+- Total: varies by task
+
+**Target Total:** 1,200-2,000 tokens per typical session (70% reduction from previous)
+
+## Maintenance Process
+
+1. **Regular Review** (monthly)
+   - Update `lastUpdated` dates
+   - Verify token estimates
+   - Check related files still exist
+   - Update deprecated notices
+
+2. **Content Changes** (as needed)
+   - Increment version number
+   - Update description if scope changes
+   - Adjust priority if usage patterns change
+   - Add new tags if topics expand
+
+3. **Deprecation Flow**
+   - Mark old file with deprecation notice
+   - Create new file with improved content
+   - Set `deprecates` field in new file
+   - Remove old file after 1 version cycle
+
+## References
+
+- [AI-Blueprint Best Practices](https://example.com/ai-blueprint)
+- [Claude Code Documentation](https://claude.ai/code/docs)
+- [Semantic Versioning](https://semver.org)
+
+---
+
+**Version:** 1.0
+**Last Updated:** 2025-11-19
+**Maintained By:** Project Team
