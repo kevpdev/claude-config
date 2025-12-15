@@ -1527,3 +1527,40 @@
 2025-12-15T19:44:08.870Z [DEBUG] Matched 1 unique hooks for query "idle_prompt" (1 before deduplication)
 2025-12-15T19:44:10.700Z [DEBUG] Notification:idle_prompt [ffplay -nodisp -autoexit -volume 10 /home/kevdev/.claude/song/need-human.mp3] completed with status 0
 2025-12-15T19:44:10.700Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T21:02:34.157Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:02:34.157Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:02:34.157Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:02:34.157Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:02:34.182Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-15T21:02:34.182Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:02:34.182Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T21:02:34.184Z [DEBUG] FileHistory: Making snapshot for message e3bc97a2-036b-43f1-8c35-c9e47f5b258e
+2025-12-15T21:02:34.190Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.2ms)
+2025-12-15T21:02:34.190Z [DEBUG] FileHistory: Added snapshot for e3bc97a2-036b-43f1-8c35-c9e47f5b258e, tracking 4 files
+2025-12-15T21:02:35.054Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:02:39.218Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:02:49.261Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-15T21:02:49.270Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-15T21:02:49.270Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:02:49.270Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-15T21:02:49.296Z [DEBUG] Writing to temp file: /home/kevdev/.claude/.gitignore.tmp.172201.1765832569296
+2025-12-15T21:02:49.301Z [DEBUG] Temp file written successfully, size: 559 bytes
+2025-12-15T21:02:49.301Z [DEBUG] Renaming /home/kevdev/.claude/.gitignore.tmp.172201.1765832569296 to /home/kevdev/.claude/.gitignore
+2025-12-15T21:02:49.301Z [DEBUG] File /home/kevdev/.claude/.gitignore written atomically
+2025-12-15T21:02:49.319Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/.claude/.gitignore
+2025-12-15T21:02:49.334Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-15T21:02:49.334Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:02:49.334Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-15T21:02:49.337Z [DEBUG] Language not supported while highlighting code, falling back to markdown:
+2025-12-15T21:02:49.368Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:02:49.368Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:02:49.368Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:02:49.368Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:02:51.953Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:03:03.731Z [DEBUG] Language not supported while highlighting code, falling back to markdown:
+2025-12-15T21:03:03.732Z [DEBUG] Language not supported while highlighting code, falling back to markdown:
+2025-12-15T21:03:03.793Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-15T21:03:03.793Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:03:03.793Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-15T21:03:09.012Z [DEBUG] Hook output does not start with {, treating as plain text
+2025-12-15T21:03:29.149Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
