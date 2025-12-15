@@ -1564,3 +1564,70 @@
 2025-12-15T21:03:03.793Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
 2025-12-15T21:03:09.012Z [DEBUG] Hook output does not start with {, treating as plain text
 2025-12-15T21:03:29.149Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2025-12-15T21:05:09.098Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:05:09.098Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:05:09.098Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:05:09.098Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:05:09.207Z [DEBUG] FileHistory: Making snapshot for message 0423081e-cd01-4761-b0ca-f1ee67fa083b
+2025-12-15T21:05:09.207Z [DEBUG] FileHistory: Added snapshot for 0423081e-cd01-4761-b0ca-f1ee67fa083b, tracking 5 files
+2025-12-15T21:05:10.084Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:05:10.124Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:05:31.633Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:05:31.633Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:05:31.633Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:05:31.633Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:05:31.732Z [DEBUG] FileHistory: Making snapshot for message d7686564-db24-4f27-a18e-6e4bd6d2f660
+2025-12-15T21:05:31.732Z [DEBUG] FileHistory: Added snapshot for d7686564-db24-4f27-a18e-6e4bd6d2f660, tracking 5 files
+2025-12-15T21:05:33.196Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:05:33.216Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:07:21.940Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:07:21.940Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:07:21.940Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:07:21.940Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:07:22.044Z [DEBUG] FileHistory: Making snapshot for message 9388e173-3c9a-440d-b6e2-006bc99b0def
+2025-12-15T21:07:22.044Z [DEBUG] FileHistory: Added snapshot for 9388e173-3c9a-440d-b6e2-006bc99b0def, tracking 5 files
+2025-12-15T21:07:23.583Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:07:23.825Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:07:52.602Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:07:52.602Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:07:52.602Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:07:52.602Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:07:54.792Z [DEBUG] FileHistory: Making snapshot for message 2c68a70d-1d25-438d-b87e-623dce5e2265
+2025-12-15T21:07:54.792Z [DEBUG] FileHistory: Added snapshot for 2c68a70d-1d25-438d-b87e-623dce5e2265, tracking 5 files
+2025-12-15T21:07:56.184Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:07:56.760Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:13:02.243Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:13:02.243Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:13:02.243Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:13:02.243Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:13:02.278Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2025-12-15T21:13:02.278Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:13:02.278Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2025-12-15T21:13:02.279Z [DEBUG] FileHistory: Making snapshot for message fad0aa70-2b1c-447d-ab21-04fbf7396f8f
+2025-12-15T21:13:02.279Z [DEBUG] FileHistory: Added snapshot for fad0aa70-2b1c-447d-ab21-04fbf7396f8f, tracking 5 files
+2025-12-15T21:13:03.402Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:13:05.139Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:13:48.851Z [WARN] Streaming stall detected: 39.6s gap between events (stall #1)
+2025-12-15T21:13:49.118Z [WARN] Streaming completed with 1 stall(s), total stall time: 39.6s
+2025-12-15T21:13:49.172Z [DEBUG] executePreToolHooks called for tool: Write
+2025-12-15T21:13:49.180Z [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+2025-12-15T21:13:49.180Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:13:49.180Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-15T21:13:49.204Z [DEBUG] Writing to temp file: /home/kevdev/.claude/README.md.tmp.172201.1765833229204
+2025-12-15T21:13:49.208Z [DEBUG] Temp file written successfully, size: 5763 bytes
+2025-12-15T21:13:49.208Z [DEBUG] Renaming /home/kevdev/.claude/README.md.tmp.172201.1765833229204 to /home/kevdev/.claude/README.md
+2025-12-15T21:13:49.208Z [DEBUG] File /home/kevdev/.claude/README.md written atomically
+2025-12-15T21:13:49.224Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.9ms)
+2025-12-15T21:13:49.226Z [DEBUG] FileHistory: Tracked file modification for /home/kevdev/.claude/README.md
+2025-12-15T21:13:49.246Z [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+2025-12-15T21:13:49.246Z [DEBUG] Found 0 hook matchers in settings
+2025-12-15T21:13:49.246Z [DEBUG] Matched 0 unique hooks for query "Write" (0 before deduplication)
+2025-12-15T21:13:49.287Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2025-12-15T21:13:49.287Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2025-12-15T21:13:49.287Z [DEBUG] Hooks: Found 0 total hooks in registry
+2025-12-15T21:13:49.287Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2025-12-15T21:13:52.435Z [DEBUG] Stream started - received first chunk
+2025-12-15T21:13:59.880Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2025-12-15T21:13:59.880Z [DEBUG] Found 1 hook matchers in settings
+2025-12-15T21:13:59.880Z [DEBUG] Matched 1 unique hooks for query "no match query" (1 before deduplication)
+2025-12-15T21:14:05.056Z [DEBUG] Hook output does not start with {, treating as plain text
