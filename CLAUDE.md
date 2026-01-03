@@ -164,63 +164,6 @@ git cz  # Instead of git commit
 
 ---
 
-## Code Quality
-
-### Architecture
-**SOLID:** Single responsibility, Open/Closed, Liskov substitution, Interface segregation, Dependency inversion
-**Patterns:** Composition > inheritance, Factory, Observer, Adapter, Strategy
-**DDD:** When domain complex - ubiquitous language, bounded contexts, aggregates
-**Clean/Hexagonal:** Business logic independent of frameworks, dependencies point inward
-
-### TypeScript
-**Strict mode always:** `strict: true`, no implicit any, null checks
-**Types:** No `any` (use `unknown`), explicit return types on public functions, generics for reusability
-**Organization:** Interfaces for contracts, types for internals, avoid assertions
-
-### Testing
-**TDD:** For complex logic, Red→Green→Refactor, tests as spec
-**Coverage:** 80% critical paths, 100% business logic
-**Types:** Unit (fast, isolated), Integration (DB, external), E2E (user journeys), Contract (API)
-**Practices:** Arrange-Act-Assert, one assertion/test, descriptive names, test behavior not implementation
-
-### Performance
-**Frontend:** Code split by route, lazy load heavy components, optimize images (WebP, srcset)
-**Core Web Vitals:** LCP <2.5s, FID <100ms, CLS <0.1
-**General:** Profile before optimizing, caching (Redis, CDN), DB indexes + EXPLAIN
-
----
-
-## Security
-
-**OWASP Top 10:** Apply all (injection, XSS, broken auth, sensitive data, access control, misconfig, etc.)
-**Input:** Validate all, whitelist > blacklist, sanitize, type-check bounds
-**Output:** Escape HTML, parameterized queries, CSP headers
-**Transport:** HTTPS only, secure cookies (HttpOnly, Secure, SameSite), HSTS
-**API:** Rate limiting, auth on sensitive endpoints, CORS configured
-
-### Auth
-**JWT:** 15min access tokens, 7-30d refresh tokens, rotate on use, httpOnly cookies, claims: iss/sub/aud/exp/iat
-**OAuth:** Use proven libraries (NextAuth, Passport), never roll crypto, validate state, PKCE for mobile/SPA
-**Passwords:** bcrypt 10+ rounds (12+ ideal), argon2 for new projects, secure time-limited reset tokens
-**MFA:** TOTP preferred, SMS fallback only, backup codes
-
-**Dependencies:** Weekly updates, immediate security patches, npm audit/Snyk, minimize deps, lock files committed
-
----
-
-## Accessibility
-
-**Semantic HTML:** Correct elements (`<button>`, `<nav>`, `<main>`), heading hierarchy (h1→h2→h3), landmarks, form labels
-**ARIA:** Only when semantic HTML insufficient, `aria-label` for icons, `aria-describedby` for help, `aria-live` for dynamic
-**Keyboard:** All interactive accessible, visible focus, logical tab order, skip links, Escape closes modals
-**Visual:** WCAG AA contrast (4.5:1 text, 3:1 UI), don't rely on color alone, 200% text resize, no flashing
-**Alt text:** Meaningful for images, empty for decorative, captions for video/audio
-
-**WCAG Levels:** A (minimum), AA (target), AAA (ideal)
-**Testing:** axe DevTools, Lighthouse, Pa11y CI/CD, keyboard-only nav, screen readers (NVDA/JAWS/VoiceOver)
-
----
-
 ## Communication
 
 ### Token Efficiency
@@ -251,24 +194,9 @@ git cz  # Instead of git commit
 
 ---
 
-## Domain Principles
+## Specialized Rules (Contextual Loading)
 
-### Backend
-**Focus:** Explain _why_ not just _how_
-**Approach:** Expose trade-offs (monolith vs micro, SQL vs NoSQL), real examples (Uber/Netflix/Airbnb), scalability (horizontal/vertical, sharding, caching)
-**Constraints:** Max 300w, code on demand, analogies required
-
-### Frontend
-**Focus:** UX + accessibility + performance (no sacrifices)
-**Approach:** Framework trade-offs (React/Vue/Svelte - bundle/DX/runtime), Core Web Vitals non-negotiable, a11y always mentioned, state management by complexity
-**Constraints:** Max 300w, visual examples (demos/gists), a11y always
-
-### DevOps
-**Focus:** Observability > perfection
-**Approach:** Automation first (CI/CD, IaC, GitOps), observability (logs/metrics/traces/alerts), resilience (auto-scale, circuit breakers, graceful degradation), cost optimization
-**Constraints:** Max 280w, config snippets 5 lines (full on request), checklists, reference docs
-
-### Data
-**Focus:** Measurable performance > theory
-**Approach:** SQL vs NoSQL context (ACID→SQL, flexible→NoSQL, time-series→InfluxDB, cache→Redis), EXPLAIN ANALYZE, indexing strategies, avoid N+1, ETL vs ELT
-**Constraints:** Max 320w, pseudo-SQL first (full on request), ASCII diagrams, metrics when available
+**Code Quality & Architecture:** `rules/quality.md` - SOLID, patterns, TypeScript, performance, domain principles
+**Testing:** `rules/testing.md` - TDD, ratios, Pierrain, stubs, réglementaire
+**Security:** `rules/security.md` - OWASP, auth, JWT, OAuth, passwords, MFA
+**Accessibility:** `rules/a11y.md` - WCAG, semantic HTML, ARIA, keyboard, testing
