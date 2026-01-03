@@ -3,14 +3,9 @@
 # Plans (temporary planning files)
 plans/
 
-# Memory Bank - Stories (often project-specific)
-# Uncomment if you want to version stories:
-# !memory-bank/stories/
-memory-bank/stories/
-
-# Memory Bank - Context (session-specific)
-memory-bank/context/
-memory-bank/.context/
+# Memory Bank - Global template (ignore in global .claude)
+# Each project has its own memory-bank/ (fully versioned in projects)
+memory-bank/
 
 # Logs
 *.log
@@ -37,5 +32,23 @@ node_modules/
 .env.local
 .env.*.local
 
+# Credentials (OAuth tokens)
+.credentials.json
+
 # Cache directories
 .cache/
+
+# Claude Code runtime files
+debug/
+file-history/
+projects/
+shell-snapshots/
+todos/
+ide/*.lock
+stats-cache.json
+statsig/
+history.jsonl
+
+# Plugins (keep installed_plugins.json, ignore caches)
+plugins/known_marketplaces.json
+plugins/marketplaces/
