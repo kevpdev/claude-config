@@ -1,5 +1,5 @@
-import { SAFE_COMMANDS, SECURITY_RULES } from "./security-rules";
-import type { ValidationResult } from "./types";
+import { SAFE_COMMANDS, SECURITY_RULES } from "./security-rules.ts";
+import type { ValidationResult } from "./types.ts";
 
 export class CommandValidator {
 	validate(command: string, toolName = "Unknown"): ValidationResult {

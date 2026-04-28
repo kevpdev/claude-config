@@ -1,4 +1,4 @@
-import type { SecurityRules } from "./types";
+import type { SecurityRules } from "./types.ts";
 
 export const SECURITY_RULES: SecurityRules = {
 	CRITICAL_COMMANDS: [
@@ -126,7 +126,7 @@ export const SECURITY_RULES: SecurityRules = {
 	],
 
 	SAFE_RM_PATHS: [
-		"/Users/melvynx/Developer/",
+		`${process.env.HOME}/`,
 		"/tmp/",
 		"/var/tmp/",
 		`${process.cwd()}/`,

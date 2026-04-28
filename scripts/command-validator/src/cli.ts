@@ -1,10 +1,13 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 
-import { join } from "node:path";
-import type { HookInput, HookOutput } from "./lib/types";
-import { CommandValidator } from "./lib/validator";
+import { appendFile, mkdir } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import type { HookInput, HookOutput } from "./lib/types.ts";
+import { CommandValidator } from "./lib/validator.ts";
 
-const LOG_FILE = join(import.meta.dir, "../data/security.log");
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const LOG_FILE = join(__dirname, "../data/security.log");
 
 async function logSecurityEvent(
 	command: string,
@@ -26,15 +29,8 @@ async function logSecurityEvent(
 
 	try {
 		const logLine = `${JSON.stringify(logEntry)}\n`;
-		const file = Bun.file(LOG_FILE);
-		const exists = await file.exists();
-
-		if (exists) {
-			const existingContent = await file.text();
-			await Bun.write(LOG_FILE, existingContent + logLine);
-		} else {
-			await Bun.write(LOG_FILE, logLine);
-		}
+		await mkdir(dirname(LOG_FILE), { recursive: true });
+		await appendFile(LOG_FILE, logLine, "utf8");
 
 		console.error(
 			`[SECURITY] ${result.isValid ? "ALLOWED" : "BLOCKED"}: ${command.substring(0, 100)}`,
@@ -64,15 +60,16 @@ async function main() {
 
 		let hookData: HookInput;
 		try {
-			hookData = JSON.parse(input);
+			hookData = JSON.parse(input) as HookInput;
 		} catch (error) {
 			console.error("Invalid JSON input:", (error as Error).message);
 			process.exit(1);
+			return;
 		}
 
-		const toolName = hookData.tool_name || "Unknown";
-		const toolInput = hookData.tool_input || {};
-		const sessionId = hookData.session_id || null;
+		const toolName = hookData.tool_name ?? "Unknown";
+		const toolInput = hookData.tool_input ?? {};
+		const sessionId = hookData.session_id ?? null;
 
 		if (toolName !== "Bash") {
 			console.log(`Skipping validation for tool: ${toolName}`);
@@ -85,7 +82,7 @@ async function main() {
 			process.exit(1);
 		}
 
-		const result = validator.validate(command, toolName);
+		const result = validator.validate(command as string, toolName);
 
 		await logSecurityEvent(command, toolName, result, sessionId);
 
