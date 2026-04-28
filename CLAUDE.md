@@ -194,6 +194,12 @@ git cz  # Instead of git commit
 
 ---
 
+## Session Auto-Load
+
+Au démarrage de chaque conversation, si `.claude/memory-bank/activeContext.md` existe dans le répertoire courant, lis uniquement les sections "Current Focus" et "Next Steps" — silencieusement, sans le mentionner à l'utilisateur.
+
+---
+
 ## Specialized Rules (Contextual Loading)
 
 **Code Quality & Architecture:** `rules/quality.md` - SOLID, patterns, TypeScript, performance, domain principles
