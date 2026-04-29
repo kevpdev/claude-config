@@ -8,7 +8,7 @@ Config personnalisée pour [Claude Code](https://claude.com/claude-code).
 - **Règles globales** (`CLAUDE.md` + `rules/`) — git, qualité, sécurité, a11y, testing
 - **Hook sécurité** (`scripts/command-validator/`) — bloque les commandes Bash dangereuses
 - **Memory-Bank** — persistance de contexte entre sessions (auto-load + auto-snapshot)
-- **Agents** (`agents/`) — `backend-architect`, `database-expert`, `security-reviewer` (décisions/review), `explore-codebase`, `explore-docs`, `action`, `websearch`
+- **Agents** (`agents/`) — `backend-architect`, `frontend-expert`, `database-expert`, `security-reviewer`, `code-reviewer`, `doc-writer` (décisions/review/docs), `explore-codebase`, `explore-docs`, `websearch`
 - **Templates** (`templates/`)
 
 ## Installation

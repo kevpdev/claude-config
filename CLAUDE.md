@@ -200,6 +200,29 @@ Au démarrage de chaque conversation, si `.claude/memory-bank/activeContext.md` 
 
 ---
 
+## Agents — When to Delegate Automatically
+
+Spawn the appropriate agent without waiting to be asked:
+
+| Situation | Agent |
+|---|---|
+| Question sur archi backend, choix technologique, trade-offs | `backend-architect` |
+| Question sur archi frontend, composants, SSR/CSR, state management | `frontend-expert` |
+| Question sur schéma DB, query, migration, index | `database-expert` |
+| Review qualité code (SOLID, naming, perf, lisibilité) | `code-reviewer` |
+| Review sécurité (OWASP, auth, secrets, injection) | `security-reviewer` |
+| Générer/mettre à jour Javadoc, JSDoc, README, OpenAPI | `doc-writer` |
+| Explorer le codebase pour implémenter une feature | `explore-codebase` |
+| Chercher la doc d'une lib ou framework | `explore-docs` |
+| Recherche web rapide | `websearch` |
+
+**Règles :**
+- Après avoir écrit du code, spawn `code-reviewer` puis `security-reviewer` en parallèle
+- Après avoir écrit du code documentable (méthodes publiques, API), spawn `doc-writer`
+- Ne pas dupliquer le travail : si tu délègues à un agent, ne refais pas la même analyse toi-même
+
+---
+
 ## Specialized Rules (Contextual Loading)
 
 **Code Quality & Architecture:** `rules/quality.md` - SOLID, patterns, TypeScript, performance, domain principles
