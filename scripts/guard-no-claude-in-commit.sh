@@ -14,6 +14,24 @@ cmd=$(printf "%s" "$payload" | python3 -c "import sys,json; d=json.load(sys.stdi
 
 printf "%s" "$cmd" | grep -qE "git commit" || exit 0
 
+# Block staging the personal bypass risk-ack into the tracked team settings.json.
+# Claude Code re-injects "skipDangerousModePermissionPrompt": true into
+# ~/.claude/settings.json on bypass launch; it belongs in settings.local.json,
+# never in the team file. Only acts when the commit targets the ~/.claude repo.
+if printf "%s" "$cmd" | grep -qE "(cd[[:space:]]+[^&|;]*\.claude|git[[:space:]]+-C[[:space:]]+[^&|;]*\.claude)"; then
+  if git -C "$HOME/.claude" diff --cached -- settings.json 2>/dev/null \
+       | grep -qE "^\+.*skipDangerousModePermissionPrompt"; then
+    python3 -c "
+import json
+print(json.dumps({
+    'decision': 'block',
+    'reason': 'settings.json is staged with skipDangerousModePermissionPrompt (a personal bypass risk-ack). It must never land in the tracked team file. Run: git restore --staged --worktree settings.json  — this key lives in settings.local.json.'
+}))
+"
+    exit 0
+  fi
+fi
+
 # Block Claude co-authorship mentions
 if printf "%s" "$cmd" | grep -qiE "Co-Authored-By: Claude|claude sonnet|claude opus|claude haiku|noreply@anthropic"; then
   python3 -c "
