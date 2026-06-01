@@ -1,10 +1,8 @@
 {
-  "_cortexhub_hooks_version": 1,
   "hooks": {
     "SessionStart": [
       {
         "matcher": "",
-        "_cortexhub": "session-context-load",
         "hooks": [
           {
             "type": "command",
@@ -16,7 +14,6 @@
     "UserPromptSubmit": [
       {
         "matcher": "",
-        "_cortexhub": "suggest-skill",
         "hooks": [
           {
             "type": "command",
@@ -26,7 +23,6 @@
       },
       {
         "matcher": "",
-        "_cortexhub": "style-reminder",
         "hooks": [
           {
             "type": "command",
@@ -38,7 +34,6 @@
     "PreToolUse": [
       {
         "matcher": "",
-        "_cortexhub": "guard-no-claude-in-commit",
         "hooks": [
           {
             "type": "command",
@@ -50,7 +45,6 @@
     "SessionEnd": [
       {
         "matcher": "",
-        "_cortexhub": "regen-active-context",
         "hooks": [
           {
             "type": "command",

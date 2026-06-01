@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # session-context-load.sh — SessionStart hook for Claude Code
 # Two-branch context injection, both driven by local config (settings.local.json):
-#   - vault   : opt-in. Set _cortexhub.vaultRoot → reads <root>/MyObsidianProVault/HOME.md
-#   - memory-bank : ON by default. Set _cortexhub.memoryBank="off" to opt out
+#   - vault   : opt-in. Set _claudeTeam.vaultRoot → reads <root>/MyObsidianProVault/HOME.md
+#   - memory-bank : ON by default. Set _claudeTeam.memoryBank="off" to opt out
 #                   (for devs with their own memory system). Reads .ai-local/memory-bank/.
 # Silent (exit 0) when no context source applies — safe on any project, any OS.
 set -euo pipefail
@@ -10,7 +10,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/common.sh"
 
-VAULT_ROOT=$(cortexhub_config vaultRoot)
+VAULT_ROOT=$(claudeteam_config vaultRoot)
 VAULT_HOME="$VAULT_ROOT/MyObsidianProVault/HOME.md"
 
 inject_context() {
@@ -26,7 +26,7 @@ print(json.dumps({
 " <<< "$1"
 }
 
-# ── Branch vault (opt-in via _cortexhub.vaultRoot) ────────────────────────────
+# ── Branch vault (opt-in via _claudeTeam.vaultRoot) ────────────────────────────
 
 if [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_ROOT"* ]]; then
   [ -f "$VAULT_HOME" ] || exit 0
@@ -81,9 +81,9 @@ if [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_ROOT"* ]]; then
   exit 0
 fi
 
-# ── Branch memory bank (ON par défaut, opt-out _cortexhub.memoryBank="off") ───
+# ── Branch memory bank (ON par défaut, opt-out _claudeTeam.memoryBank="off") ───
 
-[ "$(cortexhub_config memoryBank)" = "off" ] && exit 0
+[ "$(claudeteam_config memoryBank)" = "off" ] && exit 0
 
 MEMORY_DIR=$(find_memory_dir)
 [ -z "$MEMORY_DIR" ] && exit 0

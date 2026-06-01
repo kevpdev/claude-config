@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # regen-active-context.sh — Auto-update activeContext.md from sources of truth.
 # Called by global SessionEnd hook. Silent when:
-#   - memory-bank opted out (_cortexhub.memoryBank="off" in settings.local.json)
+#   - memory-bank opted out (_claudeTeam.memoryBank="off" in settings.local.json)
 #   - no memory-bank found in CWD
 #   - CWD is under a configured vault root (the vault handles its own regen)
 # Also archives captures older than 7 days (short-term memory expiration).
@@ -12,12 +12,12 @@ source "$SCRIPT_DIR/lib/common.sh"
 
 # ── Guards ────────────────────────────────────────────────────────────────────
 
-[ "$(cortexhub_config memoryBank)" = "off" ] && exit 0
+[ "$(claudeteam_config memoryBank)" = "off" ] && exit 0
 
 MEMORY_DIR=$(find_memory_dir)
 [ -z "$MEMORY_DIR" ] && exit 0
 
-VAULT_ROOT=$(cortexhub_config vaultRoot)
+VAULT_ROOT=$(claudeteam_config vaultRoot)
 [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_ROOT"* ]] && exit 0   # vault handles it
 
 ACTIVE="$MEMORY_DIR/activeContext.md"
