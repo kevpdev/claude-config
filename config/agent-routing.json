@@ -39,13 +39,6 @@
       "reason": "Architecture agentique — skill agentic-architect recommandé pour les décisions d'orchestration et de routing multi-agent."
     },
     {
-      "id": "cognitive-design",
-      "match": { "regex": "charge.{0,10}cognitiv|m[eé]moire.{0,10}travail|attention.{0,10}utilisateur|r[eé]tention|onboarding.*cognitif|biais.{0,10}cognitif|flow.?state|cogniti|cerveau|neuroscien|tdah|adhd" },
-      "target": { "type": "skill", "name": "brain-expert" },
-      "force": false,
-      "reason": "Design cognitif — skill brain-expert recommandé pour les décisions UX/workflow fondées sur la cognition humaine."
-    },
-    {
       "id": "backend-architecture",
       "match": { "regex": "architect|api|rest|graphql|grpc|microserv|monolith|backend|design pattern|ddd|cqrs|hexagonal" },
       "target": { "type": "skill", "name": "backend-architect" },

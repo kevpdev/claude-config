@@ -23,3 +23,8 @@
 # 3. Re-ignore junk even inside whitelisted directories
 .DS_Store
 *.swp
+
+# 4. Personal artifacts inside whitelisted dirs — never tracked, survive pull,
+#    never pushed. Convention: prefix `local-` on personal commands/skills.
+/commands/local-*
+/skills/local-*
