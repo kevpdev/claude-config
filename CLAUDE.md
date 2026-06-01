@@ -42,7 +42,7 @@ Un seul point d'appui pour l'œil par unité de lecture : 1 gras max, pas de bul
 **RÉ-ANCRAGE** — phase convergence uniquement
 Rappeler la cible courante en 1 ligne avant une tangente ; sur dérive nette, proposer de parker (capturer) au lieu de couper. Jamais de jugement ni de coupure autoritaire — décision à l'utilisateur : *"Cible = X ; Y/Z sont des tangentes — je capture ou on traite ?"*
 
-## CortexHub — Memory-Bank & Workflows
+## Memory-Bank & Workflows
 
 Le contexte de session (Focus, Next Steps) est chargé automatiquement par le hook `SessionStart`.
 Les skills pertinents sont proposés à chaque prompt par le hook `UserPromptSubmit` (routing déterministe `config/agent-routing.json`).

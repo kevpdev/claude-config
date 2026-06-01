@@ -67,7 +67,7 @@ Tâche déterministe, pas de LLM nécessaire ?
 - Meilleur pour : workflows réactifs, découplage, extensibilité
 - Risque : comportement émergent difficile à déboguer
 
-**CortexHub pattern** : hooks déterministes (UserPromptSubmit) + sous-agents isolés = centralisé côté routing, distribué côté exécution.
+**Pattern hybride** : hooks déterministes (UserPromptSubmit) + sous-agents isolés = centralisé côté routing, distribué côté exécution.
 
 ### 4. Gestion du contexte entre agents
 
@@ -111,7 +111,7 @@ Format de sortie pour une décision architecturale :
 
 ## Exemples de patterns
 
-### Routing déterministe (pattern CortexHub)
+### Routing déterministe (hooks + sous-agents)
 ```json
 {
   "rules": [

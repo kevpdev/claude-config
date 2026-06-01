@@ -101,7 +101,7 @@ Si `agent-routing.json` est absent ou si `jq` n'est pas installé, le script bas
 
 ## Liens
 
-- ADR : `1 PROJECTS/CORTEXHUB/decisions/agent-routing-deterministe.md` (vault)
+- ADR : décision de routing déterministe agents/skills (vault interne)
 - Schema : `config/agent-routing.schema.json`
 - Hook : `scripts/suggest-skill.sh`
 - Référence pattern : `wrappers/opencode/gateway.js`

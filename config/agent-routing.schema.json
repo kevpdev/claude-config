@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CortexHub agent routing rules",
+  "title": "Agent routing rules",
   "description": "Règles déterministes de routage des sous-agents et skills. Évaluées dans l'ordre, première règle qui matche gagne.",
   "type": "object",
   "required": ["rules"],
