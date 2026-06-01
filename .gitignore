@@ -1,0 +1,25 @@
+# ~/.claude is BOTH this git repo AND the Claude Code runtime directory.
+# Strategy: deny-all whitelist. A blacklist would always lag behind the new
+# runtime folders each CLI update creates — so we track ONLY the template
+# files listed below; everything else (credentials, projects/, history,
+# sessions/, settings.local.json, CLAUDE.local.md, …) stays untracked.
+
+# 1. Ignore everything at the repo root
+/*
+
+# 2. Re-include the template tree
+!/agents
+!/commands
+!/config
+!/docs
+!/scripts
+!/skills
+!/templates
+!/settings.json
+!/CLAUDE.md
+!/README.md
+!/.gitignore
+
+# 3. Re-ignore junk even inside whitelisted directories
+.DS_Store
+*.swp

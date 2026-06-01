@@ -1,0 +1,63 @@
+{
+  "_cortexhub_hooks_version": 1,
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "_cortexhub": "session-context-load",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/session-context-load.sh"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "_cortexhub": "suggest-skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/suggest-skill.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "",
+        "_cortexhub": "style-reminder",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/style-reminder.sh"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "_cortexhub": "guard-no-claude-in-commit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/guard-no-claude-in-commit.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "_cortexhub": "regen-active-context",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/scripts/regen-active-context.sh 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
