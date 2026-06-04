@@ -46,6 +46,13 @@
       "reason": "Décision d'architecture backend — skill backend-architect recommandé pour les trade-offs."
     },
     {
+      "id": "ai-engineering",
+      "match": { "regex": "golden.?set|llm.?as.?(a.?)?judge|hallucinat|prompt.{0,12}(regression|r[eé]gression|versioning)|non.?d[eé]terminis|(eval|[eé]valu).{0,15}(llm|prompt|mod[eè]le|ia)|(llm|prompt|mod[eè]le|sortie|extraction).{0,15}(eval|[eé]valu|flaky|instable)|choix.{0,10}(de.?)?mod[eè]le|model.?selection|fine.?tun|fiabilit[eé].{0,15}(llm|ia|sortie|prompt|extraction)|(llm|ia).{0,15}fiabilit|temp[eé]rature.?0|version.?pinning|data.?flywheel|llmops" },
+      "target": { "type": "skill", "name": "ai-engineering" },
+      "force": false,
+      "reason": "Ingénierie/fiabilité d'une app LLM (agentique ou non) — skill ai-engineering recommandé pour eval, golden set, régression de prompt, choix de modèle."
+    },
+    {
       "id": "devops",
       "match": { "regex": "ci.?cd|pipeline|gitlab.?ci|github.?action|dockerfile|docker.?build|docker.?image|kubernetes|k8s|helm|terraform|ansible|infra.*as.*code|\\biac\\b|blue.?green|canary|rollback|deploy|observabilit|prometheus|grafana|\\bsre\\b|gitops|container.?registry|devops" },
       "target": { "type": "skill", "name": "devops-expert" },

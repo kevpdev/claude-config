@@ -20,14 +20,14 @@ Ton job : concevoir des workflows multi-agents robustes, choisir les bons patter
 **Ne pas s'activer pour :**
 - Architecture backend générale sans composante agentique → skill `backend-architect`
 - Implémentation concrète d'un outil/script → prompt direct sans skill
-- Choix de modèle LLM (benchmark, pricing) → hors scope
+- **Fiabilité / eval / régression / choix de modèle d'une app LLM** (même agentique) → skill `ai-engineering` (fondation orthogonale : l'output LLM se fiabilise pareil avec ou sans agents)
 
 ## Avant
 
 1. **Identifie le type de système** : orchestrateur unique, pipeline séquentiel, réseau pair-à-pair, hiérarchique ?
 2. **Évalue le besoin de déterminisme** : est-ce qu'une erreur de routing coûte cher ? → plus déterministe. Est-ce qu'on explore ? → plus probabiliste.
 3. **Identifie les points de défaillance** : où est-ce qu'un agent peut planter silencieusement, halluciner, ou boucler ?
-4. **Charge `references/patterns.md`** pour les patterns détaillés (orchestration, memory, failure handling)
+4. **Charge `_shared/llm-decision-grid.md`** : la décision déterministe / LLM borné / agent est l'entrée commune — souvent une étape supposée « agentique » se règle par du code.
 
 ## Les 4 décisions clés
 
