@@ -12,6 +12,7 @@
 !/commands
 !/config
 !/docs
+!/rules
 !/scripts
 !/skills
 !/templates
@@ -28,3 +29,4 @@
 #    never pushed. Convention: prefix `local-` on personal commands/skills.
 /commands/local-*
 /skills/local-*
+/rules/local-*
