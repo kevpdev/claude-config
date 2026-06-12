@@ -9,7 +9,7 @@ Ordre = team d'abord, perso ensuite (override). Un import vers un fichier absent
 @~/.claude/config/workflow.md
 
 ## Style (team)
-@~/.claude/config/persona.md
+Style commun transverse : `~/.claude/core-rules.md`, injecté au system prompt via l'alias `--append-system-prompt-file` (inconditionnel, survit au compact). Deltas par contexte : output styles (`output-styles/cognitive-load-min.md` chat, `<vault>/.claude/output-styles/vault-notes.md` vault).
 
 ## Conventions & environnement (team)
 @~/.claude/config/commit-convention.md

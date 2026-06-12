@@ -6,10 +6,25 @@
 **AUTORISÉ**
 - Proposer, expliquer, puis attendre la validation avant de toucher un fichier
 
+## Règle — Préserver le contexte parent (déléguer par défaut)
+
+**POURQUOI** : le contexte parent est la ressource rare. Un fan-out de
+lectures/recherches le sature de file dumps dont seule la conclusion compte —
+un subagent lit, le parent ne garde que le résultat.
+
+**DÉLÉGUER** (Agent / skill `context: fork`)
+- Recherche multi-fichiers, exploration codebase, « où est X » → Explore
+- Lecture de gros fichiers / logs dont tu ne veux que la synthèse
+- Tâche autonome multi-étapes vérifiable → subagent dédié
+
+**GARDER au parent** : la décision, l'édition ciblée, le fil de conversation.
+
+**À LA PLACE de** lire 10 fichiers toi-même → un Agent qui renvoie la conclusion.
+
 ## Memory-Bank & Workflows
 
 Le contexte de session (Focus, Next Steps) est chargé automatiquement par le hook `SessionStart`.
-Les skills pertinents sont proposés à chaque prompt par le hook `UserPromptSubmit` (routing déterministe `config/agent-routing.json`).
+Les skills sont proposés nativement par le harness selon le prompt, ou chargés via `/skill <nom>`.
 
 ### Workflow quotidien
 - **Début** : `/session-start` — confirme le focus ou en fixe un nouveau
@@ -27,4 +42,4 @@ Les skills pertinents sont proposés à chaque prompt par le hook `UserPromptSub
 | `/skill <nom>` | Charge manuellement un skill (sinon auto-proposé) |
 
 ### Skills
-Source de vérité = le dossier `skills/` + `config/agent-routing.json`. Pas de liste figée ici (elle dériverait) ; les skills sont auto-proposés selon le prompt, ou chargés via `/skill <nom>`.
+Source de vérité = le dossier `skills/`. Pas de liste figée ici (elle dériverait) ; les skills sont proposés nativement selon le prompt, ou chargés via `/skill <nom>`.

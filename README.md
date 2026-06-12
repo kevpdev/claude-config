@@ -9,10 +9,9 @@ Le dépôt se clone directement **en tant que** `~/.claude` : il est à la fois 
 
 | Élément | Détail |
 |---|---|
-| Hooks | `SessionStart` (contexte), `UserPromptSubmit` (routing + style), `PreToolUse` (guard commit), `SessionEnd` (snapshot) |
-| Skills | experts chargeables (`backend-architect`, `frontend-expert`, `security-reviewer`, `docs-check`…) |
-| Agents | sous-agents délégables (`doc-writer`, `vault-sync`…) |
-| Routing déterministe | `config/agent-routing.json` — regex → skill/agent, lu par le hook `suggest-skill` |
+| Hooks | `SessionStart` (contexte), `PreToolUse` (guard commit), `SessionEnd` (snapshot) |
+| Skills | experts chargeables (`backend-architect`, `frontend-expert`, `security-reviewer`, `docs-check`…) — proposés nativement par le harness ou via `/skill <nom>` |
+| Agents | sous-agents délégables (`doc-writer`…) |
 | Garde-fou commit | `guard-no-claude-in-commit` bloque toute mention Claude/AI/co-author + impose Conventional Commits EN |
 | Templates | scaffolding memory-bank (`projectbrief`, `activeContext`, `story`…) |
 
@@ -29,7 +28,7 @@ Conséquence : tes fichiers perso ne risquent jamais d'être trackés ni pushés
 | Outil | Statut |
 |---|---|
 | `git` ≥ 2.x, `bash` | **requis** |
-| `jq`, `python3` | **recommandés** — activent le routing déterministe complet ; sans eux, `suggest-skill` bascule en mode suggestions legacy (pas de délégation forcée) |
+| `jq`, `python3` | **recommandés** — utilisés par certains hooks/scripts (parsing JSON) |
 
 ### Cas A — installation propre (pas de `~/.claude`)
 
@@ -69,7 +68,7 @@ Tes préférences migrent dans `settings.local.json` / `CLAUDE.local.md` (charg�
 | Instructions | style, notes perso | `CLAUDE.local.md` (chargé en plus de `CLAUDE.md`) |
 | Commands / Skills | tes commandes/skills perso | convention **préfixe `local-`** (ex. `skills/local-mon-skill/`) — re-ignoré par le `.gitignore` |
 
-> Ne fais jamais pointer `agent-routing.json` (tracké) vers un skill `local-*` : un coéquipier ne l'aurait pas. Un skill perso s'invoque manuellement.
+> Un skill `local-*` (perso, gitignoré) n'est pas chez un coéquipier : il s'invoque manuellement, ne le câble jamais dans un fichier tracké.
 
 ## Mise à jour
 
