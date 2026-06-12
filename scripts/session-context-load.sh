@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # session-context-load.sh — SessionStart hook for Claude Code
 # Two-branch context injection, both driven by local config (settings.local.json):
-#   - vault   : opt-in. Set _claudeTeam.vaultRoot → reads <root>/MyObsidianProVault/HOME.md
+#   - vault   : opt-in. Set _claudeTeam.vaultRoot. Fires ONLY when CWD is inside the vault dir
+#               (<root>/MyObsidianProVault), not anywhere under <root> → reads its HOME.md.
+#               Scope: a dev repo living under <root> gets NO vault injection.
 #   - memory-bank : ON by default. Set _claudeTeam.memoryBank="off" to opt out
 #                   (for devs with their own memory system). Reads .ai-local/memory-bank/.
 # Silent (exit 0) when no context source applies — safe on any project, any OS.
@@ -11,7 +13,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/common.sh"
 
 VAULT_ROOT=$(claudeteam_config vaultRoot)
-VAULT_HOME="$VAULT_ROOT/MyObsidianProVault/HOME.md"
+VAULT_DIR="$VAULT_ROOT/MyObsidianProVault"
+VAULT_HOME="$VAULT_DIR/HOME.md"
 
 inject_context() {
   python3 -c "
@@ -28,7 +31,7 @@ print(json.dumps({
 
 # ── Branch vault (opt-in via _claudeTeam.vaultRoot) ────────────────────────────
 
-if [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_ROOT"* ]]; then
+if [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_DIR"* ]]; then
   [ -f "$VAULT_HOME" ] || exit 0
 
   sprint=$(awk '/^## Sprint actif/{found=1; next} found && /^## /{exit} found && /\[\[/{
@@ -55,7 +58,7 @@ if [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_ROOT"* ]]; then
 
   # Dernier recap de session (continuité inter-sessions)
   # Extrait le dernier bloc "## HH:MM — Session" du fichier le plus récent.
-  SESSIONS_DIR="$VAULT_ROOT/MyObsidianProVault/scripts/logs/sessions"
+  SESSIONS_DIR="$VAULT_DIR/scripts/logs/sessions"
   TODAY_D=$(date +%Y-%m-%d)
   recent_recap=""
   [ -f "$SESSIONS_DIR/$TODAY_D.md" ] && recent_recap="$SESSIONS_DIR/$TODAY_D.md"
