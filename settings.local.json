@@ -1,0 +1,11 @@
+{
+  "model": "opus",
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "outputStyle": "cognitive-load-min",
+  "_claudeTeam": {
+    "vaultRoot": "/home/kevin/projects/BetterflyWorkspace",
+    "memoryBank": "off"
+  }
+}
