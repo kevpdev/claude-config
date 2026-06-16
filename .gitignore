@@ -16,9 +16,11 @@
 !/scripts
 !/skills
 !/templates
+!/output-styles
 !/settings.json
 !/CLAUDE.md
 !/README.md
+!/core-rules.md
 !/.gitignore
 
 # 3. Re-ignore junk even inside whitelisted directories
@@ -30,3 +32,4 @@
 /commands/local-*
 /skills/local-*
 /rules/local-*
+/output-styles/local-*
