@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # session-context-load.sh — SessionStart hook for Claude Code
 # Two-branch context injection, both driven by local config (settings.local.json):
-#   - vault   : opt-in. Set _claudeTeam.vaultRoot. Fires ONLY when CWD is inside the vault dir
-#               (<root>/MyObsidianProVault), not anywhere under <root> → reads its HOME.md.
-#               Scope: a dev repo living under <root> gets NO vault injection.
+#   - vault   : opt-in. Set _claudeTeam.vaultRoot to the vault dir itself. Fires ONLY when CWD
+#               is inside that dir → reads its HOME.md. The path is taken verbatim from config,
+#               no folder name is appended. Scope: outside the vault dir, NO vault injection.
 #   - memory-bank : ON by default. Set _claudeTeam.memoryBank="off" to opt out
 #                   (for devs with their own memory system). Reads .ai-local/memory-bank/.
 # Silent (exit 0) when no context source applies — safe on any project, any OS.
@@ -13,7 +13,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 source "$SCRIPT_DIR/lib/common.sh"
 
 VAULT_ROOT=$(claudeteam_config vaultRoot)
-VAULT_DIR="$VAULT_ROOT/MyObsidianProVault"
+VAULT_DIR="$VAULT_ROOT"
 VAULT_HOME="$VAULT_DIR/HOME.md"
 
 inject_context() {

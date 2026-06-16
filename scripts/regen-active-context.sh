@@ -3,7 +3,7 @@
 # Called by global SessionEnd hook. Silent when:
 #   - memory-bank opted out (_claudeTeam.memoryBank="off" in settings.local.json)
 #   - no memory-bank found in CWD
-#   - CWD is inside the configured vault dir (<root>/MyObsidianProVault); the vault handles its own regen
+#   - CWD is inside the configured vault dir (_claudeTeam.vaultRoot, verbatim); the vault handles its own regen
 # Also archives captures older than 7 days (short-term memory expiration).
 set -euo pipefail
 
@@ -18,7 +18,7 @@ MEMORY_DIR=$(find_memory_dir)
 [ -z "$MEMORY_DIR" ] && exit 0
 
 VAULT_ROOT=$(claudeteam_config vaultRoot)
-VAULT_DIR="$VAULT_ROOT/MyObsidianProVault"
+VAULT_DIR="$VAULT_ROOT"
 [ -n "$VAULT_ROOT" ] && [[ "$PWD" == "$VAULT_DIR"* ]] && exit 0   # vault handles it (only inside the vault dir)
 
 ACTIVE="$MEMORY_DIR/activeContext.md"
