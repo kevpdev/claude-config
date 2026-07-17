@@ -4,6 +4,10 @@
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "outputStyle": "cognitive-load-min",
+  "statusLine": {
+    "type": "command",
+    "command": "bash $HOME/.claude/scripts/statusline.sh"
+  },
   "_claudeTeam": {
     "vaultRoot": "/home/kevin/projects/BetterflyWorkspace",
     "memoryBank": "off"
