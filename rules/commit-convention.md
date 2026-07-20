@@ -1,0 +1,1 @@
+/home/kevin/projects/agent-config/rules/commit-convention.md
