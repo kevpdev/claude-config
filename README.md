@@ -9,7 +9,7 @@ Le dépôt se clone directement **en tant que** `~/.claude` : il est à la fois 
 
 | Élément | Détail |
 |---|---|
-| Hooks | `SessionStart` (contexte), `PreToolUse` (guard commit), `SessionEnd` (snapshot) |
+| Hooks | `PreToolUse` (guard commit) |
 | Skills | experts chargeables (`backend-architect`, `frontend-expert`, `security-reviewer`, `docs-check`…) — proposés nativement par le harness ou via `/skill <nom>` |
 | Agents | sous-agents délégables (`doc-writer`…) |
 | Garde-fou commit | `guard-no-claude-in-commit` bloque toute mention Claude/AI/co-author + impose Conventional Commits EN |
